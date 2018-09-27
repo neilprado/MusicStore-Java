@@ -28,7 +28,6 @@ public class Musica extends Produto implements Comparable<Musica> {
 		this.album = album;
 	}
 
-
 	public double getDuracao() {
 		return duracao;
 	}
