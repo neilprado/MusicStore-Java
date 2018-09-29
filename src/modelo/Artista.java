@@ -1,13 +1,13 @@
 package modelo;
 import java.util.ArrayList;
-import java.util.List;
+import dao.IDInterface;
 
-public class Artista implements Comparable<Artista> {
+public class Artista implements Comparable<Artista>, IDInterface {
 	private int id;
 	private String nome;
 	private String nacionalidade;
 	private int numIntegrantes;
-	private List<Produto> produtos = new ArrayList<>();
+	private ArrayList<Produto> produtos = new ArrayList<>();
 	
 	public Artista(String nome, String nac, int num) {
 		this.nome = nome;
@@ -17,10 +17,12 @@ public class Artista implements Comparable<Artista> {
 	
 	public void adicionar(Produto p) {
 		produtos.add(p);
+		p.setArtista(this);
 	}
 	
 	public void remover (Produto p) {
 		produtos.remove(p);
+		p.setArtista(null);
 	}
 	
 	public Produto localizar (String nome) {
@@ -29,6 +31,24 @@ public class Artista implements Comparable<Artista> {
 				return p;
 		}
 		return null;
+	}
+	
+	public int totalAlbuns() {
+		int cont = 0;
+		for (Produto p: produtos) {
+			if(p instanceof Album)
+				cont++;
+		}
+		return cont;
+	}
+	
+	public ArrayList<String> listaDeAlbuns(){
+		ArrayList<String> titulos = new ArrayList<>();
+		for(Produto p: produtos) {
+			if (p instanceof Album)
+				titulos.add(p.getNome());
+		}
+		return titulos;
 	}
 	
 	public int getId() {
@@ -63,11 +83,11 @@ public class Artista implements Comparable<Artista> {
 		this.numIntegrantes = numIntegrantes;
 	}
 
-	public List<Produto> getProdutos() {
+	public ArrayList<Produto> getProdutos() {
 		return produtos;
 	}
 
-	public void setProdutos(List<Produto> produtos) {
+	public void setProdutos(ArrayList<Produto> produtos) {
 		this.produtos = produtos;
 	}
 
@@ -78,8 +98,7 @@ public class Artista implements Comparable<Artista> {
 	}
 
 	@Override
-	public int compareTo(Artista o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Artista a) {
+		return this.getNome().compareToIgnoreCase(a.getNome());
 	}
 }

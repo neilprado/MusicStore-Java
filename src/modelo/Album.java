@@ -5,12 +5,40 @@ import java.util.List;
 public class Album extends Produto implements Comparable<Album> {
 	
 	private int faixas;
-	private List<Musica> musicas = new ArrayList<>();
-	private List<Genero> generos = new ArrayList<>();
+	private ArrayList<Musica> musicas = new ArrayList<>();
+	private ArrayList<Genero> generos = new ArrayList<>();
 	
 	public Album(String n, double p, int a, int f) {
 		super(n,p,a);
 		this.faixas = f;
+	}
+	
+	public void adicionarMusica(Musica m) {
+		m.setAlbum(this);
+		this.musicas.add(m);
+	}
+	
+	public void adicionarGenero(Genero g) {
+		this.generos.add(g);
+		g.setAlbuns(this);
+	}
+	
+	public void removerMusica(Musica m) {
+		m.setAlbum(null);
+		this.musicas.remove(m);
+	}
+	
+	public void removerGenero(Genero g) {
+		g.setAlbuns(null);
+		this.generos.remove(g);
+	}
+	
+	public Musica localizarPorNome(String nome) {
+		for (Musica m: musicas) {
+			if(m.getNome().equals(nome))
+				return m;
+		}
+		return null;
 	}
 
 	public int getFaixas() {
@@ -25,7 +53,7 @@ public class Album extends Produto implements Comparable<Album> {
 		return musicas;
 	}
 
-	public void setMusicas(List<Musica> musicas) {
+	public void setMusicas(ArrayList<Musica> musicas) {
 		this.musicas = musicas;
 	}
 
@@ -33,7 +61,7 @@ public class Album extends Produto implements Comparable<Album> {
 		return generos;
 	}
 
-	public void setGeneros(List<Genero> generos) {
+	public void setGeneros(ArrayList<Genero> generos) {
 		this.generos = generos;
 	}
 

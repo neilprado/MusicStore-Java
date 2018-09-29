@@ -1,6 +1,8 @@
 package modelo;
 
-public class Produto {
+import dao.IDInterface;
+
+public class Produto implements IDInterface {
 	private int id;
 	private String nome;
 	private double preco;
