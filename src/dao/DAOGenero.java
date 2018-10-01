@@ -6,7 +6,7 @@ import com.db4o.query.Query;
 import modelo.Genero;
 
 public class DAOGenero extends DAO<Genero> {
-	public Genero buscaUnitaria(String nome) {
+	public Genero buscaGenero(String nome) {
 		Query q = manager.query();
 		q.constrain(Genero.class);
 		q.descend("nome").constrain(nome);
