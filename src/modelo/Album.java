@@ -20,7 +20,7 @@ public class Album extends Produto implements Comparable<Album> {
 	
 	public void adicionarGenero(Genero g) {
 		this.generos.add(g);
-		g.setAlbuns(this);
+		g.adicionar(this);
 	}
 	
 	public void removerMusica(Musica m) {
@@ -29,8 +29,8 @@ public class Album extends Produto implements Comparable<Album> {
 	}
 	
 	public void removerGenero(Genero g) {
-		g.setAlbuns(null);
 		this.generos.remove(g);
+		g.remover(this);
 	}
 	
 	public Musica localizarPorNome(String nome) {

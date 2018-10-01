@@ -1,7 +1,4 @@
 package modelo;
-
-import javax.swing.JOptionPane;
-
 public class Musica extends Produto implements Comparable<Musica> {
 
 	private String url;

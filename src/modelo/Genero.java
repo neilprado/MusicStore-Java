@@ -11,12 +11,12 @@ public class Genero {
 	
 	public void adicionar(Album a) {
 		albuns.add(a);
-		a.setGeneros(this);
+		a.adicionarGenero(this);
 	}
 	
 	public void remover (Album a) {
 		albuns.remove(a);
-		a.setGeneros(null);
+		a.removerGenero(this);
 	}
 
 	public void setNome(String nome) {
