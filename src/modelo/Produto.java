@@ -2,17 +2,18 @@ package modelo;
 
 import dao.IDInterface;
 
-public class Produto implements IDInterface {
+public abstract class Produto implements IDInterface {
 	private int id;
 	private String nome;
 	private double preco;
 	private Artista artista;
 	private int ano;
 	
-	public Produto(String nome, double preco, int ano) {
+	public Produto(String nome, double preco, int ano, Artista a) {
 		this.nome = nome;
 		this.preco = preco;
 		this.ano = ano;
+		this.artista = a;
 	}
 	
 	public int getId() {

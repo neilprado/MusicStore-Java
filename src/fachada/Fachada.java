@@ -23,34 +23,23 @@ public class Fachada {
 		DAO.close();
 	}
 	
-	public static Produto cadastrarProduto(String nome, double preco, int ano) throws Exception{
-		DAO.begin();
-		Produto p = daoproduto.listarPorNome(nome);
-		if(p!= null)
-			throw new Exception("Produto " + nome + " já cadastrado");
-		p = new Produto(nome, preco, ano);
-		daoproduto.create(p);
-		DAO.commit();
-		return (Produto) p;
-	}
-	
-	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas) throws Exception {
+	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas, Artista ar) throws Exception {
 		DAO.begin();
 		Album a = (Album) daoproduto.listarPorNome(nome);
 		if(a!= null)
 			throw new Exception("Álbum " + nome + " já cadastrado");
-		a = new Album(nome, preco, ano, faixas);
+		a = new Album(nome, preco, ano, ar, faixas);
 		daoproduto.create(a);
 		DAO.commit();
 		return (Album) a;
 	}
 	
-	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, double duracao) throws Exception {
+	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, Artista ar, double duracao) throws Exception {
 		DAO.begin();
 		Musica m = (Musica) daoproduto.listarPorNome(nome);
 		if(m!=null)
 			throw new Exception("Música " + nome + " já cadastrada");
-		m = new Musica(nome, preco, ano, album, duracao);
+		m = new Musica(nome, preco, ano, album, ar, duracao);
 		daoproduto.create(m);
 		DAO.commit();
 		return (Musica) m;

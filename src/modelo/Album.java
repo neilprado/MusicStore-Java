@@ -8,8 +8,8 @@ public class Album extends Produto implements Comparable<Album> {
 	private ArrayList<Musica> musicas = new ArrayList<>();
 	private ArrayList<Genero> generos = new ArrayList<>();
 	
-	public Album(String n, double p, int a, int f) {
-		super(n,p,a);
+	public Album(String n, double p, int a, Artista ar, int f) {
+		super(n,p,a, ar);
 		this.faixas = f;
 	}
 	
