@@ -72,9 +72,8 @@ public class Album extends Produto implements Comparable<Album> {
 	}
 
 	@Override
-	public int compareTo(Album o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Album a) {
+		return super.getNome().compareToIgnoreCase(a.getNome());
 	}
 	
 }

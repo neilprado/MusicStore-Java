@@ -18,9 +18,10 @@ public class Cadastrar {
 		try {
 			System.out.println("Cadastrando...");
 			a = Fachada.cadastrarArtista("Cesare Cremonini", "Italia", 1);
+			g = Fachada.cadastrarGenero("Pop Rock");
 			al = Fachada.cadastrarAlbum("Più Che Logico", 22.90, 2017, 13, a);
 			p = Fachada.cadastrarMusica("Logico #1", 3.60, 2013, al, a, 4.11);
-			g = Fachada.cadastrarGenero("Pop Rock");
+			
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
