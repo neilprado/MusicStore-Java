@@ -1,4 +1,5 @@
 package fachada;
+import java.util.List;
 
 import dao.DAO;
 import dao.DAOArtista;
@@ -23,6 +24,7 @@ public class Fachada {
 		DAO.close();
 	}
 	
+	//Cadastros (CREATIONS)
 	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas, Artista ar) throws Exception {
 		DAO.begin();
 		Album a = (Album) daoproduto.listarPorNome(nome);
@@ -65,6 +67,126 @@ public class Fachada {
 		daogenero.create(g);
 		DAO.commit();
 		return (Genero) g;
+	}
+	
+	//Remoções (DELETIONS)
+	public static Album removerAlbum(String nome) throws Exception {
+		DAO.begin();
+		Album a = (Album) daoproduto.listarPorNome(nome);
+		if (a == null)
+			throw new Exception("Álbum " + nome + " inexistente");
+		daoproduto.delete(a);
+		DAO.commit();
+		return a;
+	}
+	
+	public static Musica removerMusica(String nome) throws Exception {
+		DAO.begin();
+		Musica m = (Musica) daoproduto.listarPorNome(nome);
+		if(m == null)
+			throw new Exception ("Música " + nome + " inexistente");
+		daoproduto.delete(m);
+		DAO.commit();
+		return m;
+	}
+	
+	public static Artista removerArtista(String nome) throws Exception{
+		DAO.begin();
+		Artista a = daoartista.buscaPorNome(nome);
+		if (a == null)
+			throw new Exception ("Artista " + nome + " não cadastrado");
+		daoartista.delete(a);
+		DAO.commit();
+		return a;
+	}
+	
+	public static Genero removerGenero(String nome) throws Exception {
+		DAO.begin();
+		Genero g = daogenero.buscaGenero(nome);
+		if (g == null)
+			throw new Exception ("Gênero " + nome + " inexistente");
+		daogenero.delete(g);
+		DAO.commit();
+		return g;
+	}
+	
+	//Atualizações (UPDATES)
+	public static void atualizarAlbum(String nome, String novo) throws Exception{
+		DAO.begin();
+		Album a = (Album) daoproduto.listarPorNome(nome);
+		if (a == null)
+			throw new Exception ("Álbum " + nome + " não cadastrado");
+		a.setNome(novo);
+		a = (Album) daoproduto.update(a);
+		DAO.commit();
+	}
+	
+	public static void atualizarMusica(String nome, String novo) throws Exception{
+		DAO.begin();
+		Musica m = (Musica) daoproduto.listarPorNome(nome);
+		if (m == null)
+			throw new Exception ("Música " + nome + " não cadastrado");
+		m.setNome(novo);
+		m = (Musica) daoproduto.update(m);
+		DAO.commit();
+	}
+	
+	public static void atualizarArtista(String nome, String novo) throws Exception{
+		DAO.begin();
+		Artista a = daoartista.buscaPorNome(nome);
+		if (a == null)
+			throw new Exception ("Álbum " + nome + " não cadastrado");
+		a.setNome(novo);
+		a = daoartista.update(a);
+		DAO.commit();
+	}
+	
+	public static void atualizarGenero(String nome, String novo) throws Exception{
+		DAO.begin();
+		Genero g = daogenero.buscaGenero(nome);
+		if (g == null)
+			throw new Exception ("Gênero " + nome + " não cadastrado");
+		g.setNome(novo);
+		g = daogenero.update(g);
+		DAO.commit();
+	}
+	
+	//Listagem (READ)
+	
+	public static String listarAlbum() {
+		List<Produto> albuns = daoproduto.readAll();
+		String texto = "--- Listagem de Álbuns ---";
+		for(Produto a: albuns) {
+			if(a instanceof Album)
+				texto+= a + "\n";
+		}
+		return texto;
+	}
+	
+	public static String listarMusicasCadastradas() {
+		List<Produto> musicas = daoproduto.readAll();
+		String texto = "--- Listagem de Músicas ---";
+		for(Produto m: musicas) {
+			if(m instanceof Musica)
+				texto+= m + "\n";
+		}
+		return texto;
+	}
+	
+	public static String listarArtistas() {
+		List<Artista> artistas = daoartista.readAll();
+		String texto = "--- Listagem de Artistas ---";
+		for(Artista a: artistas)
+			texto+= a + "\n";
+		return texto;
+	}
+	
+	public static String listarGeneros() {
+		List<Genero> generos = daogenero.readAll();
+		String texto = "--- Listagem de Generos ---";
+		for(Genero g: generos)
+			texto+= g + "\n";
+		return texto;
 	}
 
 }
