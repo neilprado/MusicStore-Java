@@ -1,4 +1,5 @@
 package fachada;
+import java.util.ArrayList;
 import java.util.List;
 
 import dao.DAO;
@@ -51,7 +52,7 @@ public class Fachada {
 		DAO.begin();
 		Artista a = daoartista.buscaPorNome(nome);
 		if (a!=null)
-			throw new Exception("Artista " + nome + "já cadastrado");
+			throw new Exception("Artista " + nome + " já cadastrado");
 		a = new Artista(nome, nac, num);
 		daoartista.create(a);
 		DAO.commit();
@@ -63,12 +64,22 @@ public class Fachada {
 		Genero g = daogenero.buscaGenero(nome);
 		if (g!=null)
 			throw new Exception("Gênero " + nome + " existente");
-		g = new Genero();
+		g = new Genero(nome);
 		daogenero.create(g);
 		DAO.commit();
 		return (Genero) g;
 	}
 	
+	public static Genero cadastrarGenero(String nome, ArrayList<Album> a) throws Exception{
+		DAO.begin();
+		Genero g = daogenero.buscaGenero(nome);
+		if (g!=null)
+			throw new Exception("Gênero " + nome + " existente");
+		g = new Genero(nome, a);
+		daogenero.create(g);
+		DAO.commit();
+		return (Genero) g;
+	}
 	//Remoções (DELETIONS)
 	public static Album removerAlbum(String nome) throws Exception {
 		DAO.begin();
@@ -187,6 +198,20 @@ public class Fachada {
 		for(Genero g: generos)
 			texto+= g + "\n";
 		return texto;
+	}
+	
+	// MÉTODOS PERSONALIZADOS
+	public static void  relacionaAlbum (String nome, String album) throws Exception {
+		DAO.begin();
+		Genero g = daogenero.buscaGenero(nome);
+		Album a = (Album) daoproduto.listarPorNome(album);
+		if (g == null)
+			throw new Exception ("Gênero " + nome + " não cadastrado");
+		if (a == null)
+			throw new Exception ("Álbum " + album + " não cadastrado");
+		a.adicionarGenero(g);
+		g.adicionar(a);
+		DAO.commit();
 	}
 
 }

@@ -1,9 +1,28 @@
 package modelo;
 import java.util.ArrayList;
+import dao.IDInterface;
 
-public class Genero {
+public class Genero implements IDInterface {
+	private int id;
 	private String nome;
-	private ArrayList<Album> albuns;
+	private ArrayList<Album> albuns = new ArrayList<>();
+	
+	public Genero(String nome) {
+		this.nome = nome;
+	}
+	
+	public Genero (String nome, ArrayList<Album> a) {
+		this.nome = nome;
+		this.albuns = a;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -33,6 +52,6 @@ public class Genero {
 
 	@Override
 	public String toString() {
-		return "Genero [nome=" + nome + ", albuns=" + albuns + "]";
+		return "Genero [id=" + id + ", nome=" + nome + ", albuns=" + albuns + "]";
 	}	
 }
