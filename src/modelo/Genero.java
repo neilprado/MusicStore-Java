@@ -30,7 +30,6 @@ public class Genero implements IDInterface {
 	
 	public void adicionar(Album a) {
 		albuns.add(a);
-		a.adicionarGenero(this);
 	}
 	
 	public void remover (Album a) {

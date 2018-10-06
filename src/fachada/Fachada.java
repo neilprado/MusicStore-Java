@@ -210,7 +210,7 @@ public class Fachada {
 		if (a == null)
 			throw new Exception ("Álbum " + album + " não cadastrado");
 		a.adicionarGenero(g);
-		g.adicionar(a);
+		daogenero.update(g);
 		DAO.commit();
 	}
 
