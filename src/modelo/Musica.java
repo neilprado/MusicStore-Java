@@ -3,12 +3,12 @@ public class Musica extends Produto implements Comparable<Musica> {
 
 	private String url;
 	private Album album;
-	private double duracao;
+	private int duracao;
 	
-	public Musica(String nome, double preco, int ano, Album a, Artista ar, double d) {
+	public Musica(String nome, double preco, int ano, Album a, Artista ar, int d) {
 		super(nome, preco, ano, ar);
 		this.album = a;
-		this.setDuracao(d);
+		this.duracao = d;
 	}
 
 	public String getUrl() {
@@ -30,13 +30,8 @@ public class Musica extends Produto implements Comparable<Musica> {
 	}
 
 
-	public void setDuracao(double duracao) {
-		String secs = String.valueOf(duracao);
-		secs = secs.substring(secs.indexOf(".")).substring(1);
-		double s = Double.parseDouble(secs);
-			if(s < 60)
-				this.duracao = duracao;
-			this.duracao = 0;
+	public void setDuracao(int duracao) {
+		this.duracao = duracao;
 	}
 
 	@Override

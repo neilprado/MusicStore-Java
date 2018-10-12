@@ -1,8 +1,11 @@
 package dao;
 import java.util.List;
 
+import com.db4o.query.Candidate;
+import com.db4o.query.Evaluation;
 import com.db4o.query.Query;
 
+import modelo.Album;
 import modelo.Artista;
 
 public class DAOArtista extends DAO<Artista> {
@@ -15,4 +18,18 @@ public class DAOArtista extends DAO<Artista> {
 			return resultados.get(0);
 		return null;
 	}
+	
+	// Consultas
+	
 }
+
+class Filtro implements Evaluation{
+	private int n;
+	@Override
+	public void evaluate(Candidate arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+	

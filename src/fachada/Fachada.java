@@ -39,7 +39,7 @@ public class Fachada {
 		return (Album) a;
 	}
 	
-	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, Artista ar, double duracao) throws Exception {
+	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, Artista ar, int duracao) throws Exception {
 		DAO.begin();
 		Musica m = (Musica) daoproduto.listarPorNome(nome);
 		if(m!=null)
@@ -48,6 +48,7 @@ public class Fachada {
 		ar.adicionar(m);
 		//daoproduto.create(m);
 		daoartista.update(ar);
+		daoproduto.update(album);
 		DAO.commit();
 		return (Musica) m;
 	}
