@@ -12,6 +12,8 @@ public class Deletar {
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
+		Fachada.finalizar();
+		System.out.println("Fim do Programa");
 	}
 
 	public static void main(String[] args) {

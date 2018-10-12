@@ -28,13 +28,13 @@ public abstract class DAO<T> implements DAOInterface<T> {
 		//new File("banco.db4o").delete();  //apagar o banco
 		EmbeddedConfiguration config =  Db4oEmbedded.newConfiguration(); 
 		config.common().messageLevel(0);  // 0,1,2,3...
-		config.common().objectClass(Artista.class).cascadeOnDelete(true);;
+		config.common().objectClass(Artista.class).cascadeOnDelete(false);;
 		config.common().objectClass(Artista.class).cascadeOnUpdate(true);;
 		config.common().objectClass(Artista.class).cascadeOnActivate(true);  //sem cascata
-		config.common().objectClass(Produto.class).cascadeOnDelete(true);;
+		config.common().objectClass(Produto.class).cascadeOnDelete(false);;
 		config.common().objectClass(Produto.class).cascadeOnUpdate(true);;
 		config.common().objectClass(Produto.class).cascadeOnActivate(true);
-		config.common().objectClass(Genero.class).cascadeOnDelete(true);;
+		config.common().objectClass(Genero.class).cascadeOnDelete(false);;
 		config.common().objectClass(Genero.class).cascadeOnUpdate(true);;
 		config.common().objectClass(Genero.class).cascadeOnActivate(true);
 		
@@ -43,6 +43,24 @@ public abstract class DAO<T> implements DAOInterface<T> {
 		config.common().objectClass(Produto.class).objectField("nome").indexed(true);
 		config.common().objectClass(Genero.class).objectField("nome").indexed(true);
 		manager = 	Db4oEmbedded.openFile(config, "banco.db4o");
+		IDControl.registrarManager(manager); 		// eventos para gerenciar autonumeração de id
+	}
+	
+	public static void abrirBancoServidor() {
+		ClientConfiguration config = Db4oClientServer.newClientConfiguration();
+		config.common().messageLevel(0);
+		config.common().objectClass(Artista.class).cascadeOnDelete(true);
+		config.common().objectClass(Artista.class).cascadeOnUpdate(true);
+		config.common().objectClass(Artista.class).cascadeOnActivate(true);
+		config.common().objectClass(Produto.class).cascadeOnDelete(true);
+		config.common().objectClass(Produto.class).cascadeOnUpdate(true);
+		config.common().objectClass(Produto.class).cascadeOnActivate(true);
+		config.common().objectClass(Genero.class).cascadeOnDelete(true);
+		config.common().objectClass(Genero.class).cascadeOnUpdate(true);
+		config.common().objectClass(Genero.class).cascadeOnActivate(true);
+		
+		manager = Db4oClientServer.openClient(config,"10.0.4.56",34000,"usuario2","senha2");	
+		//manager = Db4oClientServer.openClient(config,"localhost",34000,"usuario1","senha1");
 		IDControl.registrarManager(manager); 		// eventos para gerenciar autonumeração de id
 	}
 

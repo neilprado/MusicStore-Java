@@ -32,6 +32,7 @@ public class Cadastrar {
 			g = Fachada.cadastrarGenero("Pop");
 			g = Fachada.cadastrarGenero("Heavy Metal");
 			Fachada.relacionaAlbum("Pop Rock", "Il Primo Bacio Sulla Luna");
+			a = Fachada.cadastrarArtista("Cesare Cremonini", "Italia", 1);
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}

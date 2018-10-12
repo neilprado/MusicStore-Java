@@ -68,7 +68,21 @@ public class Album extends Produto implements Comparable<Album> {
 
 	@Override
 	public String toString() {
-		return "Album [faixas=" + faixas + ", musicas=" + musicas + ", generos=" + generos + "]";
+		return "Album [faixas=" + faixas + ", musicas=" + musicas + "]";
+	}
+	
+	public String listarGenerosPorAlbum() {
+		String texto = " ";
+		for(Genero g: generos)
+			texto += " - " + g.getNome();
+		return texto;
+	}
+	
+	public String listarMusicasPorAlbum() {
+		String texto = "";
+		for (Musica m: musicas)
+			texto += " - " + m.getNome();
+		return texto;
 	}
 
 	@Override

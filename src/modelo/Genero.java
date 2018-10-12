@@ -34,7 +34,6 @@ public class Genero implements IDInterface {
 	
 	public void remover (Album a) {
 		albuns.remove(a);
-		a.removerGenero(this);
 	}
 
 	public void setNome(String nome) {

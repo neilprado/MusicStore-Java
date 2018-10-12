@@ -32,7 +32,9 @@ public class Fachada {
 		if(a!= null)
 			throw new Exception("Álbum " + nome + " já cadastrado");
 		a = new Album(nome, preco, ano, ar, faixas);
-		daoproduto.create(a);
+		ar.adicionar(a);
+		//daoartista.update(ar);
+		 daoproduto.create(a);
 		DAO.commit();
 		return (Album) a;
 	}
@@ -43,7 +45,9 @@ public class Fachada {
 		if(m!=null)
 			throw new Exception("Música " + nome + " já cadastrada");
 		m = new Musica(nome, preco, ano, album, ar, duracao);
-		daoproduto.create(m);
+		ar.adicionar(m);
+		//daoproduto.create(m);
+		daoartista.update(ar);
 		DAO.commit();
 		return (Musica) m;
 	}
@@ -166,10 +170,10 @@ public class Fachada {
 	
 	public static String listarAlbum() {
 		List<Produto> albuns = daoproduto.readAll();
-		String texto = "--- Listagem de Álbuns ---";
+		String texto = "--- Listagem de Álbuns --- \n";
 		for(Produto a: albuns) {
 			if(a instanceof Album)
-				texto+= a + "\n";
+				texto+= a.getNome() + ((Album) a).listarGenerosPorAlbum() + ((Album) a).listarMusicasPorAlbum() + "\n" ;
 		}
 		return texto;
 	}
