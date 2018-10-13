@@ -46,6 +46,7 @@ public class Fachada {
 			throw new Exception("Música " + nome + " já cadastrada");
 		m = new Musica(nome, preco, ano, album, ar, duracao);
 		ar.adicionar(m);
+		album.adicionarMusica(m);
 		//daoproduto.create(m);
 		daoartista.update(ar);
 		daoproduto.update(album);
@@ -184,7 +185,7 @@ public class Fachada {
 		String texto = "--- Listagem de Músicas ---";
 		for(Produto m: musicas) {
 			if(m instanceof Musica)
-				texto+= m + "\n";
+				texto+= m.getNome() + "\n";
 		}
 		return texto;
 	}
@@ -201,7 +202,7 @@ public class Fachada {
 		List<Genero> generos = daogenero.readAll();
 		String texto = "--- Listagem de Generos ---";
 		for(Genero g: generos)
-			texto+= g + "\n";
+			texto+= g.getNome() + "\n";
 		return texto;
 	}
 	
