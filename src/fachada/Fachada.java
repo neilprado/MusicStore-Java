@@ -219,5 +219,15 @@ public class Fachada {
 		daogenero.update(g);
 		DAO.commit();
 	}
+	
+	public static String listaArtistas (String nome) throws Exception {
+		ArrayList<Artista> artistas = daogenero.listaArtistas(nome);
+		String texto = "Listagem de artistas do gênero: " + artistas.getNome();
+		if (artistas.isEmpty())
+			texto += " Não existem artistas desse gênero";
+		for(Artista a: artistas)
+			texto += a.getNome + " \n";
+		return texto;
+	}
 
 }
