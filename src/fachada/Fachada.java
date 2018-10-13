@@ -46,6 +46,7 @@ public class Fachada {
 			throw new Exception("Música " + nome + " já cadastrada");
 		m = new Musica(nome, preco, ano, album, ar, duracao);
 		ar.adicionar(m);
+		album.adicionarMusica(m);
 		//daoproduto.create(m);
 		daoartista.update(ar);
 		daoproduto.update(album);
@@ -181,27 +182,27 @@ public class Fachada {
 	
 	public static String listarMusicasCadastradas() {
 		List<Produto> musicas = daoproduto.readAll();
-		String texto = "--- Listagem de Músicas ---";
+		String texto = "--- Listagem de Músicas --- \n";
 		for(Produto m: musicas) {
 			if(m instanceof Musica)
-				texto+= m + "\n";
+				texto+= m.getNome() + "\n";
 		}
 		return texto;
 	}
 	
 	public static String listarArtistas() {
 		List<Artista> artistas = daoartista.readAll();
-		String texto = "--- Listagem de Artistas ---";
+		String texto = "--- Listagem de Artistas --- \n";
 		for(Artista a: artistas)
-			texto+= a + "\n";
+			texto+= a.getNome() + "\n";
 		return texto;
 	}
 	
 	public static String listarGeneros() {
 		List<Genero> generos = daogenero.readAll();
-		String texto = "--- Listagem de Generos ---";
+		String texto = "--- Listagem de Generos --- \n";
 		for(Genero g: generos)
-			texto+= g + "\n";
+			texto+= g.getNome() + "\n";
 		return texto;
 	}
 	

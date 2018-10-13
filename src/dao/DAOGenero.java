@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.db4o.query.Query;
 
+import modelo.Artista;
 import modelo.Genero;
 
 public class DAOGenero extends DAO<Genero> {
@@ -13,6 +14,16 @@ public class DAOGenero extends DAO<Genero> {
 		List<Genero> resultados = q.execute();
 		if(resultados.size()>0)
 			return resultados.get(0);
+		return null;
+	}
+	
+	public List<Artista> listaArtistas(String nome) {
+		Query q = manager.query();
+		q.constrain(Genero.class);
+		q.descend("albuns").descend("artista").descend("nome").constrain(nome);
+		List<Artista> resultados = q.execute();
+		if(resultados.size()>0)
+			return resultados;
 		return null;
 	}
 }

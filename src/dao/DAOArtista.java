@@ -19,8 +19,6 @@ public class DAOArtista extends DAO<Artista> {
 		return null;
 	}
 	
-	// Consultas
-	
 }
 
 class Filtro implements Evaluation{
