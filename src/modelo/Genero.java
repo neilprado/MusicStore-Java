@@ -50,6 +50,6 @@ public class Genero implements IDInterface {
 
 	@Override
 	public String toString() {
-		return "Genero [id=" + id + ", nome=" + nome + ", albuns=" + albuns + "]";
+		return "Genero [id=" + id + ", nome=" + nome + "]";
 	}	
 }

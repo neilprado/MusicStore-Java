@@ -1,5 +1,10 @@
 /aplicacao/
 /dao/
+<<<<<<< HEAD
+=======
+/db4o-8.1.249.16099-core-java5.jar
+/db4o-8.1.249.16099-cs-java5.jar
+>>>>>>> 4ae0198767e498b5fa26f1a12660dd03a9019308
 /db4o-8.1.249.16099-cs.optional-java5.jar
 /fachada/
 /modelo/
