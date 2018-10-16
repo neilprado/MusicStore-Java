@@ -5,7 +5,6 @@ import com.db4o.query.Candidate;
 import com.db4o.query.Evaluation;
 import com.db4o.query.Query;
 
-import modelo.Album;
 import modelo.Artista;
 
 public class DAOArtista extends DAO<Artista> {
@@ -18,8 +17,18 @@ public class DAOArtista extends DAO<Artista> {
 			return resultados.get(0);
 		return null;
 	}
-	
+	public List<Artista> listaArtistasPorGenero(String genero){
+		Query q = manager.query();
+		q.constrain(Artista.class);
+		q.descend("produtos").descend("generos").descend("nome").constrain(genero);
+		List<Artista> resultados = q.execute();
+		if(resultados.size()>0)
+			return resultados;
+		return null;
+	}
 }
+
+
 
 class Filtro implements Evaluation{
 	private int n;

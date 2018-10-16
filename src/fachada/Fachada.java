@@ -32,8 +32,17 @@ public class Fachada {
 		if(a!= null)
 			throw new Exception("Álbum " + nome + " já cadastrado");
 		a = new Album(nome, preco, ano, ar, faixas);
+		if(a.getAno()<1500)
+			throw new Exception("Ano "+a.getAno()+" não permitido para cadastro");
+		if(a.getPreco()<0)
+			throw new Exception("Preço incorreto, não existe preço negativo");
+		if(a.getFaixas()<0)
+			throw new Exception("Número de faixas incorreto");
+		if(a.getNome() == null)
+			throw new Exception("Nome de produto incorreto");
+		if(a.getArtista() == null)
+			throw new Exception("Não existe álbum sem artista");
 		ar.adicionar(a);
-		//daoartista.update(ar);
 		 daoproduto.create(a);
 		DAO.commit();
 		return (Album) a;
@@ -45,9 +54,18 @@ public class Fachada {
 		if(m!=null)
 			throw new Exception("Música " + nome + " já cadastrada");
 		m = new Musica(nome, preco, ano, album, ar, duracao);
+		if(m.getPreco()<0)
+			throw new Exception("Preço incorreto, não existe preço negativo");
+		if(m.getAlbum()==null)
+			throw new Exception("Erro! Álbum não informado");
+		if(m.getNome() == null)
+			throw new Exception("Nome de produto incorreto");
+		if(m.getArtista() == null)
+			throw new Exception("Não existe música sem artista");
+		if(m.getDuracao()<60)
+			throw new Exception("Duração de música menor que o permitido");
 		ar.adicionar(m);
 		album.adicionarMusica(m);
-		//daoproduto.create(m);
 		daoartista.update(ar);
 		daoproduto.update(album);
 		DAO.commit();
@@ -60,6 +78,12 @@ public class Fachada {
 		if (a!=null)
 			throw new Exception("Artista " + nome + " já cadastrado");
 		a = new Artista(nome, nac, num);
+		if(a.getNumIntegrantes()<1)
+			throw new Exception("Não existem artistas com menos de 1 integrante");
+		if(a.getNacionalidade() == null)
+			throw new Exception("Erro!! O artista precisa ter uma nacionalidade");
+		if(a.getNome() == null)
+			throw new Exception("Erro!! O artista precisa ter um nome");
 		daoartista.create(a);
 		DAO.commit();
 		return (Artista) a;
@@ -82,6 +106,8 @@ public class Fachada {
 		if (g!=null)
 			throw new Exception("Gênero " + nome + " existente");
 		g = new Genero(nome, a);
+		if(g.getAlbuns() == a)
+			throw new Exception("Esse álbum já pertence ao gênero " + nome);
 		daogenero.create(g);
 		DAO.commit();
 		return (Genero) g;
@@ -175,7 +201,7 @@ public class Fachada {
 		String texto = "--- Listagem de Álbuns --- \n";
 		for(Produto a: albuns) {
 			if(a instanceof Album)
-				texto+= a.getNome() + ((Album) a).listarGenerosPorAlbum() + ((Album) a).listarMusicasPorAlbum() + "\n" ;
+				texto+= a.getNome() + "\n" ;
 		}
 		return texto;
 	}
@@ -220,13 +246,46 @@ public class Fachada {
 		DAO.commit();
 	}
 	
-	public static String listaArtistas (String nome) throws Exception {
-		ArrayList<Artista> artistas = daogenero.listaArtistas(nome);
-		String texto = "Listagem de artistas do gênero: " + artistas.getNome();
-		if (artistas.isEmpty())
-			texto += " Não existem artistas desse gênero";
+	public static String consultaGenerosPelaMusica (String nome) throws Exception {
+		List<Genero> generos = daogenero.listaGeneros(nome);
+		String texto = "Listagem dos gêneros do álbum: " ;
+		if (generos.isEmpty()) {
+			texto = " Não existem gêneros para esse álbum";
+		}
+		else {
+		for(Genero g: generos)
+			texto += g.getNome()+ " \n";
+		}
+		return texto;
+	}
+	
+	public static String consultaArtistasPorGenero(String nome) throws Exception{
+		List<Artista> artistas = daoartista.listaArtistasPorGenero(nome);
+		String texto = "Listagem de artistas pelo gênero " + nome + ": ";
+		if(artistas.isEmpty())
+			texto = "Não existem artistas cadastrados para esse gênero";
 		for(Artista a: artistas)
-			texto += a.getNome + " \n";
+			texto += a.getNome()+" \n";
+		return texto;
+	}
+	
+/*	public static String consultarMusicasPorGenero(String nome) throws Exception{
+		List<Musica> musicas = daoproduto.buscarMusicas(nome);
+		String texto = "Listagem de músicas pelo gênero " + nome + " :" ;
+		if(musicas.isEmpty())
+			texto = "Não existem músicas cadastradas para esse gênero";
+		for(Musica m: musicas)
+			texto+= m.getNome()+" \n";
+		return texto;
+	} */
+	
+	public static String consultaGenerosPorArtista(String nomeArtista) throws Exception{
+		List<Genero> generos = daogenero.listaGenerosPorArtista(nomeArtista);
+		String texto = "Listagem de gêneros do artista " + nomeArtista + " :";
+		if(generos.isEmpty())
+			texto = "Não existem gêneros cadastrados para o artista " + nomeArtista;
+		for(Genero g: generos)
+			texto += g.getNome()+" \n";
 		return texto;
 	}
 

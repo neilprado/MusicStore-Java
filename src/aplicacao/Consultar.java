@@ -6,7 +6,10 @@ public class Consultar {
 	public Consultar() {
 		Fachada.inicializar();
 		try {
-			//Consultas serão realizadas aqui
+			System.out.println(Fachada.consultaGenerosPelaMusica("Il Primo Bacio Sulla Luna"));
+			System.out.println(Fachada.consultaArtistasPorGenero("Pop Rock"));
+		//	System.out.println(Fachada.consultarMusicasPorGenero("Pop Rock"));
+			System.out.println(Fachada.consultaGenerosPorArtista("Cesare Cremonini"));
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
