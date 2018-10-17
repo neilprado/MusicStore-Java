@@ -37,7 +37,7 @@ public class Cadastrar {
 			a = Fachada.cadastrarArtista("Pink Floyd", "Inglaterra", 4);
 			al = Fachada.cadastrarAlbum("The Wall", 26, 1979, 26, a);
 			p = Fachada.cadastrarMusica("Another Brick in the Wall", 3.80, 1978, al, a, 201);
-			a = Fachada.cadastrarArtista("Fréderic Chopin", "Polônia", 1);
+			a = Fachada.cadastrarArtista("Frédéric Chopin", "Polônia", 1);
 			al = Fachada.cadastrarAlbum("The Best of Chopin", 28.20, 2002, 19, a);
 			p = Fachada.cadastrarMusica("Tristesse", 3.10, 1832, al, a, 358);
 			a = Fachada.cadastrarArtista("Alice in Chains", "EUA", 4);
@@ -62,7 +62,7 @@ public class Cadastrar {
 			Fachada.relacionaAlbum("Classic", "The Best of Chopin");
 			Fachada.relacionaAlbum("Rock", "The Wall");
 			
-			a = Fachada.cadastrarArtista("Cesare Cremonini", "Italia", 1);
+			a = Fachada.cadastrarArtista("J-AX", "Italia", 1);
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}

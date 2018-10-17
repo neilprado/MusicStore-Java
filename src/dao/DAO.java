@@ -10,8 +10,10 @@ import com.db4o.cs.Db4oClientServer;
 import com.db4o.cs.config.ClientConfiguration;
 import com.db4o.query.Query;
 
+import modelo.Album;
 import modelo.Artista;
 import modelo.Genero;
+import modelo.Musica;
 import modelo.Produto;
 
 public abstract class DAO<T> implements DAOInterface<T> {
@@ -37,6 +39,12 @@ public abstract class DAO<T> implements DAOInterface<T> {
 		config.common().objectClass(Genero.class).cascadeOnDelete(false);;
 		config.common().objectClass(Genero.class).cascadeOnUpdate(true);;
 		config.common().objectClass(Genero.class).cascadeOnActivate(true);
+		config.common().objectClass(Musica.class).cascadeOnDelete(false);;
+		config.common().objectClass(Musica.class).cascadeOnUpdate(true);;
+		config.common().objectClass(Musica.class).cascadeOnActivate(true);
+		config.common().objectClass(Album.class).cascadeOnDelete(false);;
+		config.common().objectClass(Album.class).cascadeOnUpdate(true);;
+		config.common().objectClass(Album.class).cascadeOnActivate(true);
 		
 		//indexacao de atributos para agilizar a busca
 		config.common().objectClass(Artista.class).objectField("nome").indexed(true);
@@ -49,17 +57,23 @@ public abstract class DAO<T> implements DAOInterface<T> {
 	public static void abrirBancoServidor() {
 		ClientConfiguration config = Db4oClientServer.newClientConfiguration();
 		config.common().messageLevel(0);
-		config.common().objectClass(Artista.class).cascadeOnDelete(true);
+		config.common().objectClass(Artista.class).cascadeOnDelete(false);
 		config.common().objectClass(Artista.class).cascadeOnUpdate(true);
 		config.common().objectClass(Artista.class).cascadeOnActivate(true);
-		config.common().objectClass(Produto.class).cascadeOnDelete(true);
+		config.common().objectClass(Produto.class).cascadeOnDelete(false);
 		config.common().objectClass(Produto.class).cascadeOnUpdate(true);
 		config.common().objectClass(Produto.class).cascadeOnActivate(true);
-		config.common().objectClass(Genero.class).cascadeOnDelete(true);
+		config.common().objectClass(Genero.class).cascadeOnDelete(false);
 		config.common().objectClass(Genero.class).cascadeOnUpdate(true);
 		config.common().objectClass(Genero.class).cascadeOnActivate(true);
+		config.common().objectClass(Musica.class).cascadeOnDelete(false);;
+		config.common().objectClass(Musica.class).cascadeOnUpdate(true);;
+		config.common().objectClass(Musica.class).cascadeOnActivate(true);
+		config.common().objectClass(Album.class).cascadeOnDelete(false);;
+		config.common().objectClass(Album.class).cascadeOnUpdate(true);;
+		config.common().objectClass(Album.class).cascadeOnActivate(true);
 		
-		manager = Db4oClientServer.openClient(config,"10.0.4.56",34000,"usuario2","senha2");	
+		manager = Db4oClientServer.openClient(config,"10.0.4.158",34000,"usuario2","senha2");	
 		//manager = Db4oClientServer.openClient(config,"localhost",34000,"usuario1","senha1");
 		IDControl.registrarManager(manager); 		// eventos para gerenciar autonumeração de id
 	}

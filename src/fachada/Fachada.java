@@ -118,6 +118,11 @@ public class Fachada {
 		Album a = (Album) daoproduto.listarPorNome(nome);
 		if (a == null)
 			throw new Exception("Álbum " + nome + " inexistente");
+		if(a.getArtista() != null) {
+			Artista ar = a.getArtista();
+			ar.remover(a);
+			daoartista.update(ar);
+		}
 		daoproduto.delete(a);
 		DAO.commit();
 		return a;
@@ -128,6 +133,11 @@ public class Fachada {
 		Musica m = (Musica) daoproduto.listarPorNome(nome);
 		if(m == null)
 			throw new Exception ("Música " + nome + " inexistente");
+		if(m.getArtista() != null) {
+			Artista a = m.getArtista();
+			a.remover(m);
+			daoartista.update(a);
+		}
 		daoproduto.delete(m);
 		DAO.commit();
 		return m;
@@ -148,6 +158,13 @@ public class Fachada {
 		Genero g = daogenero.buscaGenero(nome);
 		if (g == null)
 			throw new Exception ("Gênero " + nome + " inexistente");
+		if(g.getAlbuns() != null) {
+			ArrayList<Album> albuns = g.getAlbuns();
+			for(Album a: albuns) {
+				a.removerGenero(g);
+				daoproduto.update(a);
+			}
+		}
 		daogenero.delete(g);
 		DAO.commit();
 		return g;
@@ -246,22 +263,25 @@ public class Fachada {
 		DAO.commit();
 	}
 	
-	public static String consultaGenerosPelaMusica (String nome) throws Exception {
+	public static String consultaGenerosPeloAlbum (String nome) throws Exception {
+		Album a = (Album) daoproduto.listarPorNome(nome);
 		List<Genero> generos = daogenero.listaGeneros(nome);
 		String texto = "Listagem dos gêneros do álbum: " ;
-		if (generos.isEmpty()) {
+		if (a == null)
+			throw new Exception("Não existe esse álbum cadastrado");
+		if (generos.isEmpty())
 			texto = " Não existem gêneros para esse álbum";
-		}
-		else {
 		for(Genero g: generos)
 			texto += g.getNome()+ " \n";
-		}
 		return texto;
 	}
 	
 	public static String consultaArtistasPorGenero(String nome) throws Exception{
+		Genero g = daogenero.buscaGenero(nome);
 		List<Artista> artistas = daoartista.listaArtistasPorGenero(nome);
 		String texto = "Listagem de artistas pelo gênero " + nome + ": ";
+		if(g == null)
+			throw new Exception("Gênero não cadastrado, tente novamente!");
 		if(artistas.isEmpty())
 			texto = "Não existem artistas cadastrados para esse gênero";
 		for(Artista a: artistas)
@@ -280,8 +300,11 @@ public class Fachada {
 	} */
 	
 	public static String consultaGenerosPorArtista(String nomeArtista) throws Exception{
+		Artista a = daoartista.buscaPorNome(nomeArtista);
 		List<Genero> generos = daogenero.listaGenerosPorArtista(nomeArtista);
-		String texto = "Listagem de gêneros do artista " + nomeArtista + " :";
+		String texto = "Listagem de gêneros do artista " + nomeArtista + ": ";
+		if(a==null)
+			throw new Exception("O artista " + nomeArtista + " não existe no cadastro");
 		if(generos.isEmpty())
 			texto = "Não existem gêneros cadastrados para o artista " + nomeArtista;
 		for(Genero g: generos)
