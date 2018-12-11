@@ -1,0 +1,35 @@
+[EL Fine]: server: 2018-12-11 14:54:48.156--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2018-12-11 14:54:48.343--ServerSession(1262822392)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
+[EL Config]: metadata: 2018-12-11 14:54:48.365--ServerSession(1262822392)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
+[EL Config]: metadata: 2018-12-11 14:54:48.368--ServerSession(1262822392)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
+[EL Config]: metadata: 2018-12-11 14:54:48.383--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [produtos] is being defaulted to: PRODUTOS.
+[EL Config]: metadata: 2018-12-11 14:54:48.391--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-11 14:54:48.391--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-11 14:54:48.392--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
+[EL Config]: metadata: 2018-12-11 14:54:48.392--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
+[EL Info]: 2018-12-11 14:54:49.068--ServerSession(1262822392)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
+[EL Fine]: connection: 2018-12-11 14:54:49.188--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+[EL Config]: connection: 2018-12-11 14:54:49.197--ServerSession(1262822392)--Connection(403147759)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+	platform=>PostgreSQLPlatform
+	user name=> "postgres"
+	datasource URL=> "jdbc:postgresql://localhost:5433/musica"
+))
+[EL Config]: connection: 2018-12-11 14:54:49.228--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--Connected: jdbc:postgresql://localhost:5433/musica
+	User: postgres
+	Database: PostgreSQL  Version: 9.5.5
+	Driver: PostgreSQL Native Driver  Version: PostgreSQL 9.4 JDBC4.1 (build 1206)
+[EL Info]: connection: 2018-12-11 14:54:49.28--ServerSession(1262822392)--Thread(Thread[main,5,main])--/file:/C:/Users/IFPB/Downloads/projeto_jpa/MusicStore-Java/target/classes/_loja-eclipselink login successful
+[EL Fine]: sql: 2018-12-11 14:54:49.344--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--CREATE TABLE ARTISTA (ID  SERIAL NOT NULL, NACIONALIDADE VARCHAR(255), NOME VARCHAR(255), NUMINTEGRANTES INTEGER, PRODUTOS BYTEA, PRIMARY KEY (ID))
+[EL Fine]: sql: 2018-12-11 14:54:49.719--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS FROM ARTISTA WHERE (NOME = ?)
+	bind => [Cesare Cremonini]
+[EL Fine]: sql: 2018-12-11 14:54:49.74--ClientSession(1620823990)--Connection(2040467681)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS) VALUES (?, ?, ?, ?)
+	bind => [Italia, Cesare Cremonini, 1, [B@3fce8fd9]
+[EL Fine]: sql: 2018-12-11 14:54:49.743--ClientSession(1620823990)--Connection(2040467681)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-11 14:54:49.762--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS FROM ARTISTA WHERE (NOME = ?)
+	bind => [J-AX]
+[EL Fine]: sql: 2018-12-11 14:54:49.764--ClientSession(1720891078)--Connection(2040467681)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS) VALUES (?, ?, ?, ?)
+	bind => [Italia, J-AX, 1, [B@5456afaa]
+[EL Fine]: sql: 2018-12-11 14:54:49.765--ClientSession(1720891078)--Connection(2040467681)--Thread(Thread[main,5,main])--select lastval()
+[EL Config]: connection: 2018-12-11 14:54:49.768--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--disconnect
+[EL Info]: connection: 2018-12-11 14:54:49.769--ServerSession(1262822392)--Thread(Thread[main,5,main])--/file:/C:/Users/IFPB/Downloads/projeto_jpa/MusicStore-Java/target/classes/_loja-eclipselink logout successful
+[EL Config]: connection: 2018-12-11 14:54:49.769--ServerSession(1262822392)--Connection(403147759)--Thread(Thread[main,5,main])--disconnect

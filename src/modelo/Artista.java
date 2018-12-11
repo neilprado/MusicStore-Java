@@ -1,8 +1,17 @@
 package modelo;
 import java.util.ArrayList;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import dao.IDInterface;
 
+@Entity
 public class Artista implements Comparable<Artista>, IDInterface {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private String nacionalidade;
@@ -13,6 +22,10 @@ public class Artista implements Comparable<Artista>, IDInterface {
 		this.nome = nome;
 		this.nacionalidade = nac;
 		this.numIntegrantes = num;
+	}
+	
+	public Artista() {
+		
 	}
 	
 	public void adicionar(Produto p) {

@@ -2,10 +2,7 @@ package fachada;
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.DAO;
-import dao.DAOArtista;
-import dao.DAOGenero;
-import dao.DAOProduto;
+import daojpa.*;
 import modelo.Album;
 import modelo.Artista;
 import modelo.Genero;
@@ -26,7 +23,7 @@ public class Fachada {
 	}
 	
 	//Cadastros (CREATIONS)
-	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas, Artista ar) throws Exception {
+/*	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas, Artista ar) throws Exception {
 		DAO.begin();
 		Album a = (Album) daoproduto.listarPorNome(nome);
 		if(a!= null)
@@ -70,7 +67,7 @@ public class Fachada {
 		daoproduto.update(album);
 		DAO.commit();
 		return (Musica) m;
-	}
+	} */
 	
 	public static Artista cadastrarArtista(String nome, String nac, int num) throws Exception {
 		DAO.begin();
@@ -87,7 +84,7 @@ public class Fachada {
 		daoartista.create(a);
 		DAO.commit();
 		return (Artista) a;
-	}
+	}/*
 	
 	public static Genero cadastrarGenero(String nome) throws Exception{
 		DAO.begin();
@@ -289,7 +286,7 @@ public class Fachada {
 		return texto;
 	}
 	
-/*	public static String consultarMusicasPorGenero(String nome) throws Exception{
+	public static String consultarMusicasPorGenero(String nome) throws Exception{
 		List<Musica> musicas = daoproduto.buscarMusicas(nome);
 		String texto = "Listagem de músicas pelo gênero " + nome + " :" ;
 		if(musicas.isEmpty())
@@ -297,7 +294,7 @@ public class Fachada {
 		for(Musica m: musicas)
 			texto+= m.getNome()+" \n";
 		return texto;
-	} */
+	}
 	
 	public static String consultaGenerosPorArtista(String nomeArtista) throws Exception{
 		Artista a = daoartista.buscaPorNome(nomeArtista);
@@ -311,5 +308,5 @@ public class Fachada {
 			texto += g.getNome()+" \n";
 		return texto;
 	}
-
+*/
 }
