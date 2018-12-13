@@ -1,11 +1,22 @@
 package modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 import dao.IDInterface;
 
+@Entity
 public abstract class Produto implements IDInterface {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String nome;
 	private double preco;
+	
+	@ManyToOne
 	private Artista artista;
 	private int ano;
 	
@@ -15,6 +26,8 @@ public abstract class Produto implements IDInterface {
 		this.ano = ano;
 		this.artista = a;
 	}
+	
+	public Produto() {}
 	
 	public int getId() {
 		return id;

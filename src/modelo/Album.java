@@ -2,16 +2,31 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Album extends Produto implements Comparable<Album> {
 	
 	private int faixas;
+	@OneToMany(mappedBy="album")
 	private ArrayList<Musica> musicas = new ArrayList<>();
+	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	@JoinTable(name="albuns_generos", joinColumns= {@JoinColumn(name="FK_ALBUM_ID")},
+	inverseJoinColumns= {@JoinColumn(name="FK_GENERO_ID")})
 	private ArrayList<Genero> generos = new ArrayList<>();
 	
 	public Album(String n, double p, int a, Artista ar, int f) {
 		super(n,p,a, ar);
 		this.faixas = f;
 	}
+	
+	public Album() {}
 	
 	public void adicionarMusica(Musica m) {
 		m.setAlbum(this);

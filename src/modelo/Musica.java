@@ -1,7 +1,10 @@
 package modelo;
+import javax.persistence.ManyToOne;
+
 public class Musica extends Produto implements Comparable<Musica> {
 
 	private String url;
+	@ManyToOne
 	private Album album;
 	private int duracao;
 	
@@ -10,6 +13,8 @@ public class Musica extends Produto implements Comparable<Musica> {
 		this.album = a;
 		this.duracao = d;
 	}
+	
+	public Musica() {}
 
 	public String getUrl() {
 		return url;

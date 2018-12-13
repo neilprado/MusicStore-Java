@@ -1,23 +1,18 @@
 package daojpa;
 
-import java.util.List;
-
-import com.db4o.query.Query;
-
-import modelo.Genero;
-import modelo.Musica;
+import javax.persistence.NoResultException;
+import javax.persistence.Query;
 import modelo.Produto;
 
 public class DAOProduto extends DAO<Produto> {
-	/*
+	
 	public Produto listarPorNome(String nome) {
-		Query q = manager.query();
-		q.constrain(Produto.class);
-		q.descend("nome").constrain(nome);
-		List<Produto> resultado = q.execute();
-		if(resultado.size() > 0)
-			return resultado.get(0);
-		return null;
+		try {
+			Query q = manager.createQuery("select p from Produto p where p.nome='" + nome + "'");
+			return (Produto) q.getSingleResult();
+		}catch(NoResultException e){
+			return null;
+		}
 	}
 	
 /*	public List<Musica> buscarMusicas(String genero){

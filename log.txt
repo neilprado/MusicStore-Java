@@ -1,35 +1,35 @@
-[EL Fine]: server: 2018-12-11 14:54:48.156--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2018-12-11 14:54:48.343--ServerSession(1262822392)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
-[EL Config]: metadata: 2018-12-11 14:54:48.365--ServerSession(1262822392)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
-[EL Config]: metadata: 2018-12-11 14:54:48.368--ServerSession(1262822392)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
-[EL Config]: metadata: 2018-12-11 14:54:48.383--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [produtos] is being defaulted to: PRODUTOS.
-[EL Config]: metadata: 2018-12-11 14:54:48.391--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-12-11 14:54:48.391--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-12-11 14:54:48.392--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
-[EL Config]: metadata: 2018-12-11 14:54:48.392--ServerSession(1262822392)--Thread(Thread[main,5,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
-[EL Info]: 2018-12-11 14:54:49.068--ServerSession(1262822392)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
-[EL Fine]: connection: 2018-12-11 14:54:49.188--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
-[EL Config]: connection: 2018-12-11 14:54:49.197--ServerSession(1262822392)--Connection(403147759)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
-	platform=>PostgreSQLPlatform
-	user name=> "postgres"
-	datasource URL=> "jdbc:postgresql://localhost:5433/musica"
-))
-[EL Config]: connection: 2018-12-11 14:54:49.228--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--Connected: jdbc:postgresql://localhost:5433/musica
-	User: postgres
-	Database: PostgreSQL  Version: 9.5.5
-	Driver: PostgreSQL Native Driver  Version: PostgreSQL 9.4 JDBC4.1 (build 1206)
-[EL Info]: connection: 2018-12-11 14:54:49.28--ServerSession(1262822392)--Thread(Thread[main,5,main])--/file:/C:/Users/IFPB/Downloads/projeto_jpa/MusicStore-Java/target/classes/_loja-eclipselink login successful
-[EL Fine]: sql: 2018-12-11 14:54:49.344--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--CREATE TABLE ARTISTA (ID  SERIAL NOT NULL, NACIONALIDADE VARCHAR(255), NOME VARCHAR(255), NUMINTEGRANTES INTEGER, PRODUTOS BYTEA, PRIMARY KEY (ID))
-[EL Fine]: sql: 2018-12-11 14:54:49.719--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS FROM ARTISTA WHERE (NOME = ?)
-	bind => [Cesare Cremonini]
-[EL Fine]: sql: 2018-12-11 14:54:49.74--ClientSession(1620823990)--Connection(2040467681)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS) VALUES (?, ?, ?, ?)
-	bind => [Italia, Cesare Cremonini, 1, [B@3fce8fd9]
-[EL Fine]: sql: 2018-12-11 14:54:49.743--ClientSession(1620823990)--Connection(2040467681)--Thread(Thread[main,5,main])--select lastval()
-[EL Fine]: sql: 2018-12-11 14:54:49.762--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS FROM ARTISTA WHERE (NOME = ?)
-	bind => [J-AX]
-[EL Fine]: sql: 2018-12-11 14:54:49.764--ClientSession(1720891078)--Connection(2040467681)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES, PRODUTOS) VALUES (?, ?, ?, ?)
-	bind => [Italia, J-AX, 1, [B@5456afaa]
-[EL Fine]: sql: 2018-12-11 14:54:49.765--ClientSession(1720891078)--Connection(2040467681)--Thread(Thread[main,5,main])--select lastval()
-[EL Config]: connection: 2018-12-11 14:54:49.768--ServerSession(1262822392)--Connection(2040467681)--Thread(Thread[main,5,main])--disconnect
-[EL Info]: connection: 2018-12-11 14:54:49.769--ServerSession(1262822392)--Thread(Thread[main,5,main])--/file:/C:/Users/IFPB/Downloads/projeto_jpa/MusicStore-Java/target/classes/_loja-eclipselink logout successful
-[EL Config]: connection: 2018-12-11 14:54:49.769--ServerSession(1262822392)--Connection(403147759)--Thread(Thread[main,5,main])--disconnect
+[EL Fine]: server: 2018-12-13 14:58:02.734--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2018-12-13 14:58:02.911--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Genero] is set to [FIELD].
+[EL Config]: metadata: 2018-12-13 14:58:02.949--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field albuns] is being defaulted to: class modelo.Album.
+[EL Config]: metadata: 2018-12-13 14:58:02.957--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Produto] is set to [FIELD].
+[EL Config]: metadata: 2018-12-13 14:58:02.959--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2018-12-13 14:58:02.96--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Album] is set to [FIELD].
+[EL Config]: metadata: 2018-12-13 14:58:02.961--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field musicas] is being defaulted to: class modelo.Musica.
+[EL Config]: metadata: 2018-12-13 14:58:02.964--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field generos] is being defaulted to: class modelo.Genero.
+[EL Config]: metadata: 2018-12-13 14:58:02.964--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
+[EL Config]: metadata: 2018-12-13 14:58:02.964--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field produtos] is being defaulted to: class modelo.Produto.
+[EL Config]: metadata: 2018-12-13 14:58:02.965--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Genero] is being defaulted to: Genero.
+[EL Config]: metadata: 2018-12-13 14:58:02.966--ServerSession(1864350231)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Genero] is being defaulted to: GENERO.
+[EL Config]: metadata: 2018-12-13 14:58:02.981--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-13 14:58:02.982--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-13 14:58:02.982--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Album] is being defaulted to: Album.
+[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Produto] is being defaulted to: Produto.
+[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Produto] is being defaulted to: PRODUTO.
+[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2018-12-13 14:58:02.984--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-13 14:58:02.984--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-13 14:58:02.986--ServerSession(1864350231)--Thread(Thread[main,5,main])--The discriminator column name for the root inheritance class [modelo.Produto] is being defaulted to: DTYPE.
+[EL Config]: metadata: 2018-12-13 14:58:02.988--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [faixas] is being defaulted to: FAIXAS.
+[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
+[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
+[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-13 14:58:02.99--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
+[EL Config]: metadata: 2018-12-13 14:58:02.99--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
+[EL Config]: metadata: 2018-12-13 14:58:03.003--ServerSession(1864350231)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-13 14:58:03.003--ServerSession(1864350231)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Warning]: metadata: 2018-12-13 14:58:03.02--ServerSession(1864350231)--Thread(Thread[main,5,main])--Element [field generos] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Config]: metadata: 2018-12-13 14:58:03.021--ServerSession(1864350231)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-13 14:58:03.022--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
+[EL Warning]: metadata: 2018-12-13 14:58:03.022--ServerSession(1864350231)--Thread(Thread[main,5,main])--Element [field albuns] within entity class [class modelo.Genero] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.

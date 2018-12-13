@@ -18,7 +18,9 @@ public class Cadastrar {
 		try {
 			System.out.println("Cadastrando...");
 			a = Fachada.cadastrarArtista("Cesare Cremonini", "Italia", 1);
-			/*al = Fachada.cadastrarAlbum("Più Che Logico", 22.90, 2017, 13, a);
+			al = Fachada.cadastrarAlbum("Più Che Logico", 22.90, 2017, 13, a);
+			g = Fachada.cadastrarGenero("Pop Rock");
+			Fachada.relacionaAlbum("Pop Rock", "Più Che Logico");
 			p = Fachada.cadastrarMusica("Logico #1", 3.60, 2013, al, a, 251);
 			p = Fachada.cadastrarMusica("Mondo", 3.50, 2009, al, a, 443);
 			p = Fachada.cadastrarMusica("Il Comico", 3.40, 2005, al, a, 353);
@@ -49,18 +51,18 @@ public class Cadastrar {
 			p = Fachada.cadastrarMusica("On Ira", 3.10, 2012, al, a, 180);
 			p = Fachada.cadastrarMusica("Sous le ciel de Paris", 3.20, 2009, al, a, 196);
 			p = Fachada.cadastrarMusica("Toujours", 3.40, 2013, al, a, 191);
-			g = Fachada.cadastrarGenero("Pop Rock");
+			
 			g = Fachada.cadastrarGenero("Pop");
 			g = Fachada.cadastrarGenero("Heavy Metal");
 			g = Fachada.cadastrarGenero("Hip Hop");
 			g = Fachada.cadastrarGenero("Classic");
 			g = Fachada.cadastrarGenero("Rock");
-			Fachada.relacionaAlbum("Pop Rock", "Il Primo Bacio Sulla Luna");
+			
 			Fachada.relacionaAlbum("Pop", "Il Primo Bacio Sulla Luna");
 			Fachada.relacionaAlbum("Hip Hop", "Cheese");
 			Fachada.relacionaAlbum("Pop", "Recto Verso");
 			Fachada.relacionaAlbum("Classic", "The Best of Chopin");
-			Fachada.relacionaAlbum("Rock", "The Wall");*/
+			Fachada.relacionaAlbum("Rock", "The Wall");
 			
 			a = Fachada.cadastrarArtista("J-AX", "Italia", 1);
 		}catch(Exception e) {

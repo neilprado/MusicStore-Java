@@ -23,7 +23,7 @@ public class Fachada {
 	}
 	
 	//Cadastros (CREATIONS)
-/*	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas, Artista ar) throws Exception {
+	public static Album cadastrarAlbum(String nome, double preco, int ano, int faixas, Artista ar) throws Exception {
 		DAO.begin();
 		Album a = (Album) daoproduto.listarPorNome(nome);
 		if(a!= null)
@@ -44,7 +44,7 @@ public class Fachada {
 		DAO.commit();
 		return (Album) a;
 	}
-	
+		
 	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, Artista ar, int duracao) throws Exception {
 		DAO.begin();
 		Musica m = (Musica) daoproduto.listarPorNome(nome);
@@ -67,7 +67,7 @@ public class Fachada {
 		daoproduto.update(album);
 		DAO.commit();
 		return (Musica) m;
-	} */
+	}
 	
 	public static Artista cadastrarArtista(String nome, String nac, int num) throws Exception {
 		DAO.begin();
@@ -84,7 +84,7 @@ public class Fachada {
 		daoartista.create(a);
 		DAO.commit();
 		return (Artista) a;
-	}/*
+	}
 	
 	public static Genero cadastrarGenero(String nome) throws Exception{
 		DAO.begin();
@@ -96,7 +96,7 @@ public class Fachada {
 		DAO.commit();
 		return (Genero) g;
 	}
-	
+	/*
 	public static Genero cadastrarGenero(String nome, ArrayList<Album> a) throws Exception{
 		DAO.begin();
 		Genero g = daogenero.buscaGenero(nome);
@@ -245,7 +245,7 @@ public class Fachada {
 			texto+= g.getNome() + "\n";
 		return texto;
 	}
-	
+*/
 	// MÉTODOS PERSONALIZADOS
 	public static void  relacionaAlbum (String nome, String album) throws Exception {
 		DAO.begin();
@@ -259,7 +259,7 @@ public class Fachada {
 		daogenero.update(g);
 		DAO.commit();
 	}
-	
+/*	
 	public static String consultaGenerosPeloAlbum (String nome) throws Exception {
 		Album a = (Album) daoproduto.listarPorNome(nome);
 		List<Genero> generos = daogenero.listaGeneros(nome);

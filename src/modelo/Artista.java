@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import dao.IDInterface;
 
@@ -16,6 +17,7 @@ public class Artista implements Comparable<Artista>, IDInterface {
 	private String nome;
 	private String nacionalidade;
 	private int numIntegrantes;
+	@OneToMany(mappedBy="artista")
 	private ArrayList<Produto> produtos = new ArrayList<>();
 	
 	public Artista(String nome, String nac, int num) {
@@ -24,9 +26,7 @@ public class Artista implements Comparable<Artista>, IDInterface {
 		this.numIntegrantes = num;
 	}
 	
-	public Artista() {
-		
-	}
+	public Artista() {}
 	
 	public void adicionar(Produto p) {
 		produtos.add(p);
