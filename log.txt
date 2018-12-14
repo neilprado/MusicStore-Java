@@ -1,35 +1,449 @@
-[EL Fine]: server: 2018-12-13 14:58:02.734--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2018-12-13 14:58:02.911--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Genero] is set to [FIELD].
-[EL Config]: metadata: 2018-12-13 14:58:02.949--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field albuns] is being defaulted to: class modelo.Album.
-[EL Config]: metadata: 2018-12-13 14:58:02.957--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Produto] is set to [FIELD].
-[EL Config]: metadata: 2018-12-13 14:58:02.959--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
-[EL Config]: metadata: 2018-12-13 14:58:02.96--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Album] is set to [FIELD].
-[EL Config]: metadata: 2018-12-13 14:58:02.961--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field musicas] is being defaulted to: class modelo.Musica.
-[EL Config]: metadata: 2018-12-13 14:58:02.964--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field generos] is being defaulted to: class modelo.Genero.
-[EL Config]: metadata: 2018-12-13 14:58:02.964--ServerSession(1864350231)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
-[EL Config]: metadata: 2018-12-13 14:58:02.964--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field produtos] is being defaulted to: class modelo.Produto.
-[EL Config]: metadata: 2018-12-13 14:58:02.965--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Genero] is being defaulted to: Genero.
-[EL Config]: metadata: 2018-12-13 14:58:02.966--ServerSession(1864350231)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Genero] is being defaulted to: GENERO.
-[EL Config]: metadata: 2018-12-13 14:58:02.981--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-12-13 14:58:02.982--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-12-13 14:58:02.982--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Album] is being defaulted to: Album.
-[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Produto] is being defaulted to: Produto.
-[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Produto] is being defaulted to: PRODUTO.
-[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
-[EL Config]: metadata: 2018-12-13 14:58:02.983--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [ano] is being defaulted to: ANO.
-[EL Config]: metadata: 2018-12-13 14:58:02.984--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-12-13 14:58:02.984--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-12-13 14:58:02.986--ServerSession(1864350231)--Thread(Thread[main,5,main])--The discriminator column name for the root inheritance class [modelo.Produto] is being defaulted to: DTYPE.
-[EL Config]: metadata: 2018-12-13 14:58:02.988--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [faixas] is being defaulted to: FAIXAS.
-[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
-[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
-[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2018-12-13 14:58:02.989--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2018-12-13 14:58:02.99--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
-[EL Config]: metadata: 2018-12-13 14:58:02.99--ServerSession(1864350231)--Thread(Thread[main,5,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
-[EL Config]: metadata: 2018-12-13 14:58:03.003--ServerSession(1864350231)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
-[EL Config]: metadata: 2018-12-13 14:58:03.003--ServerSession(1864350231)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
-[EL Warning]: metadata: 2018-12-13 14:58:03.02--ServerSession(1864350231)--Thread(Thread[main,5,main])--Element [field generos] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
-[EL Config]: metadata: 2018-12-13 14:58:03.021--ServerSession(1864350231)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
-[EL Config]: metadata: 2018-12-13 14:58:03.022--ServerSession(1864350231)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
-[EL Warning]: metadata: 2018-12-13 14:58:03.022--ServerSession(1864350231)--Thread(Thread[main,5,main])--Element [field albuns] within entity class [class modelo.Genero] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Fine]: server: 2018-12-14 14:37:49.135--Thread(Thread[main,5,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2018-12-14 14:37:49.321--ServerSession(152134087)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Genero] is set to [FIELD].
+[EL Config]: metadata: 2018-12-14 14:37:49.349--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field albuns] is being defaulted to: class modelo.Album.
+[EL Config]: metadata: 2018-12-14 14:37:49.357--ServerSession(152134087)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Produto] is set to [FIELD].
+[EL Config]: metadata: 2018-12-14 14:37:49.359--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2018-12-14 14:37:49.36--ServerSession(152134087)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Album] is set to [FIELD].
+[EL Config]: metadata: 2018-12-14 14:37:49.361--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field musicas] is being defaulted to: class modelo.Musica.
+[EL Config]: metadata: 2018-12-14 14:37:49.365--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to many mapping element [field generos] is being defaulted to: class modelo.Genero.
+[EL Config]: metadata: 2018-12-14 14:37:49.366--ServerSession(152134087)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Musica] is set to [FIELD].
+[EL Config]: metadata: 2018-12-14 14:37:49.366--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field album] is being defaulted to: class modelo.Album.
+[EL Config]: metadata: 2018-12-14 14:37:49.367--ServerSession(152134087)--Thread(Thread[main,5,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
+[EL Config]: metadata: 2018-12-14 14:37:49.367--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the one to many mapping element [field produtos] is being defaulted to: class modelo.Produto.
+[EL Config]: metadata: 2018-12-14 14:37:49.368--ServerSession(152134087)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Genero] is being defaulted to: Genero.
+[EL Config]: metadata: 2018-12-14 14:37:49.37--ServerSession(152134087)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Genero] is being defaulted to: GENERO.
+[EL Config]: metadata: 2018-12-14 14:37:49.401--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-14 14:37:49.402--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.402--ServerSession(152134087)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Album] is being defaulted to: Album.
+[EL Config]: metadata: 2018-12-14 14:37:49.403--ServerSession(152134087)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Produto] is being defaulted to: Produto.
+[EL Config]: metadata: 2018-12-14 14:37:49.403--ServerSession(152134087)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Produto] is being defaulted to: PRODUTO.
+[EL Config]: metadata: 2018-12-14 14:37:49.404--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2018-12-14 14:37:49.404--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2018-12-14 14:37:49.405--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-14 14:37:49.405--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.405--ServerSession(152134087)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Album] is being defaulted to: ALBUM.
+[EL Config]: metadata: 2018-12-14 14:37:49.406--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2018-12-14 14:37:49.407--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2018-12-14 14:37:49.408--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2018-12-14 14:37:49.408--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [faixas] is being defaulted to: FAIXAS.
+[EL Config]: metadata: 2018-12-14 14:37:49.408--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-14 14:37:49.408--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.408--ServerSession(152134087)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Musica] is being defaulted to: Musica.
+[EL Config]: metadata: 2018-12-14 14:37:49.409--ServerSession(152134087)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Musica] is being defaulted to: MUSICA.
+[EL Config]: metadata: 2018-12-14 14:37:49.409--ServerSession(152134087)--Thread(Thread[main,5,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2018-12-14 14:37:49.41--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2018-12-14 14:37:49.41--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2018-12-14 14:37:49.41--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-14 14:37:49.41--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [duracao] is being defaulted to: DURACAO.
+[EL Config]: metadata: 2018-12-14 14:37:49.41--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.411--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [url] is being defaulted to: URL.
+[EL Config]: metadata: 2018-12-14 14:37:49.411--ServerSession(152134087)--Thread(Thread[main,5,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
+[EL Config]: metadata: 2018-12-14 14:37:49.412--ServerSession(152134087)--Thread(Thread[main,5,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
+[EL Config]: metadata: 2018-12-14 14:37:49.412--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2018-12-14 14:37:49.412--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.412--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
+[EL Config]: metadata: 2018-12-14 14:37:49.413--ServerSession(152134087)--Thread(Thread[main,5,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
+[EL Config]: metadata: 2018-12-14 14:37:49.427--ServerSession(152134087)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.427--ServerSession(152134087)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.428--ServerSession(152134087)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.428--ServerSession(152134087)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Warning]: metadata: 2018-12-14 14:37:49.444--ServerSession(152134087)--Thread(Thread[main,5,main])--Element [field generos] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Config]: metadata: 2018-12-14 14:37:49.445--ServerSession(152134087)--Thread(Thread[main,5,main])--The source primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.445--ServerSession(152134087)--Thread(Thread[main,5,main])--The target primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.446--ServerSession(152134087)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.446--ServerSession(152134087)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.446--ServerSession(152134087)--Thread(Thread[main,5,main])--The primary key column name for the mapping element [field album] is being defaulted to: ID.
+[EL Config]: metadata: 2018-12-14 14:37:49.446--ServerSession(152134087)--Thread(Thread[main,5,main])--The foreign key column name for the mapping element [album] is being defaulted to: ALBUM_ID.
+[EL Warning]: metadata: 2018-12-14 14:37:49.447--ServerSession(152134087)--Thread(Thread[main,5,main])--Element [field albuns] within entity class [class modelo.Genero] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Warning]: metadata: 2018-12-14 14:37:49.45--ServerSession(152134087)--Thread(Thread[main,5,main])--Element [field musicas] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Warning]: metadata: 2018-12-14 14:37:49.451--ServerSession(152134087)--Thread(Thread[main,5,main])--Element [field produtos] within entity class [class modelo.Artista] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Info]: 2018-12-14 14:37:50.058--ServerSession(152134087)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
+[EL Fine]: connection: 2018-12-14 14:37:50.2--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+[EL Config]: connection: 2018-12-14 14:37:50.209--ServerSession(152134087)--Connection(2044903525)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+	platform=>PostgreSQLPlatform
+	user name=> "postgres"
+	datasource URL=> "jdbc:postgresql://localhost:5432/musica"
+))
+[EL Config]: connection: 2018-12-14 14:37:50.249--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--Connected: jdbc:postgresql://localhost:5432/musica
+	User: postgres
+	Database: PostgreSQL  Version: 9.4.1
+	Driver: PostgreSQL Native Driver  Version: PostgreSQL 9.4 JDBC4.1 (build 1206)
+[EL Warning]: metadata: 2018-12-14 14:37:50.26--ServerSession(152134087)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [produtos] for the entity class [class modelo.Artista] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2018-12-14 14:37:50.26--ServerSession(152134087)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [albuns] for the entity class [class modelo.Genero] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2018-12-14 14:37:50.261--ServerSession(152134087)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [generos] for the entity class [class modelo.Album] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2018-12-14 14:37:50.261--ServerSession(152134087)--Thread(Thread[main,5,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [musicas] for the entity class [class modelo.Album] since weaving was not enabled or did not occur.
+[EL Info]: connection: 2018-12-14 14:37:50.302--ServerSession(152134087)--Thread(Thread[main,5,main])--/file:/Z:/20171370045/Downloads/projeto/MusicStore-Java/target/classes/_loja-eclipselink login successful
+[EL Fine]: sql: 2018-12-14 14:37:50.362--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--CREATE TABLE MUSICA (ID  SERIAL NOT NULL, ANO INTEGER, DURACAO INTEGER, NOME VARCHAR(255), PRECO FLOAT, URL VARCHAR(255), ALBUM_ID INTEGER, ARTISTA_ID INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2018-12-14 14:37:50.436--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--CREATE TABLE GENERO (ID  SERIAL NOT NULL, NOME VARCHAR(255), PRIMARY KEY (ID))
+[EL Fine]: sql: 2018-12-14 14:37:50.467--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--CREATE TABLE ALBUM (ID  SERIAL NOT NULL, ANO INTEGER, FAIXAS INTEGER, NOME VARCHAR(255), PRECO FLOAT, ARTISTA_ID INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2018-12-14 14:37:50.507--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--CREATE TABLE ARTISTA (ID  SERIAL NOT NULL, NACIONALIDADE VARCHAR(255), NOME VARCHAR(255), NUMINTEGRANTES INTEGER, PRIMARY KEY (ID))
+[EL Fine]: sql: 2018-12-14 14:37:50.546--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--CREATE TABLE albuns_generos (FK_GENERO_ID INTEGER NOT NULL, FK_ALBUM_ID INTEGER NOT NULL, PRIMARY KEY (FK_GENERO_ID, FK_ALBUM_ID))
+[EL Fine]: sql: 2018-12-14 14:37:50.565--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--CREATE TABLE PRODUTO (ARTISTA_ID INTEGER)
+[EL Fine]: sql: 2018-12-14 14:37:50.569--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--ALTER TABLE MUSICA ADD CONSTRAINT FK_MUSICA_ALBUM_ID FOREIGN KEY (ALBUM_ID) REFERENCES ALBUM (ID)
+[EL Fine]: sql: 2018-12-14 14:37:50.573--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--ALTER TABLE MUSICA ADD CONSTRAINT FK_MUSICA_ARTISTA_ID FOREIGN KEY (ARTISTA_ID) REFERENCES ARTISTA (ID)
+[EL Fine]: sql: 2018-12-14 14:37:50.577--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--ALTER TABLE ALBUM ADD CONSTRAINT FK_ALBUM_ARTISTA_ID FOREIGN KEY (ARTISTA_ID) REFERENCES ARTISTA (ID)
+[EL Fine]: sql: 2018-12-14 14:37:50.605--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--ALTER TABLE albuns_generos ADD CONSTRAINT FK_albuns_generos_FK_GENERO_ID FOREIGN KEY (FK_GENERO_ID) REFERENCES GENERO (ID)
+[EL Fine]: sql: 2018-12-14 14:37:50.607--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--ALTER TABLE albuns_generos ADD CONSTRAINT FK_albuns_generos_FK_ALBUM_ID FOREIGN KEY (FK_ALBUM_ID) REFERENCES ALBUM (ID)
+[EL Fine]: sql: 2018-12-14 14:37:50.611--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--ALTER TABLE PRODUTO ADD CONSTRAINT FK_PRODUTO_ARTISTA_ID FOREIGN KEY (ARTISTA_ID) REFERENCES ARTISTA (ID)
+[EL Fine]: sql: 2018-12-14 14:37:50.877--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Cesare Cremonini]
+[EL Fine]: sql: 2018-12-14 14:37:50.939--ClientSession(457247584)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [Italia, Cesare Cremonini, 1]
+[EL Fine]: sql: 2018-12-14 14:37:50.942--ClientSession(457247584)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:50.959--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Più Che Logico]
+[EL Fine]: sql: 2018-12-14 14:37:50.962--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Più Che Logico]
+[EL Fine]: sql: 2018-12-14 14:37:50.964--ClientSession(1842853283)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [2017, 13, Più Che Logico, 22.9, 1]
+[EL Fine]: sql: 2018-12-14 14:37:50.966--ClientSession(1842853283)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:50.97--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Pop Rock]
+[EL Fine]: sql: 2018-12-14 14:37:50.971--ClientSession(570794077)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO GENERO (NOME) VALUES (?)
+	bind => [Pop Rock]
+[EL Fine]: sql: 2018-12-14 14:37:50.973--ClientSession(570794077)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:50.981--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Pop Rock]
+[EL Fine]: sql: 2018-12-14 14:37:50.984--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Più Che Logico]
+[EL Fine]: sql: 2018-12-14 14:37:50.986--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Più Che Logico]
+[EL Fine]: sql: 2018-12-14 14:37:50.989--ClientSession(932257672)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO albuns_generos (FK_GENERO_ID, FK_ALBUM_ID) VALUES (?, ?)
+	bind => [1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:50.994--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Logico #1]
+[EL Fine]: sql: 2018-12-14 14:37:50.995--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Logico #1]
+[EL Fine]: sql: 2018-12-14 14:37:50.999--ClientSession(1241569743)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 251, Logico #1, 3.6, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.001--ClientSession(1241569743)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.002--ClientSession(1241569743)--Connection(982757413)--Thread(Thread[main,5,main])--DELETE FROM albuns_generos WHERE ((FK_GENERO_ID = ?) AND (FK_ALBUM_ID = ?))
+	bind => [1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.007--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Mondo]
+[EL Fine]: sql: 2018-12-14 14:37:51.008--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Mondo]
+[EL Fine]: sql: 2018-12-14 14:37:51.01--ClientSession(528591360)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 443, Mondo, 3.5, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.012--ClientSession(528591360)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.013--ClientSession(528591360)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 251, Logico #1, 3.6, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.014--ClientSession(528591360)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.017--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Il Comico]
+[EL Fine]: sql: 2018-12-14 14:37:51.018--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Il Comico]
+[EL Fine]: sql: 2018-12-14 14:37:51.021--ClientSession(1168924571)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2005, 353, Il Comico, 3.4, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.023--ClientSession(1168924571)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.023--ClientSession(1168924571)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 251, Logico #1, 3.6, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.024--ClientSession(1168924571)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.025--ClientSession(1168924571)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 443, Mondo, 3.5, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.026--ClientSession(1168924571)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.032--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Il Primo Bacio Sulla Luna]
+[EL Fine]: sql: 2018-12-14 14:37:51.033--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Il Primo Bacio Sulla Luna]
+[EL Fine]: sql: 2018-12-14 14:37:51.034--ClientSession(1872973138)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [2008, 15, Il Primo Bacio Sulla Luna, 18.2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.035--ClientSession(1872973138)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.04--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Dicono di me]
+[EL Fine]: sql: 2018-12-14 14:37:51.041--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Dicono di me]
+[EL Fine]: sql: 2018-12-14 14:37:51.044--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 251, Logico #1, 3.6, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.045--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.046--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2010, 230, Dicono di me, 3.1, null, 2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.047--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.048--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2005, 353, Il Comico, 3.4, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.048--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.049--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 443, Mondo, 3.5, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.049--ClientSession(817686795)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.057--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Le Sei e Ventisei]
+[EL Fine]: sql: 2018-12-14 14:37:51.058--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Le Sei e Ventisei]
+[EL Fine]: sql: 2018-12-14 14:37:51.063--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2010, 288, Le Sei e Ventisei, 2.1, null, 2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.064--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.064--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 443, Mondo, 3.5, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.065--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.066--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 251, Logico #1, 3.6, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.066--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.067--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2010, 230, Dicono di me, 3.1, null, 2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.068--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.068--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2005, 353, Il Comico, 3.4, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.069--ClientSession(999230073)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.072--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Il Pagliaccio]
+[EL Fine]: sql: 2018-12-14 14:37:51.074--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Il Pagliaccio]
+[EL Fine]: sql: 2018-12-14 14:37:51.077--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 443, Mondo, 3.5, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.077--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.078--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2010, 288, Le Sei e Ventisei, 2.1, null, 2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.079--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.079--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 251, Logico #1, 3.6, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.08--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.081--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2010, 230, Dicono di me, 3.1, null, 2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.082--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.082--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2005, 353, Il Comico, 3.4, null, 1, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.083--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.084--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2008, 321, Il Pagliaccio, 3.6, null, 2, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.085--ClientSession(1667305539)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.088--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Iron Maiden]
+[EL Fine]: sql: 2018-12-14 14:37:51.089--ClientSession(1360215046)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [EUA, Iron Maiden, 6]
+[EL Fine]: sql: 2018-12-14 14:37:51.089--ClientSession(1360215046)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.092--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [The Number of the Beast]
+[EL Fine]: sql: 2018-12-14 14:37:51.093--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [The Number of the Beast]
+[EL Fine]: sql: 2018-12-14 14:37:51.094--ClientSession(404648734)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [1982, 8, The Number of the Beast, 32.1, 2]
+[EL Fine]: sql: 2018-12-14 14:37:51.096--ClientSession(404648734)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.099--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Run to the Hills]
+[EL Fine]: sql: 2018-12-14 14:37:51.1--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Run to the Hills]
+[EL Fine]: sql: 2018-12-14 14:37:51.102--ClientSession(1958680465)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [1981, 380, Run to the Hills, 2.7, null, 3, 2]
+[EL Fine]: sql: 2018-12-14 14:37:51.103--ClientSession(1958680465)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.115--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Gangland]
+[EL Fine]: sql: 2018-12-14 14:37:51.116--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Gangland]
+[EL Fine]: sql: 2018-12-14 14:37:51.118--ClientSession(359742806)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [1981, 380, Run to the Hills, 2.7, null, 3, 2]
+[EL Fine]: sql: 2018-12-14 14:37:51.119--ClientSession(359742806)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.12--ClientSession(359742806)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [1982, 190, Gangland, 2.8, null, 3, 2]
+[EL Fine]: sql: 2018-12-14 14:37:51.121--ClientSession(359742806)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.124--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Jon Bovi]
+[EL Fine]: sql: 2018-12-14 14:37:51.125--ClientSession(2027317551)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [EUA, Jon Bovi, 5]
+[EL Fine]: sql: 2018-12-14 14:37:51.126--ClientSession(2027317551)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.132--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Stromae]
+[EL Fine]: sql: 2018-12-14 14:37:51.133--ClientSession(1733581655)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [França, Stromae, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.134--ClientSession(1733581655)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.14--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Cheese]
+[EL Fine]: sql: 2018-12-14 14:37:51.141--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Cheese]
+[EL Fine]: sql: 2018-12-14 14:37:51.142--ClientSession(479459041)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [2010, 11, Cheese, 15.0, 4]
+[EL Fine]: sql: 2018-12-14 14:37:51.143--ClientSession(479459041)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.148--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Alors on Danse]
+[EL Fine]: sql: 2018-12-14 14:37:51.15--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Alors on Danse]
+[EL Fine]: sql: 2018-12-14 14:37:51.152--ClientSession(1325465767)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 235, Alors on Danse, 3.0, null, 4, 4]
+[EL Fine]: sql: 2018-12-14 14:37:51.153--ClientSession(1325465767)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.156--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Pink Floyd]
+[EL Fine]: sql: 2018-12-14 14:37:51.157--ClientSession(1827171553)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [Inglaterra, Pink Floyd, 4]
+[EL Fine]: sql: 2018-12-14 14:37:51.158--ClientSession(1827171553)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.165--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [The Wall]
+[EL Fine]: sql: 2018-12-14 14:37:51.166--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [The Wall]
+[EL Fine]: sql: 2018-12-14 14:37:51.167--ClientSession(1241480588)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [1979, 26, The Wall, 26.0, 5]
+[EL Fine]: sql: 2018-12-14 14:37:51.168--ClientSession(1241480588)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.171--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Another Brick in the Wall]
+[EL Fine]: sql: 2018-12-14 14:37:51.172--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Another Brick in the Wall]
+[EL Fine]: sql: 2018-12-14 14:37:51.174--ClientSession(1868805237)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [1978, 201, Another Brick in the Wall, 3.8, null, 5, 5]
+[EL Fine]: sql: 2018-12-14 14:37:51.175--ClientSession(1868805237)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.177--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Frédéric Chopin]
+[EL Fine]: sql: 2018-12-14 14:37:51.179--ClientSession(1014794348)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [Polônia, Frédéric Chopin, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.179--ClientSession(1014794348)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.182--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [The Best of Chopin]
+[EL Fine]: sql: 2018-12-14 14:37:51.182--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [The Best of Chopin]
+[EL Fine]: sql: 2018-12-14 14:37:51.183--ClientSession(849776463)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [2002, 19, The Best of Chopin, 28.2, 6]
+[EL Fine]: sql: 2018-12-14 14:37:51.184--ClientSession(849776463)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.187--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Tristesse]
+[EL Fine]: sql: 2018-12-14 14:37:51.187--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Tristesse]
+[EL Fine]: sql: 2018-12-14 14:37:51.189--ClientSession(1025001676)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [1832, 358, Tristesse, 3.1, null, 6, 6]
+[EL Fine]: sql: 2018-12-14 14:37:51.19--ClientSession(1025001676)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.192--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Alice in Chains]
+[EL Fine]: sql: 2018-12-14 14:37:51.193--ClientSession(711112124)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [EUA, Alice in Chains, 4]
+[EL Fine]: sql: 2018-12-14 14:37:51.194--ClientSession(711112124)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.196--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Facelift]
+[EL Fine]: sql: 2018-12-14 14:37:51.198--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Facelift]
+[EL Fine]: sql: 2018-12-14 14:37:51.199--ClientSession(1962266146)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [1990, 12, Facelift, 23.0, 7]
+[EL Fine]: sql: 2018-12-14 14:37:51.199--ClientSession(1962266146)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.202--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Man in the Box]
+[EL Fine]: sql: 2018-12-14 14:37:51.203--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Man in the Box]
+[EL Fine]: sql: 2018-12-14 14:37:51.204--ClientSession(1517328406)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [1989, 286, Man in the Box, 4.0, null, 7, 7]
+[EL Fine]: sql: 2018-12-14 14:37:51.205--ClientSession(1517328406)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.207--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [Zaz]
+[EL Fine]: sql: 2018-12-14 14:37:51.208--ClientSession(1830745997)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [França, Zaz, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.209--ClientSession(1830745997)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.212--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Recto Verso]
+[EL Fine]: sql: 2018-12-14 14:37:51.213--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Recto Verso]
+[EL Fine]: sql: 2018-12-14 14:37:51.214--ClientSession(1638435724)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ALBUM (ANO, FAIXAS, NOME, PRECO, ARTISTA_ID) VALUES (?, ?, ?, ?, ?)
+	bind => [2013, 14, Recto Verso, 22.0, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.215--ClientSession(1638435724)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.217--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Je Veux]
+[EL Fine]: sql: 2018-12-14 14:37:51.218--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Je Veux]
+[EL Fine]: sql: 2018-12-14 14:37:51.22--ClientSession(244185498)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2011, 217, Je Veux, 3.5, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.22--ClientSession(244185498)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.223--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [On Ira]
+[EL Fine]: sql: 2018-12-14 14:37:51.224--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [On Ira]
+[EL Fine]: sql: 2018-12-14 14:37:51.226--ClientSession(1033917063)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2012, 180, On Ira, 3.1, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.227--ClientSession(1033917063)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.227--ClientSession(1033917063)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2011, 217, Je Veux, 3.5, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.229--ClientSession(1033917063)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.231--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Sous le ciel de Paris]
+[EL Fine]: sql: 2018-12-14 14:37:51.233--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Sous le ciel de Paris]
+[EL Fine]: sql: 2018-12-14 14:37:51.235--ClientSession(1959239586)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2012, 180, On Ira, 3.1, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.236--ClientSession(1959239586)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.237--ClientSession(1959239586)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2011, 217, Je Veux, 3.5, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.237--ClientSession(1959239586)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.238--ClientSession(1959239586)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 196, Sous le ciel de Paris, 3.2, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.238--ClientSession(1959239586)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.241--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Toujours]
+[EL Fine]: sql: 2018-12-14 14:37:51.242--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Toujours]
+[EL Fine]: sql: 2018-12-14 14:37:51.245--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2011, 217, Je Veux, 3.5, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.246--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.247--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2013, 191, Toujours, 3.4, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.247--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.248--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2012, 180, On Ira, 3.1, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.249--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.249--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO MUSICA (ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID) VALUES (?, ?, ?, ?, ?, ?, ?)
+	bind => [2009, 196, Sous le ciel de Paris, 3.2, null, 8, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.25--ClientSession(2072313080)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.256--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Pop]
+[EL Fine]: sql: 2018-12-14 14:37:51.258--ClientSession(1152606315)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO GENERO (NOME) VALUES (?)
+	bind => [Pop]
+[EL Fine]: sql: 2018-12-14 14:37:51.258--ClientSession(1152606315)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.26--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Heavy Metal]
+[EL Fine]: sql: 2018-12-14 14:37:51.262--ClientSession(280615803)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO GENERO (NOME) VALUES (?)
+	bind => [Heavy Metal]
+[EL Fine]: sql: 2018-12-14 14:37:51.263--ClientSession(280615803)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.273--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Hip Hop]
+[EL Fine]: sql: 2018-12-14 14:37:51.274--ClientSession(587180314)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO GENERO (NOME) VALUES (?)
+	bind => [Hip Hop]
+[EL Fine]: sql: 2018-12-14 14:37:51.275--ClientSession(587180314)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.281--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Classic]
+[EL Fine]: sql: 2018-12-14 14:37:51.282--ClientSession(2134271532)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO GENERO (NOME) VALUES (?)
+	bind => [Classic]
+[EL Fine]: sql: 2018-12-14 14:37:51.283--ClientSession(2134271532)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.285--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Rock]
+[EL Fine]: sql: 2018-12-14 14:37:51.286--ClientSession(283039401)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO GENERO (NOME) VALUES (?)
+	bind => [Rock]
+[EL Fine]: sql: 2018-12-14 14:37:51.286--ClientSession(283039401)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Fine]: sql: 2018-12-14 14:37:51.287--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Pop]
+[EL Fine]: sql: 2018-12-14 14:37:51.288--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Il Primo Bacio Sulla Luna]
+[EL Fine]: sql: 2018-12-14 14:37:51.289--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Il Primo Bacio Sulla Luna]
+[EL Fine]: sql: 2018-12-14 14:37:51.291--ClientSession(1816522350)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO albuns_generos (FK_GENERO_ID, FK_ALBUM_ID) VALUES (?, ?)
+	bind => [2, 2]
+[EL Fine]: sql: 2018-12-14 14:37:51.293--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Hip Hop]
+[EL Fine]: sql: 2018-12-14 14:37:51.293--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Cheese]
+[EL Fine]: sql: 2018-12-14 14:37:51.294--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Cheese]
+[EL Fine]: sql: 2018-12-14 14:37:51.295--ClientSession(1631227617)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO albuns_generos (FK_GENERO_ID, FK_ALBUM_ID) VALUES (?, ?)
+	bind => [4, 4]
+[EL Fine]: sql: 2018-12-14 14:37:51.297--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Pop]
+[EL Fine]: sql: 2018-12-14 14:37:51.3--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [Recto Verso]
+[EL Fine]: sql: 2018-12-14 14:37:51.301--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [Recto Verso]
+[EL Fine]: sql: 2018-12-14 14:37:51.303--ClientSession(900298796)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO albuns_generos (FK_GENERO_ID, FK_ALBUM_ID) VALUES (?, ?)
+	bind => [2, 8]
+[EL Fine]: sql: 2018-12-14 14:37:51.313--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Classic]
+[EL Fine]: sql: 2018-12-14 14:37:51.314--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [The Best of Chopin]
+[EL Fine]: sql: 2018-12-14 14:37:51.315--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [The Best of Chopin]
+[EL Fine]: sql: 2018-12-14 14:37:51.317--ClientSession(1579132337)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO albuns_generos (FK_GENERO_ID, FK_ALBUM_ID) VALUES (?, ?)
+	bind => [5, 6]
+[EL Fine]: sql: 2018-12-14 14:37:51.322--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NOME FROM GENERO WHERE (NOME = ?)
+	bind => [Rock]
+[EL Fine]: sql: 2018-12-14 14:37:51.323--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (NOME = ?)
+	bind => [The Wall]
+[EL Fine]: sql: 2018-12-14 14:37:51.323--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (NOME = ?)
+	bind => [The Wall]
+[EL Fine]: sql: 2018-12-14 14:37:51.324--ClientSession(314411620)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO albuns_generos (FK_GENERO_ID, FK_ALBUM_ID) VALUES (?, ?)
+	bind => [6, 5]
+[EL Fine]: sql: 2018-12-14 14:37:51.327--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (NOME = ?)
+	bind => [J-AX]
+[EL Fine]: sql: 2018-12-14 14:37:51.328--ClientSession(324112183)--Connection(982757413)--Thread(Thread[main,5,main])--INSERT INTO ARTISTA (NACIONALIDADE, NOME, NUMINTEGRANTES) VALUES (?, ?, ?)
+	bind => [Italia, J-AX, 1]
+[EL Fine]: sql: 2018-12-14 14:37:51.328--ClientSession(324112183)--Connection(982757413)--Thread(Thread[main,5,main])--select lastval()
+[EL Config]: connection: 2018-12-14 14:37:51.33--ServerSession(152134087)--Connection(982757413)--Thread(Thread[main,5,main])--disconnect
+[EL Info]: connection: 2018-12-14 14:37:51.33--ServerSession(152134087)--Thread(Thread[main,5,main])--/file:/Z:/20171370045/Downloads/projeto/MusicStore-Java/target/classes/_loja-eclipselink logout successful
+[EL Config]: connection: 2018-12-14 14:37:51.331--ServerSession(152134087)--Connection(2044903525)--Thread(Thread[main,5,main])--disconnect

@@ -1,6 +1,8 @@
 package modelo;
+import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Musica extends Produto implements Comparable<Musica> {
 
 	private String url;

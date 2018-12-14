@@ -96,7 +96,6 @@ public class Fachada {
 		DAO.commit();
 		return (Genero) g;
 	}
-	/*
 	public static Genero cadastrarGenero(String nome, ArrayList<Album> a) throws Exception{
 		DAO.begin();
 		Genero g = daogenero.buscaGenero(nome);
@@ -109,6 +108,7 @@ public class Fachada {
 		DAO.commit();
 		return (Genero) g;
 	}
+	/*
 	//Remoções (DELETIONS)
 	public static Album removerAlbum(String nome) throws Exception {
 		DAO.begin();

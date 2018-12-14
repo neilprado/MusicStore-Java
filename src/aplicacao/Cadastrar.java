@@ -4,7 +4,6 @@ import fachada.Fachada;
 import modelo.Album;
 import modelo.Artista;
 import modelo.Genero;
-import modelo.Musica;
 import modelo.Produto;
 
 public class Cadastrar {
@@ -51,19 +50,16 @@ public class Cadastrar {
 			p = Fachada.cadastrarMusica("On Ira", 3.10, 2012, al, a, 180);
 			p = Fachada.cadastrarMusica("Sous le ciel de Paris", 3.20, 2009, al, a, 196);
 			p = Fachada.cadastrarMusica("Toujours", 3.40, 2013, al, a, 191);
-			
 			g = Fachada.cadastrarGenero("Pop");
 			g = Fachada.cadastrarGenero("Heavy Metal");
 			g = Fachada.cadastrarGenero("Hip Hop");
 			g = Fachada.cadastrarGenero("Classic");
 			g = Fachada.cadastrarGenero("Rock");
-			
 			Fachada.relacionaAlbum("Pop", "Il Primo Bacio Sulla Luna");
 			Fachada.relacionaAlbum("Hip Hop", "Cheese");
 			Fachada.relacionaAlbum("Pop", "Recto Verso");
 			Fachada.relacionaAlbum("Classic", "The Best of Chopin");
 			Fachada.relacionaAlbum("Rock", "The Wall");
-			
 			a = Fachada.cadastrarArtista("J-AX", "Italia", 1);
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
