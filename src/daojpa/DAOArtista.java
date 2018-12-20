@@ -1,6 +1,6 @@
 package daojpa;
 
-import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
@@ -17,38 +17,19 @@ public class DAOArtista extends DAO<Artista> {
 			return null;
 		}
 	}
-	/*
-	public Artista buscaPorNome(String nome) {
-		Query q = manager.query();
-		q.constrain(Artista.class);
-		q.descend("nome").constrain(nome);
-		List<Artista> resultados = q.execute();
-		if(resultados.size()>0)
-			return resultados.get(0);
-		return null;
-	}
 	
-
 	public List<Artista> listaArtistasPorGenero(String genero){
-		Query q = manager.query();
-		q.constrain(Artista.class);
-		q.descend("produtos").descend("generos").descend("nome").constrain(genero);
-		List<Artista> resultados = q.execute();
-		if(resultados.size()>0)
-			return resultados;
+		try {
+			Query q = manager.createQuery("select a from Artista a where a.produtos.generos.nome='" + genero + "'");
+			@SuppressWarnings("unchecked")
+			List<Artista> resultados =  q.getResultList();
+			if(resultados.size()>0)
+				return resultados;
+		}catch(NoResultException e) {
+			System.out.println(e.getMessage());
+		}
 		return null;
 	}
-}
-
-
-
-class Filtro implements Evaluation{
-	private int n;
-	@Override
-	public void evaluate(Candidate arg0) {
-		// TODO Auto-generated method stub
-		
-	} */
 
 
 }

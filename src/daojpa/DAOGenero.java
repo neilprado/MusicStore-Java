@@ -1,4 +1,6 @@
 package daojpa;
+import java.util.List;
+
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import modelo.Genero;
@@ -14,24 +16,30 @@ public class DAOGenero extends DAO<Genero> {
 			return null;
 		}
 	}
-	/*
-	public List<Genero> listaGeneros(String album) {
-		Query q = manager.query();
-		q.constrain(Genero.class);
-		q.descend("albuns").descend("nome").constrain(album);
-		List<Genero> resultados = q.execute();
-		if(resultados.size()>0)
-			return resultados;
+	
+	public List<Genero> listaGeneros(String album){
+		try {
+			Query q = manager.createQuery("select g from Genero g where g.albuns.nome='" + album + "'");
+			@SuppressWarnings("unchecked")
+			List<Genero> resultados = q.getResultList();
+			if(resultados.size()>0)
+				return resultados;
+		}catch(NoResultException e) {
+			System.out.println(e.getMessage());
+		}
 		return null;
 	}
 	
 	public List<Genero> listaGenerosPorArtista(String artista){
-		Query q = manager.query();
-		q.constrain(Genero.class);
-		q.descend("albuns").descend("artista").descend("nome").constrain(artista);
-		List<Genero> resultados = q.execute();
-		if(resultados.size()>0)
-			return resultados;
+		try {
+			Query q = manager.createQuery("select g from Genero g where g.albuns.artista.nome='"+ artista + "'");
+			@SuppressWarnings("unchecked")
+			List<Genero> resultados = q.getResultList();
+			if(resultados.size()>0)
+				return resultados;
+		}catch(NoResultException e) {
+			System.out.println(e.getMessage());
+		}
 		return null;
-	}*/
+	}
 }

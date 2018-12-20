@@ -108,7 +108,7 @@ public class Fachada {
 		DAO.commit();
 		return (Genero) g;
 	}
-	/*
+	
 	//Remoções (DELETIONS)
 	public static Album removerAlbum(String nome) throws Exception {
 		DAO.begin();
@@ -245,7 +245,6 @@ public class Fachada {
 			texto+= g.getNome() + "\n";
 		return texto;
 	}
-*/
 	// MÉTODOS PERSONALIZADOS
 	public static void  relacionaAlbum (String nome, String album) throws Exception {
 		DAO.begin();
@@ -259,7 +258,7 @@ public class Fachada {
 		daogenero.update(g);
 		DAO.commit();
 	}
-/*	
+
 	public static String consultaGenerosPeloAlbum (String nome) throws Exception {
 		Album a = (Album) daoproduto.listarPorNome(nome);
 		List<Genero> generos = daogenero.listaGeneros(nome);
@@ -308,5 +307,5 @@ public class Fachada {
 			texto += g.getNome()+" \n";
 		return texto;
 	}
-*/
+
 }
