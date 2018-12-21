@@ -19,7 +19,7 @@ public class DAOGenero extends DAO<Genero> {
 	
 	public List<Genero> listaGeneros(String album){
 		try {
-			Query q = manager.createQuery("select g from Genero g where g.albuns.nome='" + album + "'");
+			Query q = manager.createQuery("select g from Genero g join g.albuns a where a.nome='" + album + "'");
 			@SuppressWarnings("unchecked")
 			List<Genero> resultados = q.getResultList();
 			if(resultados.size()>0)
@@ -32,7 +32,7 @@ public class DAOGenero extends DAO<Genero> {
 	
 	public List<Genero> listaGenerosPorArtista(String artista){
 		try {
-			Query q = manager.createQuery("select g from Genero g where g.albuns.artista.nome='"+ artista + "'");
+			Query q = manager.createQuery("select g from Genero g join g.albuns al join al.artista a where a.nome='"+ artista + "'");
 			@SuppressWarnings("unchecked")
 			List<Genero> resultados = q.getResultList();
 			if(resultados.size()>0)

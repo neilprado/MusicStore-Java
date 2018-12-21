@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
 public class Album extends Produto implements Comparable<Album> {
 	
 	private int faixas;
-	@OneToMany(mappedBy="album")
+	@OneToMany(mappedBy="album", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private ArrayList<Musica> musicas = new ArrayList<>();
 	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinTable(name="albuns_generos", joinColumns= {@JoinColumn(name="FK_ALBUM_ID")},

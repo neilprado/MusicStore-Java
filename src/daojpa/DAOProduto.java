@@ -21,7 +21,8 @@ public class DAOProduto extends DAO<Produto> {
 	
 	public List<Musica> buscarMusicas(String genero){
 		try {
-			Query q = manager.createQuery("select m from Musica m where m.album.generos.nome='" + genero + "'");
+			Query q = manager.createQuery("select m from Musica m join m.album al join al.generos g where g.nome ='" + genero + "'");
+			@SuppressWarnings("unchecked")
 			List<Musica> resultados = q.getResultList();
 			if(resultados.size()>0)
 				return resultados;

@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 
 import dao.IDInterface;
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy= InheritanceType.TABLE_PER_CLASS)
 public abstract class Produto implements IDInterface {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

@@ -1,7 +1,9 @@
 package modelo;
 import java.util.ArrayList;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,7 +19,7 @@ public class Artista implements Comparable<Artista>, IDInterface {
 	private String nome;
 	private String nacionalidade;
 	private int numIntegrantes;
-	@OneToMany(mappedBy="artista")
+	@OneToMany(mappedBy="artista", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private ArrayList<Produto> produtos = new ArrayList<>();
 	
 	public Artista(String nome, String nac, int num) {
