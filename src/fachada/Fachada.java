@@ -63,8 +63,7 @@ public class Fachada {
 			throw new Exception("Duração de música menor que o permitido");
 		ar.adicionar(m);
 		album.adicionarMusica(m);
-		daoartista.update(ar);
-		daoproduto.update(album);
+		daoproduto.create(m);
 		DAO.commit();
 		return (Musica) m;
 	}
