@@ -91,6 +91,12 @@ public class TelaPrincipal {
 		menuBar.add(mnListar);
 		
 		JMenuItem mntmListarArtistas = new JMenuItem("Listar Artistas");
+		mntmListarArtistas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaListarArtistas t = new TelaListarArtistas();
+				t.setVisible(true);
+			}
+		});
 		mnListar.add(mntmListarArtistas);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Listar \u00C1lbuns");
@@ -121,15 +127,39 @@ public class TelaPrincipal {
 		menuBar.add(mnExcluir);
 		
 		JMenuItem mntmExcluirArtista = new JMenuItem("Excluir Artista");
+		mntmExcluirArtista.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaRemoverArtista t = new TelaRemoverArtista();
+				t.setVisible(true);
+			}
+		});
 		mnExcluir.add(mntmExcluirArtista);
 		
 		JMenuItem mntmExcluirlbum = new JMenuItem("Excluir \u00C1lbum");
+		mntmExcluirlbum.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaRemoverAlbum t = new TelaRemoverAlbum();
+				t.setVisible(true);
+			}
+		});
 		mnExcluir.add(mntmExcluirlbum);
 		
 		JMenuItem mntmExcluirMsica = new JMenuItem("Excluir M\u00FAsica");
+		mntmExcluirMsica.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaRemoverMusica t = new TelaRemoverMusica();
+				t.setVisible(true);
+			}
+		});
 		mnExcluir.add(mntmExcluirMsica);
 		
 		JMenuItem mntmExcluirGnero = new JMenuItem("Excluir G\u00EAnero");
+		mntmExcluirGnero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaRemoverGenero t = new TelaRemoverGenero();
+				t.setVisible(true);
+			}
+		});
 		mnExcluir.add(mntmExcluirGnero);
 	}
 }
