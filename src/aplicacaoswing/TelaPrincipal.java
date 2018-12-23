@@ -61,12 +61,30 @@ public class TelaPrincipal {
 		mnCadastrar.add(mntmCadastrarArtista);
 		
 		JMenuItem mntmCadastrarlbum = new JMenuItem("Cadastrar \u00C1lbum");
+		mntmCadastrarlbum.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaCadastrarAlbum t = new TelaCadastrarAlbum();
+				t.setVisible(true);
+			}
+		});
 		mnCadastrar.add(mntmCadastrarlbum);
 		
 		JMenuItem mntmCadastrarMsica = new JMenuItem("Cadastrar M\u00FAsica");
+		mntmCadastrarMsica.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaCadastrarMusica t = new TelaCadastrarMusica();
+				t.setVisible(true);
+			}
+		});
 		mnCadastrar.add(mntmCadastrarMsica);
 		
 		JMenuItem mntmCadastrarGnero = new JMenuItem("Cadastrar G\u00EAnero");
+		mntmCadastrarGnero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaCadastrarGenero t = new TelaCadastrarGenero();
+				t.setVisible(true);
+			}
+		});
 		mnCadastrar.add(mntmCadastrarGnero);
 		
 		JMenu mnListar = new JMenu("Listar");

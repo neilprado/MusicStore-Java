@@ -1,19 +1,26 @@
 package aplicacaoswing;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import fachada.Fachada;
+import modelo.Artista;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
 public class TelaCadastrarArtista extends JFrame {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JLabel lblNewLabel_1;
-	private JTextField textField_2;
+	private JTextField textField_artista;
+	private JTextField textField_nac;
+	private JLabel lbl_numintegrantes;
+	private JTextField textField_num;
+	private JLabel status;
 
 	/**
 	 * Launch the application.
@@ -36,12 +43,15 @@ public class TelaCadastrarArtista extends JFrame {
 	 */
 	public TelaCadastrarArtista() {
 		setTitle("Cadastro de Artista");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(126, 45, 171, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		textField_artista = new JTextField();
+		textField_artista.setBounds(126, 45, 171, 20);
+		getContentPane().add(textField_artista);
+		textField_artista.setColumns(10);
 		
 		JLabel lblNomeDoArtista = new JLabel("Nome do Artista");
 		lblNomeDoArtista.setBounds(10, 48, 106, 14);
@@ -51,27 +61,42 @@ public class TelaCadastrarArtista extends JFrame {
 		lblNewLabel.setBounds(10, 79, 85, 14);
 		getContentPane().add(lblNewLabel);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(126, 76, 171, 20);
-		getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		textField_nac = new JTextField();
+		textField_nac.setBounds(126, 76, 171, 20);
+		getContentPane().add(textField_nac);
+		textField_nac.setColumns(10);
 		
-		lblNewLabel_1 = new JLabel("N\u00FAmero de Integrantes");
-		lblNewLabel_1.setBounds(10, 110, 131, 14);
-		getContentPane().add(lblNewLabel_1);
+		lbl_numintegrantes = new JLabel("N\u00FAmero de Integrantes");
+		lbl_numintegrantes.setBounds(10, 110, 131, 14);
+		getContentPane().add(lbl_numintegrantes);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(126, 107, 43, 20);
-		getContentPane().add(textField_2);
-		textField_2.setColumns(10);
+		textField_num = new JTextField();
+		textField_num.setBounds(126, 107, 43, 20);
+		getContentPane().add(textField_num);
+		textField_num.setColumns(10);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setBounds(167, 168, 89, 23);
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					if(textField_artista.getText().equalsIgnoreCase("") || textField_nac.getText().equalsIgnoreCase("") || textField_num.getText().equalsIgnoreCase(""))
+						throw new Exception("Campos em branco, tente novamente!!");
+					String nomeArtista = textField_artista.getText();
+					String nacionalidade = textField_nac.getText();
+					int numero = Integer.parseInt(textField_num.getText());
+					Artista ar = Fachada.cadastrarArtista(nomeArtista, nacionalidade, numero);
+					status.setText("Artista "+ ar.getNome() + " criado com sucesso");
+				}catch(Exception err) {
+					status.setText(err.getMessage());
+				}
+			}
+		});
+		btnCadastrar.setBounds(167, 168, 106, 23);
 		getContentPane().add(btnCadastrar);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(10, 237, 414, 14);
-		getContentPane().add(lblNewLabel_2);
+		status = new JLabel("");
+		status.setBounds(10, 237, 414, 14);
+		getContentPane().add(status);
 		initialize();
 	}
 

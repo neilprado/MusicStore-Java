@@ -306,5 +306,21 @@ public class Fachada {
 			texto += g.getNome()+" \n";
 		return texto;
 	}
+	
+	// Buscas (SEARCHES)
+	
+	public static Artista buscarArtista(String nome) throws Exception{
+		Artista a = daoartista.buscaPorNome(nome);
+		if(a == null)
+			throw new Exception("Nenhum artista com esse nome foi cadastrado");
+		return a;
+	}
+	
+	public static Album buscarAlbum(String nome) throws Exception{
+		Album a = (Album) daoproduto.listarPorNome(nome);
+		if(a == null)
+			throw new Exception("Não existem álbuns cadastrados com esse nome");
+		return a;
+	}
 
 }
