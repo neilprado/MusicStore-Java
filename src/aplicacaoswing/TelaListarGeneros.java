@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Genero;
-public class TelaListarArtistas extends JFrame {
+public class TelaListarGeneros extends JFrame {
 
 	private JFrame frame;
 	private JLabel status;
@@ -23,7 +23,7 @@ public class TelaListarArtistas extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaListarArtistas window = new TelaListarArtistas();
+					TelaListarGeneros window = new TelaListarGeneros();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,8 +35,8 @@ public class TelaListarArtistas extends JFrame {
 	/**
 	 * Create the application.
 	 */
-	public TelaListarArtistas() {
-		setTitle("Listar Artistas");
+	public TelaListarGeneros() {
+		setTitle("Listar G\u00EAneros");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 449, 206);
