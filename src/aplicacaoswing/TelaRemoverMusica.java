@@ -62,6 +62,8 @@ public class TelaRemoverMusica extends JFrame {
 						throw new Exception("Não é possível remover, campo em branco");
 					Musica m = Fachada.removerMusica(textField_musica.getText());
 					status.setText("Musica " + m.getNome() + " removida com sucesso");
+					textField_musica.setText("");
+					textField_musica.requestFocus();
 				}catch(Exception err) {
 					status.setText(err.getMessage());
 				}

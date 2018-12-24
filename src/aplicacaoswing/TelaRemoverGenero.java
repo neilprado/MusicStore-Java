@@ -61,6 +61,8 @@ public class TelaRemoverGenero extends JFrame {
 						throw new Exception("Não é possível remover, campo em branco");
 					Genero g = Fachada.removerGenero(textField_genero.getText());
 					status.setText("Gênero " + g.getNome() + " removido com sucesso");
+					textField_genero.setText("");
+					textField_genero.requestFocus();
 				}catch(Exception err) {
 					status.setText(err.getMessage());
 				}

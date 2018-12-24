@@ -61,6 +61,8 @@ public class TelaRemoverAlbum extends JFrame {
 						throw new Exception("Não é possível remover, campo em branco");
 					Album al = Fachada.removerAlbum(textField_album.getText());
 					status.setText("Album " + al.getNome() + " removido com sucesso");
+					textField_album.setText("");
+					textField_album.requestFocus();
 				}catch(Exception err) {
 					status.setText(err.getMessage());
 				}

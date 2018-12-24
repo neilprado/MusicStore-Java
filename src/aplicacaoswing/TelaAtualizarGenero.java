@@ -14,7 +14,7 @@ import modelo.Album;
 public class TelaAtualizarGenero extends JFrame {
 
 	private JFrame frame;
-	private JTextField textField_musica;
+	private JTextField textField_genero;
 	private JLabel status;
 	private JLabel lblNovoNomeDoGenero;
 	private JTextField textField_novo;
@@ -45,10 +45,10 @@ public class TelaAtualizarGenero extends JFrame {
 		setBounds(100, 100, 449, 206);
 		getContentPane().setLayout(null);
 		
-		textField_musica = new JTextField();
-		textField_musica.setBounds(126, 45, 171, 20);
-		getContentPane().add(textField_musica);
-		textField_musica.setColumns(10);
+		textField_genero = new JTextField();
+		textField_genero.setBounds(126, 45, 171, 20);
+		getContentPane().add(textField_genero);
+		textField_genero.setColumns(10);
 		
 		JLabel lblNomeGenero = new JLabel("Nome do G\u00EAnero");
 		lblNomeGenero.setBounds(10, 48, 106, 14);
@@ -58,6 +58,19 @@ public class TelaAtualizarGenero extends JFrame {
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
+				try {
+					if(textField_genero.getText().equalsIgnoreCase("") || textField_novo.getText().equalsIgnoreCase(""))
+						throw new Exception("Existe um ou mais campos em branco, tente novamente");
+					String nome = textField_genero.getText();
+					String novo = textField_novo.getText();
+					Fachada.atualizarGenero(nome, novo);
+					status.setText("Gênero " + nome + " alterado com sucesso");
+					textField_genero.setText("");
+					textField_novo.setText("");
+					textField_genero.requestFocus();
+				}catch (Exception err) {
+					status.setText(err.getMessage());
+				}
 			}
 		});
 		btnAtualizar.setBounds(165, 119, 106, 23);

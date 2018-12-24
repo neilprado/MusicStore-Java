@@ -62,6 +62,8 @@ public class TelaRemoverArtista extends JFrame {
 						throw new Exception("Não é possível remover, campo em branco");
 					Artista a = Fachada.removerArtista(textField_artista.getText());
 					status.setText("Artista " + a.getNome() + " removido com sucesso");
+					textField_artista.setText("");
+					textField_artista.requestFocus();
 				}catch(Exception err) {
 					status.setText(err.getMessage());
 				}

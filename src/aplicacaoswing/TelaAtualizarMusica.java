@@ -58,6 +58,19 @@ public class TelaAtualizarMusica extends JFrame {
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
+				try {
+					if(textField_musica.getText().equalsIgnoreCase("") || textField_novo.getText().equalsIgnoreCase(""))
+						throw new Exception("Existe um ou mais campos em branco, tente novamente");
+					String nome = textField_musica.getText();
+					String novo = textField_novo.getText();
+					Fachada.atualizarMusica(nome, novo);
+					status.setText("Gênero " + nome + " alterado com sucesso");
+					textField_musica.setText("");
+					textField_novo.setText("");
+					textField_musica.requestFocus();
+				}catch (Exception err) {
+					status.setText(err.getMessage());
+				}
 			}
 		});
 		btnAtualizar.setBounds(165, 119, 106, 23);

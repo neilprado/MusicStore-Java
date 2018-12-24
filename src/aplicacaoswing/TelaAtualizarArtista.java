@@ -58,6 +58,19 @@ public class TelaAtualizarArtista extends JFrame {
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
+				try {
+					if(textField_artista.getText().equalsIgnoreCase("") || textField_novo.getText().equalsIgnoreCase(""))
+						throw new Exception("Existe um ou mais campos em branco");
+					String nome = textField_artista.getText();
+					String novo = textField_novo.getText();
+					Fachada.atualizarArtista(nome, novo);
+					status.setText("Artista "+ nome + " atualizado com sucesso");
+					textField_artista.setText("");
+					textField_novo.setText("");
+					textField_artista.requestFocus();
+				}catch(Exception err) {
+					status.setText(err.getMessage());
+				}
 			}
 		});
 		btnAtualizar.setBounds(165, 119, 106, 23);
