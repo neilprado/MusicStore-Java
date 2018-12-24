@@ -57,6 +57,7 @@ public class TelaAtualizarAlbum extends JFrame {
 		JButton btnAtualizar = new JButton("Atualizar");
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				
 			}
 		});

@@ -78,6 +78,7 @@ public class TelaCadastrarArtista extends JFrame {
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				try {
 					if(textField_artista.getText().equalsIgnoreCase("") || textField_nac.getText().equalsIgnoreCase("") || textField_num.getText().equalsIgnoreCase(""))
 						throw new Exception("Campos em branco, tente novamente!!");
@@ -86,6 +87,10 @@ public class TelaCadastrarArtista extends JFrame {
 					int numero = Integer.parseInt(textField_num.getText());
 					Artista ar = Fachada.cadastrarArtista(nomeArtista, nacionalidade, numero);
 					status.setText("Artista "+ ar.getNome() + " criado com sucesso");
+					textField_artista.setText("");
+					textField_nac.setText("");
+					textField_num.setText("");
+					textField_artista.requestFocus();
 				}catch(Exception err) {
 					status.setText(err.getMessage());
 				}

@@ -77,6 +77,7 @@ public class TelaCadastrarAlbum extends JFrame {
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				try {
 					if(textField_album.getText().equalsIgnoreCase("") || textField_artista.getText().equalsIgnoreCase("") || textField_ano.getText().equalsIgnoreCase("") || textField_faixas.getText().equalsIgnoreCase("") || textField_preco.getText().equalsIgnoreCase(""))
 						throw new Exception("Campos em branco, por favor tente novamente");
@@ -87,6 +88,12 @@ public class TelaCadastrarAlbum extends JFrame {
 					double preco = Double.parseDouble(textField_preco.getText());
 					Album al = Fachada.cadastrarAlbum(nome, preco, ano, faixas, artista);
 					status.setText("Album " + al.getNome() + " cadastrado com sucesso");
+					textField_album.setText("");
+					textField_ano.setText("");
+					textField_artista.setText("");
+					textField_faixas.setText("");
+					textField_preco.setText("");
+					textField_album.requestFocus();
 				}catch(Exception err) {
 					
 				}

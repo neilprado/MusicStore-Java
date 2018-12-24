@@ -53,9 +53,10 @@ public class TelaRemoverArtista extends JFrame {
 		lblNomeArtista.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeArtista);
 		
-		JButton btnCadastrar = new JButton("Cadastrar");
+		JButton btnCadastrar = new JButton("Remover");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				try {
 					if(textField_artista.getText().equalsIgnoreCase(""))
 						throw new Exception("Não é possível remover, campo em branco");

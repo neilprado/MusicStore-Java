@@ -52,9 +52,10 @@ public class TelaRemoverAlbum extends JFrame {
 		lblNomeAlbum.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeAlbum);
 		
-		JButton btnCadastrar = new JButton("Cadastrar");
+		JButton btnCadastrar = new JButton("Remover");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				try {
 					if(textField_album.getText().equalsIgnoreCase(""))
 						throw new Exception("Não é possível remover, campo em branco");

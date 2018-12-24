@@ -83,6 +83,7 @@ public class TelaCadastrarMusica extends JFrame {
 		JButton btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				try {
 					if(textField_album.getText().equalsIgnoreCase("") || textField_ano.getText().equalsIgnoreCase("") || 
 							textField_artista.getText().equalsIgnoreCase("") || textField_duracao.getText().equalsIgnoreCase("")
@@ -97,6 +98,14 @@ public class TelaCadastrarMusica extends JFrame {
 					int duracao = Integer.parseInt(textField_duracao.getText());
 					Musica m = new Musica(nome, preco, ano, al, a,duracao);
 					status.setText("Música "+ m.getNome() + " cadastrada com sucesso");
+					textField_album.setText("");
+					textField_ano.setText("");
+					textField_artista.setText("");
+					textField_duracao.setText("");
+					textField_musica.setText("");
+					textField_preco.setText("");
+					textField_url.setText("");
+					textField_musica.requestFocus();
 						}catch(Exception err){
 					status.setText(err.getMessage());
 				}

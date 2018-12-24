@@ -99,28 +99,70 @@ public class TelaPrincipal {
 		});
 		mnListar.add(mntmListarArtistas);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Listar \u00C1lbuns");
-		mnListar.add(mntmNewMenuItem);
+		JMenuItem mntmListarAlbuns = new JMenuItem("Listar \u00C1lbuns");
+		mntmListarAlbuns.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaListarAlbuns t = new TelaListarAlbuns();
+				t.setVisible(true);
+			}
+		});
+		mnListar.add(mntmListarAlbuns);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Listar M\u00FAsicas");
-		mnListar.add(mntmNewMenuItem_1);
+		JMenuItem mntmListarMusicas = new JMenuItem("Listar M\u00FAsicas");
+		mntmListarMusicas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaListarMusicas t = new TelaListarMusicas();
+				t.setVisible(true);
+			}
+		});
+		mnListar.add(mntmListarMusicas);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Listar G\u00EAneros");
-		mnListar.add(mntmNewMenuItem_2);
+		JMenuItem mntmListarGeneros = new JMenuItem("Listar G\u00EAneros");
+		mntmListarGeneros.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaListarGeneros t = new TelaListarGeneros();
+				t.setVisible(true);
+			}
+		});
+		mnListar.add(mntmListarGeneros);
 		
 		JMenu mnAtualizar = new JMenu("Atualizar");
 		menuBar.add(mnAtualizar);
 		
 		JMenuItem mntmAtualizarArtista = new JMenuItem("Atualizar Artista");
+		mntmAtualizarArtista.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaAtualizarArtista t = new TelaAtualizarArtista();
+				t.setVisible(true);
+			}
+		});
 		mnAtualizar.add(mntmAtualizarArtista);
 		
 		JMenuItem mntmAtualizarlbum = new JMenuItem("Atualizar \u00C1lbum");
+		mntmAtualizarlbum.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaAtualizarAlbum t = new TelaAtualizarAlbum();
+				t.setVisible(true);
+			}
+		});
 		mnAtualizar.add(mntmAtualizarlbum);
 		
 		JMenuItem mntmAtualizarMsica = new JMenuItem("Atualizar M\u00FAsica");
+		mntmAtualizarMsica.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaAtualizarMusica t = new TelaAtualizarMusica();
+				t.setVisible(true);
+			}
+		});
 		mnAtualizar.add(mntmAtualizarMsica);
 		
 		JMenuItem mntmAtualizarGnero = new JMenuItem("Atualizar G\u00EAnero");
+		mntmAtualizarGnero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				TelaAtualizarGenero t = new TelaAtualizarGenero();
+				t.setVisible(true);
+			}
+		});
 		mnAtualizar.add(mntmAtualizarGnero);
 		
 		JMenu mnExcluir = new JMenu("Excluir");

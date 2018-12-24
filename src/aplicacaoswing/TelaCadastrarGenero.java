@@ -58,12 +58,15 @@ public class TelaCadastrarGenero extends JFrame {
 		btnCadastrar = new JButton("Cadastrar");
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Fachada.inicializar();
 				try {
 					if(textField_genero.getText().equalsIgnoreCase(""))
 						throw new Exception("Campo nome do gênero se encontra em branco");
 					String nome = textField_genero.getText();
 					Genero g = Fachada.cadastrarGenero(nome);
 					status.setText("Gênero " + g.getNome() + " cadastrado com sucesso");
+					textField_genero.setText("");
+					textField_genero.requestFocus();
 				}catch(Exception err) {
 					status.setText(err.getMessage());
 				}
