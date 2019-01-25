@@ -27,7 +27,8 @@ public class DAOProduto extends DAO<Produto> {
 			if(resultados.size()>0)
 				return resultados;
 		}catch(NoResultException e) {
-			System.out.println(e.getMessage());
+			
+			System.out.println("-->"+e.getMessage());
 		}
 		return null;
 	}

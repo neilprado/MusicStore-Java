@@ -8,7 +8,7 @@ import javax.persistence.Query;
 import modelo.Artista;
 
 public class DAOArtista extends DAO<Artista> {
-	  
+
 	public Artista buscaPorNome(String nome) {
 		try {
 			Query q = manager.createQuery("select a from Artista a where a.nome='" + nome + "'");
@@ -17,10 +17,10 @@ public class DAOArtista extends DAO<Artista> {
 			return null;
 		}
 	}
-	
+
 	public List<Artista> listaArtistasPorGenero(String genero){
 		try {
-			Query q = manager.createQuery("select a from Artista a join a.produtos p join p.generos g where g.nome='" + genero + "'");
+			Query q = manager.createQuery("select a.artista from Album a join a.generos g where g.nome='" + genero + "'");
 			@SuppressWarnings("unchecked")
 			List<Artista> resultados =  q.getResultList();
 			if(resultados.size()>0)
