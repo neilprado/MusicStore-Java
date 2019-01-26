@@ -38,7 +38,7 @@ public class TelaListarMusicas extends JFrame {
 	public TelaListarMusicas() {
 		setTitle("Listar M\u00FAsicas");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 449, 206);
 		getContentPane().setLayout(null);
 		

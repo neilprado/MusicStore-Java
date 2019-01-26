@@ -27,10 +27,11 @@ public class TelaCadastrarMusica extends JFrame {
 	private JLabel lblNmeroDuracao;
 	private JTextField textField_duracao;
 	private JLabel lblNomeDolbum;
-	private JTextField textField_album;
+	private JTextField textField_video;
 	private JLabel labelMusica;
 	private JTextField textField_musica;
 	private JLabel status;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -54,7 +55,7 @@ public class TelaCadastrarMusica extends JFrame {
 	public TelaCadastrarMusica() {
 		setTitle("Cadastro de M\u00FAsica");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
 		
@@ -85,7 +86,7 @@ public class TelaCadastrarMusica extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
 				try {
-					if(textField_album.getText().equalsIgnoreCase("") || textField_ano.getText().equalsIgnoreCase("") || 
+					if(textField_video.getText().equalsIgnoreCase("") || textField_ano.getText().equalsIgnoreCase("") || 
 							textField_artista.getText().equalsIgnoreCase("") || textField_duracao.getText().equalsIgnoreCase("")
 							|| textField_musica.getText().equalsIgnoreCase("") || textField_preco.getText().equalsIgnoreCase("")
 							|| textField_url.getText().equalsIgnoreCase(""))
@@ -93,12 +94,13 @@ public class TelaCadastrarMusica extends JFrame {
 					String nome = textField_musica.getText();
 					double preco = Double.parseDouble(textField_preco.getText());
 					int ano = Integer.parseInt(textField_ano.getText());
-					Album al = Fachada.buscarAlbum(textField_album.getText());
+					Album al = Fachada.buscarAlbum(textField_video.getText());
 					Artista a = Fachada.buscarArtista(textField_artista.getText());
 					int duracao = Integer.parseInt(textField_duracao.getText());
-					Musica m = new Musica(nome, preco, ano, al, a,duracao);
+					String url = textField_video.getText();
+					Musica m = new Musica(nome, preco, ano, al, a,duracao, url);
 					status.setText("Música "+ m.getNome() + " cadastrada com sucesso");
-					textField_album.setText("");
+					textField_video.setText("");
 					textField_ano.setText("");
 					textField_artista.setText("");
 					textField_duracao.setText("");
@@ -111,11 +113,11 @@ public class TelaCadastrarMusica extends JFrame {
 				}
 			}
 		});
-		btnCadastrar.setBounds(171, 203, 106, 23);
+		btnCadastrar.setBounds(171, 213, 106, 23);
 		getContentPane().add(btnCadastrar);
 		
 		status = new JLabel("");
-		status.setBounds(10, 237, 414, 14);
+		status.setBounds(10, 247, 414, 14);
 		getContentPane().add(status);
 		
 		textField_artista = new JTextField();
@@ -145,10 +147,10 @@ public class TelaCadastrarMusica extends JFrame {
 		lblNomeDolbum.setBounds(10, 139, 131, 14);
 		getContentPane().add(lblNomeDolbum);
 		
-		textField_album = new JTextField();
-		textField_album.setColumns(10);
-		textField_album.setBounds(126, 136, 171, 20);
-		getContentPane().add(textField_album);
+		textField_video = new JTextField();
+		textField_video.setColumns(10);
+		textField_video.setBounds(126, 186, 171, 20);
+		getContentPane().add(textField_video);
 		
 		labelMusica = new JLabel("Nome da M\u00FAsica");
 		labelMusica.setBounds(10, 17, 106, 14);
@@ -158,6 +160,15 @@ public class TelaCadastrarMusica extends JFrame {
 		textField_musica.setColumns(10);
 		textField_musica.setBounds(126, 14, 171, 20);
 		getContentPane().add(textField_musica);
+		
+		JLabel lblUrl = new JLabel("URL");
+		lblUrl.setBounds(10, 189, 131, 14);
+		getContentPane().add(lblUrl);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(126, 135, 171, 20);
+		getContentPane().add(textField);
 		initialize();
 	}
 

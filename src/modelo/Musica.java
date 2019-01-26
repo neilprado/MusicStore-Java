@@ -10,10 +10,11 @@ public class Musica extends Produto implements Comparable<Musica> {
 	private Album album;
 	private int duracao;
 	
-	public Musica(String nome, double preco, int ano, Album a, Artista ar, int d) {
+	public Musica(String nome, double preco, int ano, Album a, Artista ar, int d, String url) {
 		super(nome, preco, ano, ar);
 		this.album = a;
 		this.duracao = d;
+		this.url = url;
 	}
 	
 	public Musica() {}

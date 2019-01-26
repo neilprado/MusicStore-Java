@@ -45,12 +45,12 @@ public class Fachada {
 		return (Album) a;
 	}
 		
-	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, Artista ar, int duracao) throws Exception {
+	public static Musica cadastrarMusica (String nome, double preco, int ano, Album album, Artista ar, int duracao, String url) throws Exception {
 		DAO.begin();
 		Musica m = (Musica) daoproduto.listarPorNome(nome);
 		if(m!=null)
 			throw new Exception("Música " + nome + " já cadastrada");
-		m = new Musica(nome, preco, ano, album, ar, duracao);
+		m = new Musica(nome, preco, ano, album, ar, duracao, url);
 		if(m.getPreco()<0)
 			throw new Exception("Preço incorreto, não existe preço negativo");
 		if(m.getAlbum()==null)

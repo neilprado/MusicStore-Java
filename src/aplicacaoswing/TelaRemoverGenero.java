@@ -39,7 +39,7 @@ public class TelaRemoverGenero extends JFrame {
 	public TelaRemoverGenero() {
 		setTitle("Remover G\u00EAnero");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 449, 206);
 		getContentPane().setLayout(null);
 		

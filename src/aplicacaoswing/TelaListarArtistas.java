@@ -38,7 +38,7 @@ public class TelaListarArtistas extends JFrame {
 	public TelaListarArtistas() {
 		setTitle("Listar Artistas");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 449, 206);
 		getContentPane().setLayout(null);
 		

@@ -42,7 +42,7 @@ public class TelaCadastrarGenero extends JFrame {
 	public TelaCadastrarGenero() {
 		setTitle("Cadastro de G\u00EAnero");
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 200);
 		getContentPane().setLayout(null);
 		
