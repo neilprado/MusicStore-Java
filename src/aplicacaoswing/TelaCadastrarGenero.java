@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class TelaCadastrarGenero extends JFrame {
 
@@ -40,6 +42,7 @@ public class TelaCadastrarGenero extends JFrame {
 	 * Create the application.
 	 */
 	public TelaCadastrarGenero() {
+		getContentPane().setBackground(Color.WHITE);
 		setTitle("Cadastro de G\u00EAnero");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -52,10 +55,12 @@ public class TelaCadastrarGenero extends JFrame {
 		textField_genero.setColumns(10);
 		
 		JLabel lblNomeDoGenero = new JLabel("Nome do Genero");
+		lblNomeDoGenero.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeDoGenero.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeDoGenero);
 		
 		btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();

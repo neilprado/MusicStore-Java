@@ -11,6 +11,8 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Album;
+import java.awt.Color;
+import java.awt.Font;
 public class TelaAtualizarGenero extends JFrame {
 
 	private JFrame frame;
@@ -39,6 +41,7 @@ public class TelaAtualizarGenero extends JFrame {
 	 * Create the application.
 	 */
 	public TelaAtualizarGenero() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Atualizar G\u00EAnero");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -51,10 +54,12 @@ public class TelaAtualizarGenero extends JFrame {
 		textField_genero.setColumns(10);
 		
 		JLabel lblNomeGenero = new JLabel("Nome do G\u00EAnero");
+		lblNomeGenero.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeGenero.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeGenero);
 		
 		JButton btnAtualizar = new JButton("Atualizar");
+		btnAtualizar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
@@ -81,6 +86,7 @@ public class TelaAtualizarGenero extends JFrame {
 		getContentPane().add(status);
 		
 		lblNovoNomeDoGenero = new JLabel("Novo G\u00EAnero");
+		lblNovoNomeDoGenero.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNovoNomeDoGenero.setBounds(10, 79, 106, 14);
 		getContentPane().add(lblNovoNomeDoGenero);
 		

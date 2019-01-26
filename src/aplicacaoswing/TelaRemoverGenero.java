@@ -11,6 +11,8 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Genero;
+import java.awt.Color;
+import java.awt.Font;
 public class TelaRemoverGenero extends JFrame {
 
 	private JFrame frame;
@@ -37,6 +39,7 @@ public class TelaRemoverGenero extends JFrame {
 	 * Create the application.
 	 */
 	public TelaRemoverGenero() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Remover G\u00EAnero");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -49,10 +52,12 @@ public class TelaRemoverGenero extends JFrame {
 		textField_genero.setColumns(10);
 		
 		JLabel lblNomeGenero = new JLabel("Nome do G\u00EAnero");
+		lblNomeGenero.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeGenero.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeGenero);
 		
 		JButton btnCadastrar = new JButton("Remover");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();

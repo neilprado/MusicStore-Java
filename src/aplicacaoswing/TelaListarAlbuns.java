@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Genero;
+import java.awt.Color;
 public class TelaListarAlbuns extends JFrame {
 
 	private JFrame frame;
@@ -36,6 +37,7 @@ public class TelaListarAlbuns extends JFrame {
 	 * Create the application.
 	 */
 	public TelaListarAlbuns() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Listar \u00C1lbuns");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

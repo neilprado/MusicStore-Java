@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 import fachada.Fachada;
 import modelo.Album;
 import modelo.Artista;
+import java.awt.Color;
+import java.awt.Font;
 
 public class TelaCadastrarAlbum extends JFrame {
 
@@ -46,6 +48,7 @@ public class TelaCadastrarAlbum extends JFrame {
 	 * Create the application.
 	 */
 	public TelaCadastrarAlbum() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Cadastro de \u00C1lbum");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -58,10 +61,12 @@ public class TelaCadastrarAlbum extends JFrame {
 		textField_album.setColumns(10);
 		
 		JLabel lblNomeDoAlbum = new JLabel("Nome do Album");
+		lblNomeDoAlbum.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeDoAlbum.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeDoAlbum);
 		
 		JLabel lblPreco = new JLabel("Pre\u00E7o");
+		lblPreco.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblPreco.setBounds(10, 79, 85, 14);
 		getContentPane().add(lblPreco);
 		
@@ -71,10 +76,12 @@ public class TelaCadastrarAlbum extends JFrame {
 		textField_preco.setColumns(10);
 		
 		lblNewLabel_artista = new JLabel("Nome do Artista");
+		lblNewLabel_artista.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_artista.setBounds(10, 110, 131, 14);
 		getContentPane().add(lblNewLabel_artista);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
@@ -121,6 +128,7 @@ public class TelaCadastrarAlbum extends JFrame {
 		getContentPane().add(textField_ano);
 		
 		lblNmeroDeFaixas = new JLabel("N\u00FAmero de Faixas");
+		lblNmeroDeFaixas.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNmeroDeFaixas.setBounds(10, 142, 131, 14);
 		getContentPane().add(lblNmeroDeFaixas);
 		

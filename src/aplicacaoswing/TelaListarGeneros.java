@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Genero;
+import java.awt.Color;
 public class TelaListarGeneros extends JFrame {
 
 	private JFrame frame;
@@ -36,6 +37,7 @@ public class TelaListarGeneros extends JFrame {
 	 * Create the application.
 	 */
 	public TelaListarGeneros() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Listar G\u00EAneros");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

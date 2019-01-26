@@ -12,6 +12,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class TelaPrincipal {
 
@@ -88,6 +89,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnAlbum);
 		
 		JButton btnMusica = new JButton("");
+		btnMusica.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
 		btnMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -102,6 +104,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnMusica);
 		
 		JButton btnGenero = new JButton("");
+		btnGenero.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
 		btnGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -150,6 +153,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnListAlbum);
 		
 		JButton btnListMusica = new JButton("");
+		btnListMusica.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
 		btnListMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -164,6 +168,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnListMusica);
 		
 		JButton btnListGenero = new JButton("");
+		btnListGenero.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
 		btnListGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -212,6 +217,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnUpdateAlbum);
 		
 		JButton btnUpdateMusica = new JButton("");
+		btnUpdateMusica.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
 		btnUpdateMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -226,6 +232,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnUpdateMusica);
 		
 		JButton btnUpdateGenero = new JButton("");
+		btnUpdateGenero.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
 		btnUpdateGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -274,6 +281,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnDeleteAlbum);
 		
 		JButton btnDeleteMusica = new JButton("");
+		btnDeleteMusica.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
 		btnDeleteMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -288,6 +296,7 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnDeleteMusica);
 		
 		JButton btnDeleteGenero = new JButton("");
+		btnDeleteGenero.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
 		btnDeleteGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -302,12 +311,18 @@ public class TelaPrincipal {
 		frmMusicstore.getContentPane().add(btnDeleteGenero);
 		
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setForeground(new Color(255, 255, 255));
+		menuBar.setBackground(new Color(123, 104, 238));
 		frmMusicstore.setJMenuBar(menuBar);
 		
 		JMenu mnCadastrar = new JMenu("Cadastrar");
+		mnCadastrar.setForeground(new Color(255, 255, 255));
+		mnCadastrar.setBackground(new Color(123, 104, 238));
 		menuBar.add(mnCadastrar);
 		
 		JMenuItem mntmCadastrarArtista = new JMenuItem("Cadastrar Artista");
+		mntmCadastrarArtista.setForeground(new Color(255, 255, 255));
+		mntmCadastrarArtista.setBackground(new Color(123, 104, 238));
 		mntmCadastrarArtista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaCadastrarArtista t = new TelaCadastrarArtista();
@@ -317,6 +332,8 @@ public class TelaPrincipal {
 		mnCadastrar.add(mntmCadastrarArtista);
 		
 		JMenuItem mntmCadastrarlbum = new JMenuItem("Cadastrar \u00C1lbum");
+		mntmCadastrarlbum.setForeground(new Color(255, 255, 255));
+		mntmCadastrarlbum.setBackground(new Color(123, 104, 238));
 		mntmCadastrarlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaCadastrarAlbum t = new TelaCadastrarAlbum();
@@ -326,6 +343,8 @@ public class TelaPrincipal {
 		mnCadastrar.add(mntmCadastrarlbum);
 		
 		JMenuItem mntmCadastrarMsica = new JMenuItem("Cadastrar M\u00FAsica");
+		mntmCadastrarMsica.setForeground(new Color(255, 255, 255));
+		mntmCadastrarMsica.setBackground(new Color(123, 104, 238));
 		mntmCadastrarMsica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaCadastrarMusica t = new TelaCadastrarMusica();
@@ -335,6 +354,8 @@ public class TelaPrincipal {
 		mnCadastrar.add(mntmCadastrarMsica);
 		
 		JMenuItem mntmCadastrarGnero = new JMenuItem("Cadastrar G\u00EAnero");
+		mntmCadastrarGnero.setForeground(new Color(255, 255, 255));
+		mntmCadastrarGnero.setBackground(new Color(123, 104, 238));
 		mntmCadastrarGnero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaCadastrarGenero t = new TelaCadastrarGenero();
@@ -344,9 +365,13 @@ public class TelaPrincipal {
 		mnCadastrar.add(mntmCadastrarGnero);
 		
 		JMenu mnListar = new JMenu("Listar");
+		mnListar.setForeground(new Color(255, 255, 255));
+		mnListar.setBackground(new Color(255, 255, 255));
 		menuBar.add(mnListar);
 		
 		JMenuItem mntmListarArtistas = new JMenuItem("Listar Artistas");
+		mntmListarArtistas.setForeground(new Color(255, 255, 255));
+		mntmListarArtistas.setBackground(new Color(123, 104, 238));
 		mntmListarArtistas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaListarArtistas t = new TelaListarArtistas();
@@ -356,6 +381,8 @@ public class TelaPrincipal {
 		mnListar.add(mntmListarArtistas);
 		
 		JMenuItem mntmListarAlbuns = new JMenuItem("Listar \u00C1lbuns");
+		mntmListarAlbuns.setForeground(new Color(255, 255, 255));
+		mntmListarAlbuns.setBackground(new Color(123, 104, 238));
 		mntmListarAlbuns.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaListarAlbuns t = new TelaListarAlbuns();
@@ -365,6 +392,8 @@ public class TelaPrincipal {
 		mnListar.add(mntmListarAlbuns);
 		
 		JMenuItem mntmListarMusicas = new JMenuItem("Listar M\u00FAsicas");
+		mntmListarMusicas.setBackground(new Color(123, 104, 238));
+		mntmListarMusicas.setForeground(new Color(255, 255, 255));
 		mntmListarMusicas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaListarMusicas t = new TelaListarMusicas();
@@ -374,6 +403,8 @@ public class TelaPrincipal {
 		mnListar.add(mntmListarMusicas);
 		
 		JMenuItem mntmListarGeneros = new JMenuItem("Listar G\u00EAneros");
+		mntmListarGeneros.setForeground(new Color(255, 255, 255));
+		mntmListarGeneros.setBackground(new Color(123, 104, 238));
 		mntmListarGeneros.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaListarGeneros t = new TelaListarGeneros();
@@ -383,9 +414,13 @@ public class TelaPrincipal {
 		mnListar.add(mntmListarGeneros);
 		
 		JMenu mnAtualizar = new JMenu("Atualizar");
+		mnAtualizar.setForeground(new Color(255, 255, 255));
+		mnAtualizar.setBackground(new Color(255, 255, 255));
 		menuBar.add(mnAtualizar);
 		
 		JMenuItem mntmAtualizarArtista = new JMenuItem("Atualizar Artista");
+		mntmAtualizarArtista.setForeground(new Color(255, 255, 255));
+		mntmAtualizarArtista.setBackground(new Color(123, 104, 238));
 		mntmAtualizarArtista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaAtualizarArtista t = new TelaAtualizarArtista();
@@ -395,6 +430,8 @@ public class TelaPrincipal {
 		mnAtualizar.add(mntmAtualizarArtista);
 		
 		JMenuItem mntmAtualizarlbum = new JMenuItem("Atualizar \u00C1lbum");
+		mntmAtualizarlbum.setForeground(new Color(255, 255, 255));
+		mntmAtualizarlbum.setBackground(new Color(123, 104, 238));
 		mntmAtualizarlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaAtualizarAlbum t = new TelaAtualizarAlbum();
@@ -404,6 +441,8 @@ public class TelaPrincipal {
 		mnAtualizar.add(mntmAtualizarlbum);
 		
 		JMenuItem mntmAtualizarMsica = new JMenuItem("Atualizar M\u00FAsica");
+		mntmAtualizarMsica.setForeground(new Color(255, 255, 255));
+		mntmAtualizarMsica.setBackground(new Color(123, 104, 238));
 		mntmAtualizarMsica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaAtualizarMusica t = new TelaAtualizarMusica();
@@ -413,6 +452,8 @@ public class TelaPrincipal {
 		mnAtualizar.add(mntmAtualizarMsica);
 		
 		JMenuItem mntmAtualizarGnero = new JMenuItem("Atualizar G\u00EAnero");
+		mntmAtualizarGnero.setForeground(new Color(255, 255, 255));
+		mntmAtualizarGnero.setBackground(new Color(123, 104, 238));
 		mntmAtualizarGnero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaAtualizarGenero t = new TelaAtualizarGenero();
@@ -422,9 +463,13 @@ public class TelaPrincipal {
 		mnAtualizar.add(mntmAtualizarGnero);
 		
 		JMenu mnExcluir = new JMenu("Excluir");
+		mnExcluir.setForeground(new Color(255, 255, 255));
+		mnExcluir.setBackground(new Color(255, 255, 255));
 		menuBar.add(mnExcluir);
 		
 		JMenuItem mntmExcluirArtista = new JMenuItem("Excluir Artista");
+		mntmExcluirArtista.setBackground(new Color(123, 104, 238));
+		mntmExcluirArtista.setForeground(new Color(255, 255, 255));
 		mntmExcluirArtista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaRemoverArtista t = new TelaRemoverArtista();
@@ -434,6 +479,8 @@ public class TelaPrincipal {
 		mnExcluir.add(mntmExcluirArtista);
 		
 		JMenuItem mntmExcluirlbum = new JMenuItem("Excluir \u00C1lbum");
+		mntmExcluirlbum.setForeground(new Color(255, 255, 255));
+		mntmExcluirlbum.setBackground(new Color(123, 104, 238));
 		mntmExcluirlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaRemoverAlbum t = new TelaRemoverAlbum();
@@ -443,6 +490,8 @@ public class TelaPrincipal {
 		mnExcluir.add(mntmExcluirlbum);
 		
 		JMenuItem mntmExcluirMsica = new JMenuItem("Excluir M\u00FAsica");
+		mntmExcluirMsica.setBackground(new Color(123, 104, 238));
+		mntmExcluirMsica.setForeground(new Color(255, 255, 255));
 		mntmExcluirMsica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaRemoverMusica t = new TelaRemoverMusica();
@@ -452,6 +501,8 @@ public class TelaPrincipal {
 		mnExcluir.add(mntmExcluirMsica);
 		
 		JMenuItem mntmExcluirGnero = new JMenuItem("Excluir G\u00EAnero");
+		mntmExcluirGnero.setForeground(new Color(255, 255, 255));
+		mntmExcluirGnero.setBackground(new Color(123, 104, 238));
 		mntmExcluirGnero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				TelaRemoverGenero t = new TelaRemoverGenero();

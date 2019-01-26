@@ -27,11 +27,10 @@ public class TelaCadastrarMusica extends JFrame {
 	private JLabel lblNmeroDuracao;
 	private JTextField textField_duracao;
 	private JLabel lblNomeDolbum;
-	private JTextField textField_video;
 	private JLabel labelMusica;
 	private JTextField textField_musica;
 	private JLabel status;
-	private JTextField textField;
+	private JTextField textFieldAlbum;
 
 	/**
 	 * Launch the application.
@@ -86,21 +85,21 @@ public class TelaCadastrarMusica extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
 				try {
-					if(textField_video.getText().equalsIgnoreCase("") || textField_ano.getText().equalsIgnoreCase("") || 
+					if(textField_url.getText().equalsIgnoreCase("") || textField_ano.getText().equalsIgnoreCase("") || 
 							textField_artista.getText().equalsIgnoreCase("") || textField_duracao.getText().equalsIgnoreCase("")
 							|| textField_musica.getText().equalsIgnoreCase("") || textField_preco.getText().equalsIgnoreCase("")
-							|| textField_url.getText().equalsIgnoreCase(""))
+							|| textFieldAlbum.getText().equalsIgnoreCase(""))
 						throw new Exception ("Existem campos em branco, tente novamente preenchendo-os");
 					String nome = textField_musica.getText();
 					double preco = Double.parseDouble(textField_preco.getText());
 					int ano = Integer.parseInt(textField_ano.getText());
-					Album al = Fachada.buscarAlbum(textField_video.getText());
+					Album al = Fachada.buscarAlbum(textFieldAlbum.getText());
 					Artista a = Fachada.buscarArtista(textField_artista.getText());
 					int duracao = Integer.parseInt(textField_duracao.getText());
-					String url = textField_video.getText();
-					Musica m = new Musica(nome, preco, ano, al, a,duracao, url);
+					String url = textField_url.getText();
+					Musica m = new Musica(nome, preco, ano, al, a, duracao, url);
 					status.setText("Música "+ m.getNome() + " cadastrada com sucesso");
-					textField_video.setText("");
+					textFieldAlbum.setText("");
 					textField_ano.setText("");
 					textField_artista.setText("");
 					textField_duracao.setText("");
@@ -147,11 +146,6 @@ public class TelaCadastrarMusica extends JFrame {
 		lblNomeDolbum.setBounds(10, 139, 131, 14);
 		getContentPane().add(lblNomeDolbum);
 		
-		textField_video = new JTextField();
-		textField_video.setColumns(10);
-		textField_video.setBounds(126, 186, 171, 20);
-		getContentPane().add(textField_video);
-		
 		labelMusica = new JLabel("Nome da M\u00FAsica");
 		labelMusica.setBounds(10, 17, 106, 14);
 		getContentPane().add(labelMusica);
@@ -161,14 +155,10 @@ public class TelaCadastrarMusica extends JFrame {
 		textField_musica.setBounds(126, 14, 171, 20);
 		getContentPane().add(textField_musica);
 		
-		JLabel lblUrl = new JLabel("URL");
-		lblUrl.setBounds(10, 189, 131, 14);
-		getContentPane().add(lblUrl);
-		
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setBounds(126, 135, 171, 20);
-		getContentPane().add(textField);
+		textFieldAlbum = new JTextField();
+		textFieldAlbum.setColumns(10);
+		textFieldAlbum.setBounds(126, 135, 171, 20);
+		getContentPane().add(textFieldAlbum);
 		initialize();
 	}
 

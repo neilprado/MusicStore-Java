@@ -11,6 +11,8 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Album;
+import java.awt.Font;
+import java.awt.Color;
 public class TelaAtualizarAlbum extends JFrame {
 
 	private JFrame frame;
@@ -39,6 +41,8 @@ public class TelaAtualizarAlbum extends JFrame {
 	 * Create the application.
 	 */
 	public TelaAtualizarAlbum() {
+		setBackground(new Color(192, 192, 192));
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Atualizar \u00C1lbum");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -51,10 +55,12 @@ public class TelaAtualizarAlbum extends JFrame {
 		textField_artista.setColumns(10);
 		
 		JLabel lblNomeAlbum = new JLabel("Nome do \u00C1lbum");
+		lblNomeAlbum.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeAlbum.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeAlbum);
 		
 		JButton btnAtualizar = new JButton("Atualizar");
+		btnAtualizar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnAtualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
@@ -81,6 +87,7 @@ public class TelaAtualizarAlbum extends JFrame {
 		getContentPane().add(status);
 		
 		lblNovoNomeDoAlbum = new JLabel("Novo nome do \u00C1lbum");
+		lblNovoNomeDoAlbum.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNovoNomeDoAlbum.setBounds(10, 79, 106, 14);
 		getContentPane().add(lblNovoNomeDoAlbum);
 		

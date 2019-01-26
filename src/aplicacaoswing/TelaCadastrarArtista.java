@@ -12,6 +12,8 @@ import modelo.Artista;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Color;
 
 public class TelaCadastrarArtista extends JFrame {
 
@@ -42,6 +44,7 @@ public class TelaCadastrarArtista extends JFrame {
 	 * Create the application.
 	 */
 	public TelaCadastrarArtista() {
+		getContentPane().setBackground(Color.WHITE);
 		setTitle("Cadastro de Artista");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -54,10 +57,12 @@ public class TelaCadastrarArtista extends JFrame {
 		textField_artista.setColumns(10);
 		
 		JLabel lblNomeDoArtista = new JLabel("Nome do Artista");
+		lblNomeDoArtista.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeDoArtista.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeDoArtista);
 		
 		JLabel lblNewLabel = new JLabel("Nacionalidade");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel.setBounds(10, 79, 85, 14);
 		getContentPane().add(lblNewLabel);
 		
@@ -67,15 +72,17 @@ public class TelaCadastrarArtista extends JFrame {
 		textField_nac.setColumns(10);
 		
 		lbl_numintegrantes = new JLabel("N\u00FAmero de Integrantes");
-		lbl_numintegrantes.setBounds(10, 110, 131, 14);
+		lbl_numintegrantes.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lbl_numintegrantes.setBounds(10, 110, 147, 14);
 		getContentPane().add(lbl_numintegrantes);
 		
 		textField_num = new JTextField();
-		textField_num.setBounds(126, 107, 43, 20);
+		textField_num.setBounds(190, 107, 43, 20);
 		getContentPane().add(textField_num);
 		textField_num.setColumns(10);
 		
 		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
@@ -96,7 +103,7 @@ public class TelaCadastrarArtista extends JFrame {
 				}
 			}
 		});
-		btnCadastrar.setBounds(167, 168, 106, 23);
+		btnCadastrar.setBounds(150, 168, 147, 23);
 		getContentPane().add(btnCadastrar);
 		
 		status = new JLabel("");

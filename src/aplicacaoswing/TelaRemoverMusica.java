@@ -11,6 +11,8 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Musica;
+import java.awt.Color;
+import java.awt.Font;
 
 public class TelaRemoverMusica extends JFrame {
 
@@ -38,6 +40,7 @@ public class TelaRemoverMusica extends JFrame {
 	 * Create the application.
 	 */
 	public TelaRemoverMusica() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Remover M\u00FAsica");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -50,10 +53,12 @@ public class TelaRemoverMusica extends JFrame {
 		textField_musica.setColumns(10);
 		
 		JLabel lblNomeMusica = new JLabel("Nome da M\u00FAsica");
+		lblNomeMusica.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeMusica.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeMusica);
 		
 		JButton btnCadastrar = new JButton("Remover");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();

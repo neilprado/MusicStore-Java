@@ -11,6 +11,8 @@ import javax.swing.JTextField;
 
 import fachada.Fachada;
 import modelo.Artista;
+import java.awt.Color;
+import java.awt.Font;
 
 public class TelaRemoverArtista extends JFrame {
 
@@ -38,6 +40,7 @@ public class TelaRemoverArtista extends JFrame {
 	 * Create the application.
 	 */
 	public TelaRemoverArtista() {
+		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Remover Artista");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -50,10 +53,12 @@ public class TelaRemoverArtista extends JFrame {
 		textField_artista.setColumns(10);
 		
 		JLabel lblNomeArtista = new JLabel("Nome do Artista");
+		lblNomeArtista.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNomeArtista.setBounds(10, 48, 106, 14);
 		getContentPane().add(lblNomeArtista);
 		
 		JButton btnCadastrar = new JButton("Remover");
+		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Fachada.inicializar();
