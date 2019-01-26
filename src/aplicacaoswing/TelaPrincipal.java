@@ -3,17 +3,19 @@ package aplicacaoswing;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class TelaPrincipal {
 
-	private JFrame frame;
+	private JFrame frmMusicstore;
 
 	/**
 	 * Launch the application.
@@ -23,7 +25,7 @@ public class TelaPrincipal {
 			public void run() {
 				try {
 					TelaPrincipal window = new TelaPrincipal();
-					window.frame.setVisible(true);
+					window.frmMusicstore.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -42,16 +44,21 @@ public class TelaPrincipal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 545, 335);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmMusicstore = new JFrame();
+		frmMusicstore.setTitle("MusicStore");
+		frmMusicstore.setBounds(100, 100, 545, 335);
+		frmMusicstore.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmMusicstore.getContentPane().setLayout(null);
+		try {
+			frmMusicstore.setContentPane(new FundoTela("/imagem/bground.jpg"));
+		}catch(IOException e1) {}
 		
 		JLabel lblCadastros = new JLabel("Cadastros");
 		lblCadastros.setBounds(10, 31, 79, 14);
-		frame.getContentPane().add(lblCadastros);
+		frmMusicstore.getContentPane().add(lblCadastros);
 		
-		JButton btnListArtista = new JButton("New button");
+		JButton btnListArtista = new JButton("");
+		btnListArtista.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
 		btnListArtista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -63,9 +70,10 @@ public class TelaPrincipal {
 			}
 		});
 		btnListArtista.setBounds(88, 77, 89, 55);
-		frame.getContentPane().add(btnListArtista);
+		frmMusicstore.getContentPane().add(btnListArtista);
 		
-		JButton btnAlbum = new JButton("New button");
+		JButton btnAlbum = new JButton("");
+		btnAlbum.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/album.jpg")));
 		btnAlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -77,9 +85,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnAlbum.setBounds(187, 11, 89, 55);
-		frame.getContentPane().add(btnAlbum);
+		frmMusicstore.getContentPane().add(btnAlbum);
 		
-		JButton btnMusica = new JButton("New button");
+		JButton btnMusica = new JButton("");
 		btnMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -91,9 +99,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnMusica.setBounds(286, 11, 89, 55);
-		frame.getContentPane().add(btnMusica);
+		frmMusicstore.getContentPane().add(btnMusica);
 		
-		JButton btnGenero = new JButton("New button");
+		JButton btnGenero = new JButton("");
 		btnGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -105,13 +113,14 @@ public class TelaPrincipal {
 			}
 		});
 		btnGenero.setBounds(385, 11, 89, 55);
-		frame.getContentPane().add(btnGenero);
+		frmMusicstore.getContentPane().add(btnGenero);
 		
 		JLabel lblListagens = new JLabel("Listagens");
 		lblListagens.setBounds(10, 97, 46, 14);
-		frame.getContentPane().add(lblListagens);
+		frmMusicstore.getContentPane().add(lblListagens);
 		
-		JButton button = new JButton("New button");
+		JButton button = new JButton("");
+		button.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -123,9 +132,10 @@ public class TelaPrincipal {
 			}
 		});
 		button.setBounds(88, 11, 89, 55);
-		frame.getContentPane().add(button);
+		frmMusicstore.getContentPane().add(button);
 		
-		JButton btnListAlbum = new JButton("New button");
+		JButton btnListAlbum = new JButton("");
+		btnListAlbum.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/album.jpg")));
 		btnListAlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -137,9 +147,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnListAlbum.setBounds(187, 77, 89, 55);
-		frame.getContentPane().add(btnListAlbum);
+		frmMusicstore.getContentPane().add(btnListAlbum);
 		
-		JButton btnListMusica = new JButton("New button");
+		JButton btnListMusica = new JButton("");
 		btnListMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -151,9 +161,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnListMusica.setBounds(286, 77, 89, 55);
-		frame.getContentPane().add(btnListMusica);
+		frmMusicstore.getContentPane().add(btnListMusica);
 		
-		JButton btnListGenero = new JButton("New button");
+		JButton btnListGenero = new JButton("");
 		btnListGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -165,13 +175,14 @@ public class TelaPrincipal {
 			}
 		});
 		btnListGenero.setBounds(385, 77, 89, 55);
-		frame.getContentPane().add(btnListGenero);
+		frmMusicstore.getContentPane().add(btnListGenero);
 		
 		JLabel lblAtualizao = new JLabel("Atualiza\u00E7\u00F5es");
 		lblAtualizao.setBounds(10, 163, 63, 14);
-		frame.getContentPane().add(lblAtualizao);
+		frmMusicstore.getContentPane().add(lblAtualizao);
 		
-		JButton btnUpdateArtista = new JButton("New button");
+		JButton btnUpdateArtista = new JButton("");
+		btnUpdateArtista.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
 		btnUpdateArtista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -183,9 +194,10 @@ public class TelaPrincipal {
 			}
 		});
 		btnUpdateArtista.setBounds(88, 143, 89, 55);
-		frame.getContentPane().add(btnUpdateArtista);
+		frmMusicstore.getContentPane().add(btnUpdateArtista);
 		
-		JButton btnUpdateAlbum = new JButton("New button");
+		JButton btnUpdateAlbum = new JButton("");
+		btnUpdateAlbum.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/album.jpg")));
 		btnUpdateAlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -197,9 +209,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnUpdateAlbum.setBounds(187, 143, 89, 55);
-		frame.getContentPane().add(btnUpdateAlbum);
+		frmMusicstore.getContentPane().add(btnUpdateAlbum);
 		
-		JButton btnUpdateMusica = new JButton("New button");
+		JButton btnUpdateMusica = new JButton("");
 		btnUpdateMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -211,9 +223,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnUpdateMusica.setBounds(286, 143, 89, 55);
-		frame.getContentPane().add(btnUpdateMusica);
+		frmMusicstore.getContentPane().add(btnUpdateMusica);
 		
-		JButton btnUpdateGenero = new JButton("New button");
+		JButton btnUpdateGenero = new JButton("");
 		btnUpdateGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -225,13 +237,14 @@ public class TelaPrincipal {
 			}
 		});
 		btnUpdateGenero.setBounds(385, 143, 89, 55);
-		frame.getContentPane().add(btnUpdateGenero);
+		frmMusicstore.getContentPane().add(btnUpdateGenero);
 		
 		JLabel lblNewLabel = new JLabel("Exclus\u00F5es");
 		lblNewLabel.setBounds(10, 230, 63, 14);
-		frame.getContentPane().add(lblNewLabel);
+		frmMusicstore.getContentPane().add(lblNewLabel);
 		
-		JButton btnDeleteArtista = new JButton("New button");
+		JButton btnDeleteArtista = new JButton("");
+		btnDeleteArtista.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
 		btnDeleteArtista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -243,9 +256,10 @@ public class TelaPrincipal {
 			}
 		});
 		btnDeleteArtista.setBounds(88, 210, 89, 55);
-		frame.getContentPane().add(btnDeleteArtista);
+		frmMusicstore.getContentPane().add(btnDeleteArtista);
 		
-		JButton btnDeleteAlbum = new JButton("New button");
+		JButton btnDeleteAlbum = new JButton("");
+		btnDeleteAlbum.setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/album.jpg")));
 		btnDeleteAlbum.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -257,9 +271,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnDeleteAlbum.setBounds(187, 209, 89, 55);
-		frame.getContentPane().add(btnDeleteAlbum);
+		frmMusicstore.getContentPane().add(btnDeleteAlbum);
 		
-		JButton btnDeleteMusica = new JButton("New button");
+		JButton btnDeleteMusica = new JButton("");
 		btnDeleteMusica.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -271,9 +285,9 @@ public class TelaPrincipal {
 			}
 		});
 		btnDeleteMusica.setBounds(286, 209, 89, 55);
-		frame.getContentPane().add(btnDeleteMusica);
+		frmMusicstore.getContentPane().add(btnDeleteMusica);
 		
-		JButton btnDeleteGenero = new JButton("New button");
+		JButton btnDeleteGenero = new JButton("");
 		btnDeleteGenero.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -285,10 +299,10 @@ public class TelaPrincipal {
 			}
 		});
 		btnDeleteGenero.setBounds(385, 209, 89, 55);
-		frame.getContentPane().add(btnDeleteGenero);
+		frmMusicstore.getContentPane().add(btnDeleteGenero);
 		
 		JMenuBar menuBar = new JMenuBar();
-		frame.setJMenuBar(menuBar);
+		frmMusicstore.setJMenuBar(menuBar);
 		
 		JMenu mnCadastrar = new JMenu("Cadastrar");
 		menuBar.add(mnCadastrar);
