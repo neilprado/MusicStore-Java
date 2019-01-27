@@ -327,5 +327,14 @@ public class Fachada {
 			throw new Exception("Não existem álbuns cadastrados com esse nome");
 		return a;
 	}
+	
+	// Contagens 
+	
+	public static int contarMusicas() throws Exception {
+		int quant = daoproduto.contarMusicas();
+		if(quant < 0)
+			throw new Exception("Não existem músicas cadastradas");
+		return quant;
+	}
 
 }

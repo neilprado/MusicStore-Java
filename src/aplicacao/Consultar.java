@@ -10,6 +10,7 @@ public class Consultar {
 			System.out.println(Fachada.consultaArtistasPorGenero("Pop"));
 			System.out.println(Fachada.consultarMusicasPorGenero("Pop Rock"));
 			System.out.println(Fachada.consultaGenerosPorArtista("Cesare Cremonini"));
+			System.out.println(Fachada.contarMusicas());
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
