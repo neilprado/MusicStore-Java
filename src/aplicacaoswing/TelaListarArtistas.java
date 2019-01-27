@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import fachada.Fachada;
+import modelo.Album;
+import modelo.Artista;
 import modelo.Genero;
 import modelo.Musica;
 
@@ -50,18 +52,37 @@ public class TelaListarArtistas extends JFrame {
 		getContentPane().setLayout(null);
 		
 		Fachada.inicializar();
-		List<Musica> musicas = Fachada.listarMusicas(); 
-		button = new JButton[musicas.size()];
-		label = new JLabel[musicas.size()];
-		for(int i = 0; i < musicas.size(); i++) {
-			button[i] = new JButton("");
-			button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
-			getContentPane().add(button[i]);
-			button[i].setBounds(4*(i*22), 11, 89, 68);
-			label[i] = new JLabel("New Label");
-			label[i].setBounds(4*(i*22), 79, 89, 14);
-			getContentPane().add(label[i]);			
-			initialize();
+		List<Artista> artistas = Fachada.listarArtistasCadastrados(); 
+		button = new JButton[artistas.size()];
+		label = new JLabel[artistas.size()];
+		for(int i = 0; i < artistas.size(); i++) {
+			if(i <= 7) {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(i*22), 11, 89, 68);
+				label[i] = new JLabel("New Label");
+				label[i].setBounds(4*(i*22), 79, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();
+			}else {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(i*22), 111, 89, 68);
+				label[i] = new JLabel("New Label");
+				label[i].setBounds(4*(i*22), 179, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();	
+			}
 		}
 	}
 

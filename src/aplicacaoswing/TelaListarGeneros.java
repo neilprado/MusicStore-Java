@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import fachada.Fachada;
+import modelo.Album;
 import modelo.Genero;
 import modelo.Musica;
 
@@ -46,22 +47,41 @@ public class TelaListarGeneros extends JFrame {
 		setTitle("Listar G\u00EAneros");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 449, 206);
+		setBounds(100, 100, 694, 344);
 		getContentPane().setLayout(null);
 		
 		Fachada.inicializar();
-		List<Musica> musicas = Fachada.listarMusicas(); 
-		button = new JButton[musicas.size()];
-		label = new JLabel[musicas.size()];
-		for(int i = 0; i < musicas.size(); i++) {
-			button[i] = new JButton("");
-			button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
-			getContentPane().add(button[i]);
-			button[i].setBounds(4*(i*22), 11, 89, 68);
-			label[i] = new JLabel("New Label");
-			label[i].setBounds(4*(i*22), 79, 89, 14);
-			getContentPane().add(label[i]);			
-			initialize();
+		List<Genero> generos = Fachada.listarGenerosCadastrados(); 
+		button = new JButton[generos.size()];
+		label = new JLabel[generos.size()];
+		for(int i = 0; i < generos.size(); i++) {
+			if(i <= 7) {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(i*22), 11, 89, 68);
+				label[i] = new JLabel("New Label");
+				label[i].setBounds(4*(i*22), 79, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();
+			}else {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(i*22), 111, 89, 68);
+				label[i] = new JLabel("New Label");
+				label[i].setBounds(4*(i*22), 179, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();	
+			}
 		}
 	}
 

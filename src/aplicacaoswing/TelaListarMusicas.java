@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import fachada.Fachada;
+import modelo.Album;
 import modelo.Genero;
 import modelo.Musica;
 
@@ -60,14 +61,33 @@ public class TelaListarMusicas extends JFrame {
 		button = new JButton[musicas.size()];
 		label = new JLabel[musicas.size()];
 		for(int i = 0; i < musicas.size(); i++) {
-			button[i] = new JButton("");
-			button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
-			getContentPane().add(button[i]);
-			button[i].setBounds(4*(i*22), 11, 89, 68);
-			label[i] = new JLabel("New Label");
-			label[i].setBounds(4*(i*22), 79, 89, 14);
-			getContentPane().add(label[i]);			
-			initialize();
+			if(i <= 7) {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(i*22), 11, 89, 68);
+				label[i] = new JLabel("New Label");
+				label[i].setBounds(4*(i*22), 79, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();
+			}else {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(i*22), 111, 89, 68);
+				label[i] = new JLabel("New Label");
+				label[i].setBounds(4*(i*22), 179, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();	
+			}
 		}
 		
 		
