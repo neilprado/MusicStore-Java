@@ -252,9 +252,9 @@ public class Fachada {
 	
 	// Listagem de Objetos
 	@SuppressWarnings("null")
-	public List<Musica> listarMusicas(){
+	public static List<Musica> listarMusicas(){
 		List<Produto> produtos = daoproduto.readAll();
-		List<Musica> musicas = null;
+		List<Musica> musicas = new ArrayList<Musica>();
 		for(Produto m: produtos) {
 			if(m instanceof Musica)
 				musicas.add((Musica) m);
@@ -262,9 +262,9 @@ public class Fachada {
 		return musicas;
 	}
 	
-	public List<Album> listarAlbuns(){
+	public static List<Album> listarAlbuns(){
 		List<Produto> produtos = daoproduto.readAll();
-		List<Album> albuns = null;
+		List<Album> albuns = new ArrayList<Album>();
 		for(Produto a: produtos) {
 			if(a instanceof Album)
 				albuns.add((Album) a);
@@ -272,17 +272,17 @@ public class Fachada {
 		return albuns;
 	}
 	
-	public List<Artista> listarArtistasCadastrados(){
+	public static List<Artista> listarArtistasCadastrados(){
 		List<Artista> artistas = daoartista.readAll();
-		List<Artista> aux = null;
+		List<Artista> aux = new ArrayList<Artista>();
 		for(Artista a: artistas)
 			aux.add(a);
 		return aux;
 	}
 	
-	public List<Genero> listarGenerosCadastrados(){
+	public static List<Genero> listarGenerosCadastrados(){
 		List<Genero> generos = daogenero.readAll();
-		List<Genero> aux = null;
+		List<Genero> aux = new ArrayList<Genero>();
 		for(Genero g: generos)
 			aux.add(g);
 		return aux;

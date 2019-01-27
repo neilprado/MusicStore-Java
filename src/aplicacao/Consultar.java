@@ -1,6 +1,9 @@
 package aplicacao;
 
+import java.util.List;
+
 import fachada.Fachada;
+import modelo.Musica;
 
 public class Consultar {
 	public Consultar() {
