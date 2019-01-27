@@ -249,6 +249,44 @@ public class Fachada {
 			texto+= g.getNome() + "\n";
 		return texto;
 	}
+	
+	// Listagem de Objetos
+	@SuppressWarnings("null")
+	public List<Musica> listarMusicas(){
+		List<Produto> produtos = daoproduto.readAll();
+		List<Musica> musicas = null;
+		for(Produto m: produtos) {
+			if(m instanceof Musica)
+				musicas.add((Musica) m);
+		}
+		return musicas;
+	}
+	
+	public List<Album> listarAlbuns(){
+		List<Produto> produtos = daoproduto.readAll();
+		List<Album> albuns = null;
+		for(Produto a: produtos) {
+			if(a instanceof Album)
+				albuns.add((Album) a);
+		}
+		return albuns;
+	}
+	
+	public List<Artista> listarArtistasCadastrados(){
+		List<Artista> artistas = daoartista.readAll();
+		List<Artista> aux = null;
+		for(Artista a: artistas)
+			aux.add(a);
+		return aux;
+	}
+	
+	public List<Genero> listarGenerosCadastrados(){
+		List<Genero> generos = daogenero.readAll();
+		List<Genero> aux = null;
+		for(Genero g: generos)
+			aux.add(g);
+		return aux;
+	}
 	// MÉTODOS PERSONALIZADOS
 	public static void  relacionaAlbum (String nome, String album) throws Exception {
 		DAO.begin();
@@ -336,5 +374,6 @@ public class Fachada {
 			throw new Exception("Não existem músicas cadastradas");
 		return quant;
 	}
+	
 
 }
