@@ -61,7 +61,9 @@ public class TelaListarMusicas extends JFrame {
 		button = new JButton[musicas.size()];
 		label = new JLabel[musicas.size()];
 		int i = 0;
+		int j = 0;
 		for(Musica m: musicas) {
+			if(i < 8) {
 				button[i] = new JButton("");
 				button[i].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -74,7 +76,22 @@ public class TelaListarMusicas extends JFrame {
 				label[i].setBounds(4*(i*22), 79, 89, 14);
 				getContentPane().add(label[i]);			
 				initialize();
-				i++;
+			}else {
+				button[i] = new JButton("");
+				button[i].addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
+				getContentPane().add(button[i]);
+				button[i].setBounds(4*(j*22), 111, 89, 68);
+				label[i] = new JLabel(m.getNome());
+				label[i].setBounds(4*(j*22), 179, 89, 14);
+				getContentPane().add(label[i]);			
+				initialize();
+				j++;
+			}
+			i++;
 		}
 		
 		
