@@ -54,8 +54,8 @@ public class TelaListarGeneros extends JFrame {
 		List<Genero> generos = Fachada.listarGenerosCadastrados(); 
 		button = new JButton[generos.size()];
 		label = new JLabel[generos.size()];
-		for(int i = 0; i < generos.size(); i++) {
-			if(i <= 7) {
+		int i = 0;
+		for(Genero g: generos) {
 				button[i] = new JButton("");
 				button[i].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -64,24 +64,11 @@ public class TelaListarGeneros extends JFrame {
 				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
 				getContentPane().add(button[i]);
 				button[i].setBounds(4*(i*22), 11, 89, 68);
-				label[i] = new JLabel("New Label");
+				label[i] = new JLabel(g.getNome());
 				label[i].setBounds(4*(i*22), 79, 89, 14);
 				getContentPane().add(label[i]);			
 				initialize();
-			}else {
-				button[i] = new JButton("");
-				button[i].addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					}
-				});
-				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/genero.jpg")));
-				getContentPane().add(button[i]);
-				button[i].setBounds(4*(i*22), 111, 89, 68);
-				label[i] = new JLabel("New Label");
-				label[i].setBounds(4*(i*22), 179, 89, 14);
-				getContentPane().add(label[i]);			
-				initialize();	
-			}
+				i++;
 		}
 	}
 

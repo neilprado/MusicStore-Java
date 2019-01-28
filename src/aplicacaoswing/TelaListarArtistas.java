@@ -55,34 +55,22 @@ public class TelaListarArtistas extends JFrame {
 		List<Artista> artistas = Fachada.listarArtistasCadastrados(); 
 		button = new JButton[artistas.size()];
 		label = new JLabel[artistas.size()];
-		for(int i = 0; i < artistas.size(); i++) {
-			if(i <= 7) {
-				button[i] = new JButton("");
-				button[i].addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					}
-				});
-				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
-				getContentPane().add(button[i]);
-				button[i].setBounds(4*(i*22), 11, 89, 68);
-				label[i] = new JLabel("New Label");
-				label[i].setBounds(4*(i*22), 79, 89, 14);
-				getContentPane().add(label[i]);			
-				initialize();
-			}else {
-				button[i] = new JButton("");
-				button[i].addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-					}
-				});
-				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
-				getContentPane().add(button[i]);
-				button[i].setBounds(4*(i*22), 111, 89, 68);
-				label[i] = new JLabel("New Label");
-				label[i].setBounds(4*(i*22), 179, 89, 14);
-				getContentPane().add(label[i]);			
-				initialize();	
-			}
+		int i = 0;
+		for(Artista a: artistas) {
+			button[i] = new JButton("");
+			button[i].addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
+			button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/artista.jpg")));
+			getContentPane().add(button[i]);
+			button[i].setBounds(4*(i*22), 11, 89, 68);
+			label[i] = new JLabel(a.getNome());
+			label[i].setBounds(4*(i*22), 79, 89, 14);
+			getContentPane().add(label[i]);			
+			initialize();
+			button[i] = new JButton("");	
+			i++;
 		}
 	}
 
