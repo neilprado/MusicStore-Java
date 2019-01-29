@@ -25,7 +25,7 @@ public class TelaListarMusicas extends JFrame {
 	private JLabel status;
 	private JButton button[];
 	private JLabel label[];
-	private TelaListaCustom tela;
+	private JFrame tela;
 
 	/**
 	 * Launch the application.
@@ -69,7 +69,8 @@ public class TelaListarMusicas extends JFrame {
 				button[i].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						try {
-							tela = new TelaListaCustom(m);
+							tela = new TelaVideo(m);
+							tela.setVisible(true);
 						}catch(Exception err) {
 							System.out.println(err.getMessage());
 						}
@@ -86,6 +87,12 @@ public class TelaListarMusicas extends JFrame {
 				button[i] = new JButton("");
 				button[i].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
+						try {
+							tela = new TelaVideo(m);
+							tela.setVisible(true);
+						}catch(Exception err) {
+							System.out.println(err.getMessage());
+						}
 					}
 				});
 				button[i].setIcon(new ImageIcon(TelaPrincipal.class.getResource("/imagem/musica.jpg")));
