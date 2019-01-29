@@ -3,12 +3,17 @@ package aplicacaoswing;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+
+import modelo.Album;
+import modelo.Musica;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 
 public class TelaListaCustom {
 
 	private JFrame frmBusca;
+	private static Musica mu;
 
 	/**
 	 * Launch the application.
@@ -17,7 +22,7 @@ public class TelaListaCustom {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaListaCustom window = new TelaListaCustom();
+					TelaListaCustom window = new TelaListaCustom(mu);
 					window.frmBusca.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -28,11 +33,14 @@ public class TelaListaCustom {
 
 	/**
 	 * Create the application.
+	 * @param a 
 	 */
-	public TelaListaCustom() {
+	public TelaListaCustom(Musica m) {
 		
 		initialize();
 	}
+	
+	
 
 	/**
 	 * Initialize the contents of the frame.

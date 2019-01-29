@@ -22,6 +22,7 @@ public class TelaListarAlbuns extends JFrame {
 	private JFrame frame;
 	private JButton button[];
 	private JLabel label[];
+	private TelaListaCustom tela;
 
 	/**
 	 * Launch the application.
