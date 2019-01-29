@@ -1,163 +1,165 @@
-[EL Fine]: server: 2019-01-29 14:14:45.979--Thread(Thread[AWT-EventQueue-0,6,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2019-01-29 14:14:46.238--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Genero] is set to [FIELD].
-[EL Config]: metadata: 2019-01-29 14:14:46.265--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field albuns] is being defaulted to: class modelo.Album.
-[EL Config]: metadata: 2019-01-29 14:14:46.272--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Produto] is set to [FIELD].
-[EL Config]: metadata: 2019-01-29 14:14:46.274--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
-[EL Config]: metadata: 2019-01-29 14:14:46.274--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Album] is set to [FIELD].
-[EL Config]: metadata: 2019-01-29 14:14:46.275--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field musicas] is being defaulted to: class modelo.Musica.
-[EL Config]: metadata: 2019-01-29 14:14:46.278--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field generos] is being defaulted to: class modelo.Genero.
-[EL Config]: metadata: 2019-01-29 14:14:46.278--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Musica] is set to [FIELD].
-[EL Config]: metadata: 2019-01-29 14:14:46.278--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field album] is being defaulted to: class modelo.Album.
-[EL Config]: metadata: 2019-01-29 14:14:46.279--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
-[EL Config]: metadata: 2019-01-29 14:14:46.279--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field produtos] is being defaulted to: class modelo.Produto.
-[EL Config]: metadata: 2019-01-29 14:14:46.279--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Genero] is being defaulted to: Genero.
-[EL Config]: metadata: 2019-01-29 14:14:46.28--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Genero] is being defaulted to: GENERO.
-[EL Config]: metadata: 2019-01-29 14:14:46.296--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2019-01-29 14:14:46.297--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.298--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Album] is being defaulted to: Album.
-[EL Config]: metadata: 2019-01-29 14:14:46.298--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Produto] is being defaulted to: Produto.
-[EL Config]: metadata: 2019-01-29 14:14:46.298--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Produto] is being defaulted to: PRODUTO.
-[EL Config]: metadata: 2019-01-29 14:14:46.299--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
-[EL Config]: metadata: 2019-01-29 14:14:46.3--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [ano] is being defaulted to: ANO.
-[EL Config]: metadata: 2019-01-29 14:14:46.3--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2019-01-29 14:14:46.3--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.301--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Album] is being defaulted to: ALBUM.
-[EL Config]: metadata: 2019-01-29 14:14:46.301--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
-[EL Config]: metadata: 2019-01-29 14:14:46.302--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
-[EL Config]: metadata: 2019-01-29 14:14:46.302--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [ano] is being defaulted to: ANO.
-[EL Config]: metadata: 2019-01-29 14:14:46.303--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [faixas] is being defaulted to: FAIXAS.
-[EL Config]: metadata: 2019-01-29 14:14:46.303--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2019-01-29 14:14:46.303--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.303--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Musica] is being defaulted to: Musica.
-[EL Config]: metadata: 2019-01-29 14:14:46.304--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Musica] is being defaulted to: MUSICA.
-[EL Config]: metadata: 2019-01-29 14:14:46.304--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
-[EL Config]: metadata: 2019-01-29 14:14:46.305--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
-[EL Config]: metadata: 2019-01-29 14:14:46.305--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [ano] is being defaulted to: ANO.
-[EL Config]: metadata: 2019-01-29 14:14:46.305--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2019-01-29 14:14:46.305--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [duracao] is being defaulted to: DURACAO.
-[EL Config]: metadata: 2019-01-29 14:14:46.306--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.306--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [url] is being defaulted to: URL.
-[EL Config]: metadata: 2019-01-29 14:14:46.306--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
-[EL Config]: metadata: 2019-01-29 14:14:46.306--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
-[EL Config]: metadata: 2019-01-29 14:14:46.307--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2019-01-29 14:14:46.307--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.307--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
-[EL Config]: metadata: 2019-01-29 14:14:46.307--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
-[EL Config]: metadata: 2019-01-29 14:14:46.322--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.322--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.322--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.322--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
-[EL Warning]: metadata: 2019-01-29 14:14:46.338--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field generos] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
-[EL Config]: metadata: 2019-01-29 14:14:46.339--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.339--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.34--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.34--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.34--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field album] is being defaulted to: ID.
-[EL Config]: metadata: 2019-01-29 14:14:46.34--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [album] is being defaulted to: ALBUM_ID.
-[EL Warning]: metadata: 2019-01-29 14:14:46.341--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field albuns] within entity class [class modelo.Genero] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
-[EL Warning]: metadata: 2019-01-29 14:14:46.344--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field musicas] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
-[EL Warning]: metadata: 2019-01-29 14:14:46.345--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field produtos] within entity class [class modelo.Artista] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
-[EL Info]: 2019-01-29 14:14:47.0--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
-[EL Fine]: connection: 2019-01-29 14:14:47.111--Thread(Thread[AWT-EventQueue-0,6,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
-[EL Config]: connection: 2019-01-29 14:14:47.121--ServerSession(153930724)--Connection(2140437132)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+[EL Fine]: server: 2019-01-29 20:15:28.456--Thread(Thread[AWT-EventQueue-0,6,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2019-01-29 20:15:28.631--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Genero] is set to [FIELD].
+[EL Config]: metadata: 2019-01-29 20:15:28.649--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field albuns] is being defaulted to: class modelo.Album.
+[EL Config]: metadata: 2019-01-29 20:15:28.655--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Produto] is set to [FIELD].
+[EL Config]: metadata: 2019-01-29 20:15:28.656--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2019-01-29 20:15:28.656--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Album] is set to [FIELD].
+[EL Config]: metadata: 2019-01-29 20:15:28.657--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field musicas] is being defaulted to: class modelo.Musica.
+[EL Config]: metadata: 2019-01-29 20:15:28.659--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field generos] is being defaulted to: class modelo.Genero.
+[EL Config]: metadata: 2019-01-29 20:15:28.659--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Musica] is set to [FIELD].
+[EL Config]: metadata: 2019-01-29 20:15:28.66--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field album] is being defaulted to: class modelo.Album.
+[EL Config]: metadata: 2019-01-29 20:15:28.66--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Artista] is set to [FIELD].
+[EL Config]: metadata: 2019-01-29 20:15:28.66--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the one to many mapping element [field produtos] is being defaulted to: class modelo.Produto.
+[EL Config]: metadata: 2019-01-29 20:15:28.66--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Genero] is being defaulted to: Genero.
+[EL Config]: metadata: 2019-01-29 20:15:28.661--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Genero] is being defaulted to: GENERO.
+[EL Config]: metadata: 2019-01-29 20:15:28.673--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2019-01-29 20:15:28.674--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.674--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Album] is being defaulted to: Album.
+[EL Config]: metadata: 2019-01-29 20:15:28.675--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Produto] is being defaulted to: Produto.
+[EL Config]: metadata: 2019-01-29 20:15:28.675--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Produto] is being defaulted to: PRODUTO.
+[EL Config]: metadata: 2019-01-29 20:15:28.676--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2019-01-29 20:15:28.676--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2019-01-29 20:15:28.676--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2019-01-29 20:15:28.676--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.676--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Album] is being defaulted to: ALBUM.
+[EL Config]: metadata: 2019-01-29 20:15:28.677--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2019-01-29 20:15:28.677--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2019-01-29 20:15:28.678--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2019-01-29 20:15:28.678--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [faixas] is being defaulted to: FAIXAS.
+[EL Config]: metadata: 2019-01-29 20:15:28.678--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2019-01-29 20:15:28.678--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.678--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Musica] is being defaulted to: Musica.
+[EL Config]: metadata: 2019-01-29 20:15:28.678--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Musica] is being defaulted to: MUSICA.
+[EL Config]: metadata: 2019-01-29 20:15:28.679--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to one mapping element [field artista] is being defaulted to: class modelo.Artista.
+[EL Config]: metadata: 2019-01-29 20:15:28.679--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [preco] is being defaulted to: PRECO.
+[EL Config]: metadata: 2019-01-29 20:15:28.679--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [ano] is being defaulted to: ANO.
+[EL Config]: metadata: 2019-01-29 20:15:28.679--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2019-01-29 20:15:28.679--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [duracao] is being defaulted to: DURACAO.
+[EL Config]: metadata: 2019-01-29 20:15:28.679--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.68--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [url] is being defaulted to: URL.
+[EL Config]: metadata: 2019-01-29 20:15:28.68--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Artista] is being defaulted to: Artista.
+[EL Config]: metadata: 2019-01-29 20:15:28.68--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Artista] is being defaulted to: ARTISTA.
+[EL Config]: metadata: 2019-01-29 20:15:28.68--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2019-01-29 20:15:28.68--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.68--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [numIntegrantes] is being defaulted to: NUMINTEGRANTES.
+[EL Config]: metadata: 2019-01-29 20:15:28.681--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nacionalidade] is being defaulted to: NACIONALIDADE.
+[EL Config]: metadata: 2019-01-29 20:15:28.691--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.691--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.691--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.692--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Warning]: metadata: 2019-01-29 20:15:28.703--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field generos] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Config]: metadata: 2019-01-29 20:15:28.704--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.704--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field generos] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.704--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field artista] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.704--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [artista] is being defaulted to: ARTISTA_ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.705--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The primary key column name for the mapping element [field album] is being defaulted to: ID.
+[EL Config]: metadata: 2019-01-29 20:15:28.705--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--The foreign key column name for the mapping element [album] is being defaulted to: ALBUM_ID.
+[EL Warning]: metadata: 2019-01-29 20:15:28.705--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field albuns] within entity class [class modelo.Genero] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Warning]: metadata: 2019-01-29 20:15:28.707--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field musicas] within entity class [class modelo.Album] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Warning]: metadata: 2019-01-29 20:15:28.708--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Element [field produtos] within entity class [class modelo.Artista] uses a collection type [class java.util.ArrayList] when the JPA specification only supports java.util.Collection, java.util.Set, java.util.List, or java.util.Map.  This type is supported with eager loading; using lazy loading with this collection type requires additional configuration and an IndirectContainer implementation that extends [class java.util.ArrayList] or setting the mapping to use basic indirection and the type to be ValueholderInterface.
+[EL Info]: 2019-01-29 20:15:29.006--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
+[EL Fine]: connection: 2019-01-29 20:15:29.079--Thread(Thread[AWT-EventQueue-0,6,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+[EL Config]: connection: 2019-01-29 20:15:29.085--ServerSession(1498395630)--Connection(33504348)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
 	platform=>PostgreSQLPlatform
 	user name=> "postgres"
-	datasource URL=> "jdbc:postgresql://localhost:5433/musica"
+	datasource URL=> "jdbc:postgresql://localhost:5432/musica"
 ))
-[EL Config]: connection: 2019-01-29 14:14:47.154--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:postgresql://localhost:5433/musica
+[EL Config]: connection: 2019-01-29 20:15:29.101--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:postgresql://localhost:5432/musica
 	User: postgres
-	Database: PostgreSQL  Version: 9.5.5
+	Database: PostgreSQL  Version: 9.5.12
 	Driver: PostgreSQL Native Driver  Version: PostgreSQL 9.4 JDBC4.1 (build 1206)
-[EL Warning]: metadata: 2019-01-29 14:14:47.166--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [generos] for the entity class [class modelo.Album] since weaving was not enabled or did not occur.
-[EL Warning]: metadata: 2019-01-29 14:14:47.167--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [musicas] for the entity class [class modelo.Album] since weaving was not enabled or did not occur.
-[EL Warning]: metadata: 2019-01-29 14:14:47.168--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [albuns] for the entity class [class modelo.Genero] since weaving was not enabled or did not occur.
-[EL Warning]: metadata: 2019-01-29 14:14:47.168--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [produtos] for the entity class [class modelo.Artista] since weaving was not enabled or did not occur.
-[EL Info]: connection: 2019-01-29 14:14:47.207--ServerSession(153930724)--Thread(Thread[AWT-EventQueue-0,6,main])--/file:/C:/Users/IFPB/Desktop/projeto/MusicStore-Java/target/classes/_loja-eclipselink login successful
-[EL Fine]: sql: 2019-01-29 14:14:47.482--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM
-[EL Fine]: sql: 2019-01-29 14:14:47.491--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Warning]: metadata: 2019-01-29 20:15:29.11--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [albuns] for the entity class [class modelo.Genero] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2019-01-29 20:15:29.11--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [generos] for the entity class [class modelo.Album] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2019-01-29 20:15:29.11--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [musicas] for the entity class [class modelo.Album] since weaving was not enabled or did not occur.
+[EL Warning]: metadata: 2019-01-29 20:15:29.11--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--Reverting the lazy setting on the OneToOne or ManyToOne attribute [produtos] for the entity class [class modelo.Artista] since weaving was not enabled or did not occur.
+[EL Info]: connection: 2019-01-29 20:15:29.139--ServerSession(1498395630)--Thread(Thread[AWT-EventQueue-0,6,main])--/file:/C:/Users/Neil/Desktop/projeto/MusicStore-Java/target/classes/_loja-eclipselink login successful
+[EL Fine]: sql: 2019-01-29 20:15:29.347--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM
+[EL Fine]: sql: 2019-01-29 20:15:29.356--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [1]
-[EL Fine]: sql: 2019-01-29 14:14:47.495--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.359--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [1]
-[EL Fine]: sql: 2019-01-29 14:14:47.497--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.361--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [2]
-[EL Fine]: sql: 2019-01-29 14:14:47.499--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.363--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
 	bind => [2]
-[EL Fine]: sql: 2019-01-29 14:14:47.501--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.364--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [8]
-[EL Fine]: sql: 2019-01-29 14:14:47.502--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.365--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [8]
-[EL Fine]: sql: 2019-01-29 14:14:47.505--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.366--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [8]
-[EL Fine]: sql: 2019-01-29 14:14:47.508--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.368--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [8]
-[EL Fine]: sql: 2019-01-29 14:14:47.509--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.369--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [8]
-[EL Fine]: sql: 2019-01-29 14:14:47.511--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.37--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2019-01-29 14:14:47.513--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.371--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+	bind => [9]
+[EL Fine]: sql: 2019-01-29 20:15:29.372--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+	bind => [9]
+[EL Fine]: sql: 2019-01-29 20:15:29.372--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [1]
-[EL Fine]: sql: 2019-01-29 14:14:47.516--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.374--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [1]
-[EL Fine]: sql: 2019-01-29 14:14:47.518--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.375--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
 	bind => [1]
-[EL Fine]: sql: 2019-01-29 14:14:47.52--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.376--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [1]
-[EL Fine]: sql: 2019-01-29 14:14:47.528--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.383--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2019-01-29 14:14:47.529--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.383--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2019-01-29 14:14:47.531--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.384--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [2]
-[EL Fine]: sql: 2019-01-29 14:14:47.532--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.385--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [3]
-[EL Fine]: sql: 2019-01-29 14:14:47.533--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.386--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [3]
-[EL Fine]: sql: 2019-01-29 14:14:47.535--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.387--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2019-01-29 14:14:47.537--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.388--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2019-01-29 14:14:47.538--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.388--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2019-01-29 14:14:47.539--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.389--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [4]
-[EL Fine]: sql: 2019-01-29 14:14:47.54--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.39--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
 	bind => [4]
-[EL Fine]: sql: 2019-01-29 14:14:47.542--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.39--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [4]
-[EL Fine]: sql: 2019-01-29 14:14:47.545--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.392--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2019-01-29 14:14:47.546--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.392--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2019-01-29 14:14:47.547--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.393--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2019-01-29 14:14:47.548--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.393--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [5]
-[EL Fine]: sql: 2019-01-29 14:14:47.549--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.394--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
 	bind => [6]
-[EL Fine]: sql: 2019-01-29 14:14:47.551--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.394--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [5]
-[EL Fine]: sql: 2019-01-29 14:14:47.554--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.395--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [6]
-[EL Fine]: sql: 2019-01-29 14:14:47.555--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.396--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [6]
-[EL Fine]: sql: 2019-01-29 14:14:47.555--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.397--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [6]
-[EL Fine]: sql: 2019-01-29 14:14:47.556--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.398--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [6]
-[EL Fine]: sql: 2019-01-29 14:14:47.557--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.398--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.ANO, t1.FAIXAS, t1.NOME, t1.PRECO, t1.ARTISTA_ID FROM albuns_generos t0, ALBUM t1 WHERE ((t0.FK_GENERO_ID = ?) AND (t1.ID = t0.FK_ALBUM_ID))
 	bind => [5]
-[EL Fine]: sql: 2019-01-29 14:14:47.559--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.399--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [6]
-[EL Fine]: sql: 2019-01-29 14:14:47.56--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.4--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, NACIONALIDADE, NOME, NUMINTEGRANTES FROM ARTISTA WHERE (ID = ?)
 	bind => [7]
-[EL Fine]: sql: 2019-01-29 14:14:47.561--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.401--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM WHERE (ARTISTA_ID = ?)
 	bind => [7]
-[EL Fine]: sql: 2019-01-29 14:14:47.562--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.401--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ARTISTA_ID = ?)
 	bind => [7]
-[EL Fine]: sql: 2019-01-29 14:14:47.563--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
+[EL Fine]: sql: 2019-01-29 20:15:29.402--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT t1.ID, t1.NOME FROM albuns_generos t0, GENERO t1 WHERE ((t0.FK_ALBUM_ID = ?) AND (t1.ID = t0.FK_GENERO_ID))
 	bind => [7]
-[EL Fine]: sql: 2019-01-29 14:14:47.564--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
+[EL Fine]: sql: 2019-01-29 20:15:29.402--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA WHERE (ALBUM_ID = ?)
 	bind => [7]
-[EL Fine]: sql: 2019-01-29 14:14:47.566--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA
-[EL Fine]: sql: 2019-01-29 14:15:11.212--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, FAIXAS, NOME, PRECO, ARTISTA_ID FROM ALBUM
-[EL Fine]: sql: 2019-01-29 14:15:11.216--ServerSession(153930724)--Connection(259004345)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA
+[EL Fine]: sql: 2019-01-29 20:15:29.403--ServerSession(1498395630)--Connection(1810112504)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, ANO, DURACAO, NOME, PRECO, URL, ALBUM_ID, ARTISTA_ID FROM MUSICA

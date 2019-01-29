@@ -3,9 +3,10 @@ package aplicacaoswing;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
-import modelo.Album;
+import chrriis.dj.nativeswing.swtimpl.NativeInterface;
+import chrriis.dj.nativeswing.swtimpl.components.JWebBrowser;
 import modelo.Musica;
 
 import java.awt.BorderLayout;
@@ -30,7 +31,26 @@ public class TelaVideo extends JFrame {
 				}
 			}
 		});
+		
+NativeInterface.runEventPump();
+		
+		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+			@Override
+			public void run() {
+				NativeInterface.close();
+			}
+		}));
 	}
+	
+	public static JPanel getBrowser() {
+		JPanel wbPanel = new JPanel(new BorderLayout());
+		JWebBrowser wb = new JWebBrowser();
+		wbPanel.add(wb, BorderLayout.CENTER);
+		wb.setBarsVisible(false);
+		wb.navigate(mu.getUrl());
+		return wbPanel;
+	}
+
 
 	/**
 	 * Create the application.
