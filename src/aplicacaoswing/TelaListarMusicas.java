@@ -1,31 +1,25 @@
 package aplicacaoswing;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 import fachada.Fachada;
-import modelo.Album;
-import modelo.Genero;
 import modelo.Musica;
-
-import java.awt.Color;
-import javax.swing.SwingConstants;
 public class TelaListarMusicas extends JFrame {
 
 	private JFrame frame;
 	private JLabel status;
 	private JButton button[];
 	private JLabel label[];
-	private JFrame tela;
+
 
 	/**
 	 * Launch the application.
@@ -69,7 +63,8 @@ public class TelaListarMusicas extends JFrame {
 				button[i].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						try {
-							tela = new TelaVideo(m);
+							TelaVideo tela = new TelaVideo(m);
+							System.out.println(m.getAno());
 							tela.setVisible(true);
 						}catch(Exception err) {
 							System.out.println(err.getMessage());
@@ -88,7 +83,8 @@ public class TelaListarMusicas extends JFrame {
 				button[i].addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						try {
-							tela = new TelaVideo(m);
+							TelaVideo tela = new TelaVideo(m);
+							System.out.println(m.getNome());
 							tela.setVisible(true);
 						}catch(Exception err) {
 							System.out.println(err.getMessage());

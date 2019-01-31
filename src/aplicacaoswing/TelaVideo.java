@@ -44,12 +44,12 @@ NativeInterface.runEventPump();
 		}));
 	}
 	
-	public static JPanel getBrowser() {
+	public static JPanel getBrowser(Musica m) {
 		JPanel wbPanel = new JPanel(new BorderLayout());
 		JWebBrowser wb = new JWebBrowser();
 		wbPanel.add(wb, BorderLayout.CENTER);
 		wb.setBarsVisible(false);
-		wb.navigate(mu.getUrl());
+		wb.navigate(m.getUrl());
 		return wbPanel;
 	}
 
@@ -66,10 +66,7 @@ NativeInterface.runEventPump();
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 694, 344);
-		getContentPane().setLayout(null);
-		
-		Fachada.inicializar();
-
+		getContentPane().add(getBrowser(m), BorderLayout.CENTER);
 		initialize();
 	}
 	
