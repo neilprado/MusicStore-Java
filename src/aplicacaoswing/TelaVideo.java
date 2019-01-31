@@ -4,9 +4,11 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 import chrriis.dj.nativeswing.swtimpl.NativeInterface;
 import chrriis.dj.nativeswing.swtimpl.components.JWebBrowser;
+import fachada.Fachada;
 import modelo.Musica;
 
 import java.awt.BorderLayout;
@@ -21,7 +23,7 @@ public class TelaVideo extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
+		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					TelaVideo window = new TelaVideo(mu);
@@ -57,12 +59,17 @@ NativeInterface.runEventPump();
 	 * @param a 
 	 */
 	public TelaVideo(Musica m) {
+		NativeInterface.open();
+		
 		getContentPane().setBackground(new Color(255, 255, 255));
 		setTitle("Youtube Video");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 694, 344);
 		getContentPane().setLayout(null);
+		
+		Fachada.inicializar();
+
 		initialize();
 	}
 	
@@ -73,11 +80,8 @@ NativeInterface.runEventPump();
 	 */
 	private void initialize() {
 		frmBusca = new JFrame();
-		frmBusca.getContentPane().setBackground(new Color(255, 255, 255));
-		frmBusca.setTitle("Busca");
 		frmBusca.setBounds(100, 100, 450, 300);
-		frmBusca.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frmBusca.getContentPane().setLayout(null);
+		frmBusca.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
