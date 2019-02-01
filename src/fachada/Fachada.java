@@ -71,22 +71,17 @@ public class Fachada {
 	public static Artista cadastrarArtista(String nome, String nac, int num) throws Exception {
 		DAO.begin();
 		Artista a = daoartista.buscaPorNome(nome);
-		System.out.println("Z");
 		if (a!=null)
 			throw new Exception("Artista " + nome + " já cadastrado");
 		a = new Artista(nome, nac, num);
-		System.out.println("Y");
 		if(a.getNumIntegrantes()<1)
 			throw new Exception("Não existem artistas com menos de 1 integrante");
 		if(a.getNacionalidade() == null)
 			throw new Exception("Erro!! O artista precisa ter uma nacionalidade");
 		if(a.getNome() == null)
 			throw new Exception("Erro!! O artista precisa ter um nome");
-		System.out.println("X");
 		daoartista.create(a);
-		System.out.println("W");
 		DAO.commit();
-		System.out.println("U");
 		return (Artista) a;
 	}
 	

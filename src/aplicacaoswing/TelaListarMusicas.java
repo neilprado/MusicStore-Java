@@ -64,7 +64,6 @@ public class TelaListarMusicas extends JFrame {
 					public void actionPerformed(ActionEvent e) {
 						try {
 							TelaVideo tela = new TelaVideo(m);
-							System.out.println(m.getAno());
 							tela.setVisible(true);
 						}catch(Exception err) {
 							System.out.println(err.getMessage());
@@ -84,7 +83,6 @@ public class TelaListarMusicas extends JFrame {
 					public void actionPerformed(ActionEvent e) {
 						try {
 							TelaVideo tela = new TelaVideo(m);
-							System.out.println(m.getNome());
 							tela.setVisible(true);
 						}catch(Exception err) {
 							System.out.println(err.getMessage());
