@@ -66,8 +66,6 @@ NativeInterface.runEventPump();
 		setResizable(true);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 655, 333);
-		setExtendedState(MAXIMIZED_BOTH);
-		setUndecorated(true);
 		getContentPane().add(getBrowser(m), BorderLayout.CENTER);
 		initialize();
 	}
